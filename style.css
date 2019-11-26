@@ -1,0 +1,318 @@
+html, body {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background: #124735;
+  align-content: center;
+}
+
+.navbar-brand p {
+  color: #ffffff;
+}
+
+.navbar-brand img {
+  width: 87px;
+}
+
+.navbar-nav ul li a {
+  color: #ffffff;
+  font-size: 80%;
+}
+
+.nav-link {
+  color: #ffffff;
+  font-size: 90%;
+}
+
+.navbar-toggler {
+  border: 0 !important;
+}
+
+.jumbotron {
+  height: 93vh;
+  background-image: url("./img/people.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  border-radius: 0px;
+}
+
+.banner-text {
+  margin-top: 3.25rem;
+  color: #ffffff;
+}
+
+.priceBadge {
+  width: 100px;
+}
+
+.btns .rf-btn {
+  background-color: #fff;
+  color: #124735;
+  text-shadow: 0.5;
+}
+
+.btns .img-btn {
+  background-color: #256141;
+  color: #fff;
+}
+
+.header-section h2 {
+  color: #124735;
+}
+
+.feature-card h5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: bolder;
+}
+.feature-card h6 {
+  margin-top: 1rem;
+}
+.feature-card h4 {
+  color: #256141;
+}
+
+.feature-title {
+  color: #124735;
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+#features {
+  padding-bottom: 3rem;
+  padding-left: 2rem;
+  padding-right: 2.75rem;
+}
+
+.benefits {
+  background-color: #256141;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  margin: 0 !important;
+}
+
+.highlights {
+  max-width: 175px;
+}
+
+.procedure {
+  width: 250px;
+}
+
+#steps {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+#steps h4 {
+  color: #124735;
+  margin-bottom: 0;
+}
+#steps .card img {
+  margin-top: 0 !important;
+}
+
+#easy {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+#easy h3 {
+  color: #124735;
+  margin-bottom: 0;
+}
+#easy .card img {
+  margin-top: 0 !important;
+}
+
+#outline-btn a {
+  border-color: #fff !important;
+  color: #fff;
+}
+
+#indiv_steps .indiv_cards {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+#indiv_steps .indiv_cards h5 {
+  padding-top: 3px;
+}
+
+.learn-more {
+  background-color: #256141 !important;
+  border: 0 !important;
+}
+
+.primer {
+  background-color: #256141;
+  padding-top: 0.75rem;
+  padding-bottom: 1.5rem;
+  margin: 0 !important;
+}
+
+@media (max-width: 340px) {
+  .primerIMG, .benefitsIMG {
+    width: 175px;
+  }
+
+  .partner {
+    width: 300px;
+  }
+
+  .check-success {
+    width: 100px;
+  }
+}
+@media (min-width: 340px) {
+  .primerIMG, .benefitsIMG {
+    width: 175px;
+  }
+
+  .partner {
+    width: 300px;
+  }
+
+  .check-success {
+    width: 100px;
+  }
+}
+@media (min-width: 520px) {
+  .primerIMG, .benefitsIMG {
+    width: 375px;
+  }
+
+  .partner {
+    width: 500px;
+  }
+
+  .check-success {
+    width: 150px;
+  }
+}
+@media (min-width: 320px) {
+  .applyPic {
+    text-align: center;
+  }
+}
+.modLabel {
+  color: #256141;
+  font-weight: bolder;
+}
+
+.fab {
+  font-size: 210%;
+}
+
+.utils {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.utils h3 {
+  color: #256141;
+}
+.utils a {
+  background-color: #256141;
+  border: 0;
+}
+
+.primerSubmit {
+  background-color: #256141;
+  border: 0;
+}
+
+.pay-opt {
+  width: 200px;
+}
+
+.email-submit {
+  color: #fff;
+  border-color: #fff;
+}
+
+#email {
+  background-color: #256141;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  margin: 0 !important;
+}
+#email h3 {
+  color: #fff;
+  padding-bottom: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.claimHeader, .accHead, .stepHeader, .reqs {
+  color: #256141 !important;
+  font-weight: bold;
+}
+
+.backHome, .reqModx {
+  background-color: #256141;
+}
+
+footer {
+  background-color: #124735;
+  height: 40px;
+}
+footer p {
+  padding-top: 10px;
+  margin-bottom: 0;
+  color: #ffffff !important;
+}
+
+.mailtoui-modal-title {
+  color: #256141;
+}
+
+.mailtoui-email-address {
+  background-color: #ffffff;
+  font-weight: bold;
+  color: #256141;
+}
+
+.mailtoui-button-content:hover,
+.mailtoui-button-content:focus,
+.mailtoui-button-copy:hover,
+.mailtoui-button-copy:focus {
+  background-color: #256141;
+  color: #ffffff;
+}
+
+.mailtoui-button-content,
+.mailtoui-button-copy {
+  background-color: #ffffff;
+  color: #3c3c3c;
+}
+
+.mailtoui-button:focus .mailtoui-button-content {
+  background-color: #256141;
+  color: #ffffff;
+}
+
+.mailtoui-button-copy-clicked,
+.mailtoui-button-copy-clicked:hover,
+.mailtoui-button-copy-clicked:focus {
+  background-color: #256141;
+  color: #fff;
+}
+
+.mailtoui-modal-close:focus,
+.mailtoui-modal-close:hover {
+  color: #b74d48;
+}
+
+.swal-title {
+  color: #256141;
+}
+
+.swal-text {
+  margin-top: 1rem;
+  font-size: 25px;
+}
+
+/*# sourceMappingURL=style.css.map */

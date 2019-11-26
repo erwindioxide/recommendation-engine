@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#256141">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" src="./style.css" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20">
+    <title>Rampver OF Insurance | How To Pay</title>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.getJSON('https://v2-api.sheety.co/22e745b87e3785990d3c93f763521184/mfapi/mutualfunds', function(data) {
+                var template = Handlebars.compile($('#item-template').html())
+                $('#mutualfunds').html(template(data.mutualfunds))
+            })
+        })
+    </script>
+    <script id="item-template" type="text/x-handlebars-template">
+        <div class="row mt-4 mutualfunds">
+            {{#each this}}
+            <div class="col-lg-4 col-md-6">
+                <div class="card mb-3">
+                    <div class="text-center">
+                        <img src="{{imageurl}}" alt="{{imageurl}}" style="width: 320px;" class="mt-3"></img>
+                    </div>
+                    <h6 class="text-center mt-2 text-success claimHeader">{{fundname}}</h6>
+                    <div class="my-2 mx-3">
+                        <p>Risk Profile: {{riskprofile}}</p>
+                        <p>Type: {{type}}</p>
+                        <p>Fund House: {{fundmanager}}</p>
+                        <p>Min. Initial Investment: {{initial}}</p>
+                        <p>Min. Additional Investment: {{additional}}</p>
+                        <div class="text-left">
+                            <button class="btn btn-warning" data-toggle="modal" data-target="#viewMore{{id}}">View More</button>
+                            <button class="btn btn-success">Invest now!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="viewMore{{id}}" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="text-left modLabel">{{fundname}}</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div role="document">
+                                <div class="modal-body">
+                                    <div class="mb-3">
+                                        <div class="text-center">
+                                            <img src="{{imageurl}}" alt="{{imageurl}}" style="width: 320px;" class="mt-3"></img>
+                                        </div>
+                                        <div class="my-2 mx-3">
+                                            <br>
+                                            <div class="text-left">
+                                                <button class="btn btn-success" data-toggle="collapse" href="#form{{id}}">Invest now!</button>
+                                            </div>
+                                            <br>
+                                            <div class="collapse multi-collapse" id="form{{id}}" role="dialog" tabindex="-1">
+                                                <h5 class="text-left modLabel p-0">Invest in {{fundname}} today!</h5>
+                                                <div class="modal-body">
+
+                                                    <!-- START WP DATA COLLECTION -->
+                                                    <form action="https://rampver.com/test-reco/#wpcf7-f11896-o1" method="POST">
+                                                        <div style="display: none;">
+                                                            <input type="hidden" name="_wpcf7" value="11896">
+                                                            <input type="hidden" name="_wpcf7_version" value="5.1.4">
+                                                            <input type="hidden" name="_wpcf7_locale" value="en_US">
+                                                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f11896-o1">
+                                                            <input type="hidden" name="_wpcf7_container_post" value="0">
+                                                        </div>
+
+
+                                                        <!-- First Name -->
+                                                        <div class="form-group">
+                                                            <label for="your-name" class="claimHeader">Your Name*</label>
+                                                            <input type="text" id="FN" class="form-control" name="your-name" placeholder="Full Name" required>
+                                                        </div>
+
+                                                        <input type="hidden" class="form-control" name="fundname" value="{{fundname}}" required>
+
+                                                        <!-- submit buttons -->
+                                                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                                                        <input type="submit" value="Send!" id="trigger" class="text-white btn primerSubmit" onclick="preloader()">
+                                                        <input type="hidden" name="ht" value="2d7ef216bc37d7d95eb23af68d8ca5fb3f0f32cf:MTU2NTA3NzI0MS43Njk0">
+                                                        <input type="hidden" name="mc_signupsource" value="hosted">
+
+                                                        <p class="text-center">
+                                                            <img src="./img/preloader.gif" id="preloader" class="mt-3 d-none" style="width: 30px;">
+                                                        </p>
+
+                                                    </form>
+                                                    <!-- END WP Data Collection -->
+
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <p class="claimHeader">Fund Details:</p>
+                                            <p>Risk Profile: {{riskprofile}}</p>
+                                            <p>Type: {{type}}</p>
+                                            <p>Fund House: {{fundmanager}}</p>
+                                            <p>YTD Return: {{ytd}}</p>
+                                            <p>Min. Initial Investment: {{initial}}</p>
+                                            <p>Min. Additional Investment: {{additional}}</p>
+                                            <br>
+                                            <p class="claimHeader">Description</p>
+                                            <hr>
+                                            <p>{{description}}</p>
+                                            <br>
+                                            <p class="claimHeader">This fund is for you if:</p>
+                                            <hr>
+                                            <ul>
+                                                <li>{{ffy2}}</li>
+                                                <li>{{ffy3}}</li>
+                                                <li>{{ffy1}}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            {{/each}}
+
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid d-flex">
+            <a class="navbar-brand" href="#">
+                <img src="./img/rf-logo.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto order-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container px-3 mutual funds">
+
+        <div id="mutualfunds">Fetching Data NOW...</div>
+
+    </div>
+
+
+
+
+    <footer>
+        <p class="text-white text-center">Rampver Financials &copy; 2019</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b2291eba76.js"></script>
+
+</html>

@@ -1,0 +1,3 @@
+https://v2-api.sheety.co/22e745b87e3785990d3c93f763521184/mfapi/mutualfunds/
+
+https://api.sheety.co/74d7c850-51bf-476f-9c9e-744848cea
