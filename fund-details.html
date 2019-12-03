@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#256141">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" src="./style.css" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20">
+    <title>Mutual Funds List</title>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var code = (getUrlVars()["fundmanagercode"]).toLowerCase();
+        var id = getUrlVars()["id"];
+        var app = document.querySelector('.app');
+        var api = 'https://v2-api.sheety.co/rampverfinancials/mfapi/' + code + '/' + id;
+
+        var renderData = "json." + code;
+
+        function dataFill(json) {
+            document.getElementById("fundname").innerHTML = eval(renderData + ".fundname");
+            document.getElementById("initial").innerHTML = eval(renderData + ".initial");
+            document.getElementById("additional").innerHTML = eval(renderData + ".additional");
+            document.getElementById("type").innerHTML = eval(renderData + ".type");
+            document.getElementById("imageurl").src = eval(renderData + ".imageurl");
+
+        }
+
+
+        var output = fetch(api)
+            .then(response => response.json())
+            .then(json => {
+                this.dataFill(json);
+            });
+    </script>
+
+</head>
+
+<body>
+
+
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid d-flex">
+            <a class="navbar-brand" href="#">
+                <img src="./img/rf-logo.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto order-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container px-3 mutual funds">
+        <h1 class="claimHeader">Fund Details</h1>
+        <img id="imageurl" style="width: 300px;">
+        <div id="fundname"></div>
+        <div id="initial"></div>
+        <div id="additional"></div>
+        <div id="type"></div>
+
+    </div>
+
+
+
+    <footer>
+        <p class="text-white text-center">Rampver Financials &copy; 2019</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b2291eba76.js"></script>
+
+</html>
