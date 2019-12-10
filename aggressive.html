@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" src="./style.css" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20">
+    <link rel="icon" href="../img/favicon.png" type="image/png" sizes="16x20">
     <title>Mutual Funds List</title>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
@@ -16,9 +16,9 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $.getJSON('https://v2-api.sheety.co/rampverfinancials/mfapi/all', function(data) {
+            $.getJSON('https://v2-api.sheety.co/rampverfinancials/mfapi/aggressive', function(data) {
                 var template = Handlebars.compile($('#item-template').html())
-                $('#all').html(template(data.all))
+                $('#aggressive').html(template(data.aggressive))
             })
         })
     </script>
@@ -122,6 +122,7 @@
             </div>
             {{/each}}
     </script>
+
 </head>
 
 <body>
@@ -129,9 +130,9 @@
 
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid d-flex">
-            <div class="navbar-brand" href="#">
-                <img src="./img/rf-logo.png"></img>
-            </div>
+            <a class="navbar-brand" href="#">
+                <img src="./img/rf-logo.png">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -141,6 +142,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./">Home</a>
                     </li>
+
                 </ul>
             </div>
         </div>
@@ -151,12 +153,12 @@
         <div class="form-group mt-3">
             <label class="claimHeader">🔎 Browse Mutual Funds: </label>
             <select class="form-control">
-                <option>On list: All mutual funds</option>
+                <option>📌 On list: For Aggressive Investors</option>
                 <option onclick="window.location.href='./recommended.html'">✔️ Rampver's Recommended Funds</option>
                 <option disabled> </option>
                 <option disabled>📊 Select Investor Risk Profile</option>
                 <option onclick="window.location.href='./index.html'">All Funds</option>
-                <option onclick="window.location.href='./aggressive.html'">For Aggressive Investors</option>
+                <option onclick="window.location.href='#'">For Aggressive Investors</option>
                 <option onclick="window.location.href='./moderate.html'">For Moderate Investors</option>
                 <option onclick="window.location.href='./conservative.html'">For Conservative Investors</option>
                 <option disabled> </option>
@@ -171,7 +173,7 @@
             </select>
         </div>
 
-        <div id="all">
+        <div id="aggressive">
             <div style="margin:auto">
                 <br></br>
                 <br></br>
