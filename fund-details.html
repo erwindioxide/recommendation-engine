@@ -9,41 +9,10 @@
     <link rel="stylesheet" src="./style.css" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20">
-    <title>Mutual Funds List</title>
+    <title>Fund Details</title>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        function getUrlVars() {
-            var vars = {};
-            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
-                vars[key] = value;
-            });
-            return vars;
-        }
-
-        var code = (getUrlVars()["fundmanagercode"]).toLowerCase();
-        var id = getUrlVars()["id"];
-        var app = document.querySelector('.app');
-        var api = 'https://v2-api.sheety.co/rampverfinancials/mfapi/' + code + '/' + id;
-
-        var renderData = "json." + code;
-
-        function dataFill(json) {
-            document.getElementById("fundname").innerHTML = eval(renderData + ".fundname");
-            document.getElementById("initial").innerHTML = eval(renderData + ".initial");
-            document.getElementById("additional").innerHTML = eval(renderData + ".additional");
-            document.getElementById("type").innerHTML = eval(renderData + ".type");
-            document.getElementById("imageurl").src = eval(renderData + ".imageurl");
-
-        }
-
-
-        var output = fetch(api)
-            .then(response => response.json())
-            .then(json => {
-                this.dataFill(json);
-            });
-    </script>
+    <script src="./js/urlparser.js"></script>
 
 </head>
 
@@ -70,8 +39,8 @@
         </div>
     </nav>
 
-    <div class="container px-3 mutual funds">
-        <h1 class="claimHeader">Fund Details</h1>
+    <div class="container px-3 mutual funds mt-4">
+        <h1 class="claimHeader" id="fundtitle"></h1>
         <img id="imageurl" style="width: 300px;">
         <div id="fundname"></div>
         <div id="initial"></div>
