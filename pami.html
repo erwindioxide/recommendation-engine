@@ -63,7 +63,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header d-flex align-items-center">
-                            <h5 class="text-left modLabel">{{fundname}}</h5>
+                            <h5 class="text-left claimHeader">{{fundname}}</h5>
                             <h5 class="text-secondary font-weight-bold text-right ml-auto p-2" data-dismiss="modal"> X</h5>
                         </div>
                         <div class="modal-body">
@@ -79,35 +79,41 @@
                                                 <p class="claimHeader">{{type}}</p>
                                                 <p class="claimHeader">{{fundmanagername}}</p>
                                                 <hr>
-                                                <p>🛡️ For {{riskprofile}}-type investors.</p>
-                                                <p>🕒 Recommended time horizon is {{timehorizon}}.</p>
-                                                <p>✔️ Minimum initial investment is {{initial}}.</p>
-                                                <p>✔️ Minimum additional investment is {{additional}}.</p>
-                                                <p>📅 Inception date: {{inception}}</p>
-                                                <p>📇 Management Fee: {{managementfee}}</p>
+                                                <small>🛡️ For {{riskprofile}}-type investors.</small>
                                                 <br>
-                                                <p class="claimHeader">📝 Fund Description</p>
+                                                <small>🕒 Recommended time horizon is {{timehorizon}}.</small>
+                                                <br>
+                                                <small>✔️ Minimum initial investment is {{initial}}.</small>
+                                                <br>
+                                                <small>✔️ Minimum additional investment is {{additional}}.</small>
+                                                <br>
+                                                <small>📅 Inception date: {{inception}}</small>
+                                                <br>
+                                                <small>📇 Management Fee: {{managementfee}}</small>
+                                                <br>
+                                                <br>
+                                                <small class="claimHeader">📝 Fund Description</small>
                                                 <hr>
                                                 <p class="text-justify mt-2">
-                                                    <p class="text-justify">{{introduction}}</p>
+                                                    <small class="text-justify">{{introduction}}</small>
                                                 </p>
                                                 <br>
-                                                <p class="claimHeader">📑 This fund is for you if:</p>
+                                                <small class="claimHeader">📑 This fund is for you if:</small>
                                                 <hr>
                                                 <ul>
                                                     <li>
                                                         <p class="text-justify mt-2">
-                                                            <p style="text-align: justify">{{ffy1}}</p>
+                                                            <small style="text-align: justify">{{ffy1}}</small>
                                                         </p>
                                                     </li>
                                                     <li>
                                                         <p class="text-justify mt-2">
-                                                            <p style="text-align: justify">{{ffy2}}</p>
+                                                            <small style="text-align: justify">{{ffy2}}</small>
                                                         </p>
                                                     </li>
                                                     <li>
                                                         <p class="text-justify mt-2">
-                                                            <p style="text-align: justify">{{ffy3}}</p>
+                                                            <small style="text-align: justify">{{ffy3}}</small>
                                                         </p>
                                                     </li>
                                                 </ul>
@@ -122,7 +128,6 @@
             </div>
             {{/each}}
     </script>
-
 </head>
 
 <body>
@@ -130,9 +135,9 @@
 
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid d-flex">
-            <a class="navbar-brand" href="#">
-                <img src="./img/rf-logo.png">
-            </a>
+            <div class="navbar-brand" href="#">
+                <img src="./img/rf-logo.png"></img>
+            </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -142,35 +147,33 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./">Home</a>
                     </li>
-
                 </ul>
             </div>
         </div>
     </nav>
 
     <div class="container px-3 mutual funds">
-
-        <div class="form-group mt-3">
+        <div class="dropdown mt-4">
             <label class="claimHeader">🔎 Browse Mutual Funds: </label>
-            <select class="form-control">
-                <option>📌 On list: Philam Asset Management (PAMI)</option>
-                <option onclick="window.location.href='./recommended.html'">✔️ Rampver's Recommended Funds</option>
-                <option disabled> </option>
-                <option disabled>📊 Select Investor Risk Profile</option>
-                <option onclick="window.location.href='./index.html'">All Funds</option>
-                <option onclick="window.location.href='./aggressive.html'">For Aggressive Investors</option>
-                <option onclick="window.location.href='./moderate.html'">For Moderate Investors</option>
-                <option onclick="window.location.href='./conservative.html'">For Conservative Investors</option>
-                <option disabled> </option>
-                <option disabled>🌱 Select Fund House</option>
-                <option onclick="window.location.href='./index.html'">All Funds</option>
-                <option onclick="window.location.href='./soldivo.html'">Soldivo Funds (SOLDIVO)</option>
-                <option onclick="window.location.href='./atram.html'">ATR Asset Management (ATRAM)</option>
-                <option onclick="window.location.href='./pemi.html'">Philequity Management (PEMI)</option>
-                <option onclick="window.location.href='./slamci.html'">Sun Life Asset Management (SLAMCI)</option>
-                <option onclick="window.location.href='./fami.html'">First Metro Asset Management (FAMI)</option>
-                <option onclick="window.location.href='#'">Philam Asset Management (PAMI)</option>
-            </select>
+            <button class="btn btn-block border dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                📌On list: Philam Asset Management (PAMI)
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="./recommended.html">✔️ Rampver's Recommended Funds</a>
+                <a class="dropdown-item" href="./index.html">All Mutual Funds</a>
+                <a class="dropdown-item" href="./aggressive.html">For Aggressive Investor (Stock/Equity Funds)</a>
+                <a class="dropdown-item" href="./moderate.html">For Moderate Investor (Balanced Funds)</a>
+                <a class="dropdown-item" href="./conservative.html">For Conservative Investor (Bond Funds/ Money
+                    Market Funds)</a>
+                <a class="dropdown-item" href="./soldivo.html">Soldivo Funds (SOLDIVO)</a>
+                <a class="dropdown-item" href="./atram.html">ATR Asset Management (ATRAM)</a>
+                <a class="dropdown-item" href="./pemi.html">Philequity Management (PEMI)</a>
+                <a class="dropdown-item" href="./slamci.html">Sun Life Asset Management (SLAMCI)</a>
+                <a class="dropdown-item" href="./fami.html">First Metro Asset Management (FAMI)</a>
+                <a class="dropdown-item" href="#">Philam Asset Management (PAMI)</a>
+                <a class="dropdown-item" href="./bimi.html">BPI Investment Management (BIMI)</a>
+                <a class="dropdown-item" href="./usdollar.html">US Dollar Denominated Funds (Dollar Funds)</a>
+            </div>
         </div>
 
         <div id="pami">
