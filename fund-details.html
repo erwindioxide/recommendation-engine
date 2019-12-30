@@ -39,31 +39,128 @@
         </div>
     </nav>
 
-    <div class="container px-3 mutual funds mt-4">
-        <h1 class="claimHeader" id="fundtitle"></h1>
-        <img id="imageurl" style="width: 300px;">
-        <div id="fundname"></div>
-        <div id="initial"></div>
-        <div id="additional"></div>
-        <div id="type"></div>
+    <div class="container-fluid mt-4 ">
 
+        <div class="row">
+
+            <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                <h1 class="claimHeader text-center" id="fundtitle"></h1>
+                <br>
+                <p class="text-center">
+                    <div class="pl-4 pr-4">
+                        <img id="imageurl" class="detailimg rounded">
+                </p>
+                <br>
+
+
+                <h5 class="claimHeader ">Fund Introduction</h5>
+                <hr>
+                <div id="introduction" class="text-justify"></div>
+                <br>
+
+                <h5 class="claimHeader ">Fund Description</h5>
+                <hr>
+                <p id="description" class="text-justify"></p>
+                <br>
+
+                <h5 class="claimHeader ">Fund Suitability</h5>
+                <hr>
+                <p>This fund is for you if:</p>
+                <ul>
+                    <li id="ffy1"></li>
+                    <li id="ffy2"></li>
+                    <li id="ffy3"></li>
+                </ul>
+                </div>
+                <br>
+
+                <div class="container">
+
+                    <h5 class="claimHeader">Fund Details</h5>
+                    <table class="table table-hover">
+                        <tr>
+                            <td class="claimHeader">Mutual Fund Type</td>
+                            <td id="type"></td>
+                        </tr>
+                        <tr>
+                            <td class="claimHeader">Fund Manager</td>
+                            <td id="fundmanagername"></td>
+                        </tr>
+                        <tr>
+                            <td class="claimHeader">Year-to-Date Return</td>
+                            <td id="ytd"></td>
+                        </tr>
+                        <tr>
+                            <td class="claimHeader">Risk Profile</td>
+                            <td id="riskprofile"></td>
+                        </tr>
+                        <tr>
+                            <td class="claimHeader">Currency</td>
+                            <td id="currency"></td>
+                        </tr>
+                        <tr>
+                            <td class="claimHeader">Minimum Initial Investment</td>
+                            <td id="initial"></td>
+                        </tr>
+                        <tr>
+                            <td class="claimHeader">Minimum Additional Investment</td>
+                            <td id="additional"></td>
+                        </tr>
+                        <tr>
+                            <td class="claimHeader">Recommended length of stay</td>
+                            <td id="timehorizon"></td>
+                        </tr>
+                        <tr>
+                            <td class="claimHeader">Inception Date</td>
+                            <td id="inception"></td>
+                        </tr>
+                        <tr>
+                            <td class="claimHeader">Management Fee</td>
+                            <td id="managementfee"></td>
+                        </tr>
+                        <tr>
+                            <td class="claimHeader">Sales Load Fee</td>
+                            <td id="salesload"></td>
+                        </tr>
+                        <tr>
+                            <td class="claimHeader">Holding Period</td>
+                            <td id="holdingperiod"></td>
+                        </tr>
+                        <tr>
+                            <td class="claimHeader">Early Redemption Fee</td>
+                            <td id="exitfee"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 ">
+
+                <p class="container">People from all walks of life have dreams for themselves and their loved ones. Providing children with the best education, having a nice home, starting a business and a comfortable retirement in the future are just some of the many dreams
+                    that Filipinos nurture in their hearts. This is the point where savers become investors. Investing in mutual funds can help an individual invest their money in reputable instruments without the burden of timing the market or the need
+                    to dedicate time to actively manage their financial portfolios. For the past 20 years, mutual funds have been one of the most utilized investment vehicles in the Philippines. It has helped many Filipinos achieve their goals and ultimately,
+                    attain their life objectives. Affordability, convenience, diversification, safety, and better rates of returns (in long-term) are only some of the advantages that made mutual funds (stock funds) a popular choice for the investing public.
+                    Soldivo Funds are investment vehicles of choice for investors who seek diversified, well-managed funds that can fulfill life’s dreams. For investors who are committed to disciplined execution, Soldivo Funds are basic components in
+                    an investment portfolio geared for growth.</p>
+            </div>
+
+        </div>
     </div>
 
 
-
     <footer>
-        <p class="text-white text-center">Rampver Financials &copy; 2019</p>
+        <p class="text-white text-center ">Rampver Financials &copy; 2019</p>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
     <script>
         AOS.init();
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous ">
     </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous ">
     </script>
-    <script src="https://kit.fontawesome.com/b2291eba76.js"></script>
+    <script src="https://kit.fontawesome.com/b2291eba76.js "></script>
 
 </html>
