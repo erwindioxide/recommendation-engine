@@ -9,7 +9,7 @@
     <link rel="stylesheet" src="./style.css" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20">
-    <title>Fund Details</title>
+    <title>Mutual Fund Details</title>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./js/urlparser.js"></script>
@@ -39,11 +39,11 @@
         </div>
     </nav>
 
-    <div class="container-fluid mt-4 ">
+    <div class="container mt-4 ">
 
         <div class="row">
 
-            <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
+            <div class="col-lg-8 col-md-8 col-sm-12">
                 <div class="pl-4 pr-4">
                     <h3 class="claimHeader text-center" id="fundtitle"></h3>
                     <br>
@@ -134,14 +134,170 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 ">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <br>
 
-                <p class="container">People from all walks of life have dreams for themselves and their loved ones. Providing children with the best education, having a nice home, starting a business and a comfortable retirement in the future are just some of the many dreams
-                    that Filipinos nurture in their hearts. This is the point where savers become investors. Investing in mutual funds can help an individual invest their money in reputable instruments without the burden of timing the market or the need
-                    to dedicate time to actively manage their financial portfolios. For the past 20 years, mutual funds have been one of the most utilized investment vehicles in the Philippines. It has helped many Filipinos achieve their goals and ultimately,
-                    attain their life objectives. Affordability, convenience, diversification, safety, and better rates of returns (in long-term) are only some of the advantages that made mutual funds (stock funds) a popular choice for the investing public.
-                    Soldivo Funds are investment vehicles of choice for investors who seek diversified, well-managed funds that can fulfill life’s dreams. For investors who are committed to disciplined execution, Soldivo Funds are basic components in
-                    an investment portfolio geared for growth.</p>
+                <div class="container">
+                    <h3 class="claimHeader text-center">Interested to invest?</h3>
+                    <button class="btn rfbtn btn-block btn-lg text-white mt-3" data-toggle="modal" data-target="#inquireform">Inquire now!</button>
+                </div>
+
+                <div class="modal fade" id="inquireform" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header d-flex align-items-center">
+                                <h5 class="text-left claimHeader">Fill out to know more!</h5>
+                                <h5 class="text-secondary font-weight-bold text-right ml-auto p-2" data-dismiss="modal">
+                                    X</h5>
+                            </div>
+                            <div class="modal-body">
+                                <div role="document">
+                                    <form method="post" id="formstring">
+                                        <div style="display: none;">
+                                            <input type="hidden" name="_wpcf7" id="wpcode">
+                                            <input type="hidden" name="_wpcf7_version" value="5.1.4">
+                                            <input type="hidden" name="_wpcf7_locale" value="en_US">
+                                            <input type="hidden" name="_wpcf7_unit_tag" id="wpcodetag">
+                                            <input type="hidden" name="_wpcf7_container_post" value="0">
+                                        </div>
+                                        <input type="hidden" name="fundname" id="fundnamevalue">
+
+                                        <div class="form-group">
+                                            <label for="salutation" class="claimHeader">Salutation</label>
+                                            <select class="form-control" id="salutation" name="salutation" placeholder="--please select">
+                                                <option value="Mr.">Mr.</option>
+                                                <option value="Ms.">Ms.</option>
+                                                <option value="Mrs.">Mrs.</option>
+                                                <option value="M.">M.</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="fullname" class="claimHeader">Full Name*</label>
+                                            <input type="text" class="form-control" name="fullname" required placeholder="Full Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email" class="claimHeader">Email Address*</label>
+                                            <input type="email" class="form-control" name="email" required placeholder="Email Address">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="contact" class="claimHeader">Contact
+                                                Number*</label>
+                                            <input type="number" class="form-control" required placeholder="Contact Number" name="contact">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="birthday" class="claimHeader">Birthday</label>
+                                            <input type="date" class="form-control" name="birthday">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="location" class="claimHeader">Location</label>
+                                            <input type="text" class="form-control" placeholder="Location" name="location">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="rampverclient" class="claimHeader">Are you currently Rampver
+                                                Financials client?
+                                            </label>
+                                            <select name="rampverclient" id="rampverclient" class="form-control">
+                                                <option value="Yes">Yes, I am a Rampver client.</option>
+                                                <option value="No">No, I am not a Rampver client, yet.</option>
+                                                <option value="Not Sure">I am not sure.</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="referral" class="claimHeader">How did you know about Rampver
+                                                Financials?
+                                            </label>
+                                            <select name="referral" id="referral" class="form-control">
+                                                <option value="--">--</option>
+                                                <option value="FB/ Social Media">Facebook/ Social Media</option>
+                                                <option value="Youtube">Youtube Videos</option>
+                                                <option value="Website">Rampver Website</option>
+                                                <option value="Blogs/Articles">Blogs/Articles</option>
+                                                <option value="Talks/Conferences/Live Events">Talks/Conferences/Live
+                                                    Events</option>
+                                                <option value="Google Search">Google Search</option>
+                                                <option value="Friend/Family Referral">Friend/Family Referral</option>
+                                                <option value="Advertisements">Advertisements</option>
+                                                <option value="Flyers/Printed Materials">Flyers/Printed Materials
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="claimHeader" for="modeofcontact">What is your preferred mode
+                                                of contact?
+                                            </label>
+                                            <select name="modeofcontact" id="modeofcontact" class="form-control">
+                                                <option value="Email">Email</option>
+                                                <option value="SMS/Text Message">SMS/Text Message</option>
+                                                <option value="Phone Call">Phone Call</option>
+                                                <option value="Messenger/Viber/ Whatsapp">Messenger/Viber/ Whatsapp
+                                                </option>
+                                                <option value="Personal Meeting">Personal Meeting</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="claimHeader" for="question">Any questions?
+                                            </label>
+                                            <br>
+                                            <textarea name="question" id="" class="form-control" cols="30" rows="5" placeholder="Your Message"></textarea>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" name="consent" id="consent" required>
+                                            <small class="text-secondary font-italic form-check-label" for="consent">I
+                                                agree to receive
+                                                regular updates, promotions, and recommendations from Rampver
+                                                Financials. Visit <a href="rampver.com/privacy">rampver.com/privacy</a>
+                                                for more info. </small>
+                                        </div>
+                                        <p class="text-center mt-4 mb-4">
+                                            <input type="submit" value="I want to invest!" class="text-white btn rfbtn font-weight-bold btn-lg">
+                                        </p>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+
+                <div class="container">
+                    <br>
+                    <h4 class="claimHeader text-center ">Related Readings </h4>
+                    <br>
+                    <ul>
+                        <li>
+                            <h6 class="claimHeader">
+                                <a href="" id="prospectuslink" class="claimHeader">Mutual Fund Prospectus</a>
+                            </h6>
+                        </li>
+                        <li>
+                            <h6 class="claimHeader">
+                                <a href="" id="ffslink" class="claimHeader">Latest Fund Fact Sheet</a>
+                            </h6>
+                        </li>
+                        <li>
+                            <h6 class="claimHeader">
+                                <a id="profilelink" class="claimHeader">Fund Profile</a>
+                            </h6>
+                        </li>
+                        <li>
+                            <h6 class="claimHeader">
+                                <a id="forms" class="claimHeader">Forms and Requirements</a>
+                            </h6>
+                        </li>
+                        <li>
+                            <h6 class="claimHeader">
+                                <a id="funding" class="claimHeader">Funding Procedures</a>
+                            </h6>
+                        </li>
+                    </ul>
+                </div>
+
+
+
             </div>
 
         </div>

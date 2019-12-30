@@ -28,7 +28,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card mb-3">
                     <div class="text-center">
-                        <img src="{{imageurl}}" alt="{{imageurl}}" style="width: 320px;" class="mt-3"></img>
+                        <img src="{{imageurl}}" alt="{{imageurl}}" class="previewimg"></img>
                     </div>
                     <h5 class="text-center mt-2 text-success claimHeader mt-3 mx-4">{{fundname}}</h5>
                     <div class="my-2 mx-3">
@@ -51,8 +51,8 @@
                             <small style="text-align: justify">{{ffy1}}</small>
                         </p>
                         <div class="text-center mb-3 mt-3">
-                            <button class="btn px-4 text-white font-weight-bold btn-secondary" data-toggle="modal" data-target="#viewMore{{fundmanagercode}}{{id}}">Preview</button>
-                            <a class="ml-4 btn px-4 text-white font-weight-bold btn-success" href="./fund-details.html?fundmanagercode={{fundmanagercode}}&id={{id}}">See More</a>
+                            <button class="btn px-4 font-weight-bold claimHeader border" data-toggle="modal" data-target="#viewMore{{fundmanagercode}}{{id}}">Preview</button>
+                            <a class="ml-4 btn px-4 text-white font-weight-bold rfbtn" href="./fund-details.html?fundmanagercode={{fundmanagercode}}&id={{id}}">See More</a>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                                 <div class="modal-body">
                                     <div class="mb-3">
                                         <div class="text-center">
-                                            <img src="{{imageurl}}" style="width: 300px;" class="mt-3"></img>
+                                            <img src="{{imageurl}}" class="mt-2 previewimg rounded"></img>
                                         </div>
                                         <div class="my-2 mx-3">
                                             <br>
@@ -161,7 +161,7 @@
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="./recommended.html">✔️ Rampver's Recommended Funds</a>
                 <a class="dropdown-item" href="./index.html">All Mutual Funds</a>
-                <a class="dropdown-item" href="#">For Aggressive Investor (Stock/Equity Funds)</a>
+                <a class="dropdown-item" href="#">For Aggressive Investor (Equity Funds)</a>
                 <a class="dropdown-item" href="./moderate.html">For Moderate Investor (Balanced Funds)</a>
                 <a class="dropdown-item" href="./conservative.html">For Conservative Investor (Bond Funds)</a>
                 <a class="dropdown-item" href="./soldivo.html">Soldivo Funds (SOLDIVO)</a>
@@ -171,7 +171,7 @@
                 <a class="dropdown-item" href="./fami.html">First Metro Asset Management (FAMI)</a>
                 <a class="dropdown-item" href="./pami.html">Philam Asset Management (PAMI)</a>
                 <a class="dropdown-item" href="./bimi.html">BPI Investment Management (BIMI)</a>
-                <a class="dropdown-item" href="./usdollar.html">US Dollar Denominated Funds (Dollar Funds)</a>
+                <a class="dropdown-item" href="./usdollar.html">Dollar Funds (Dollar Funds)</a>
             </div>
         </div>
 
