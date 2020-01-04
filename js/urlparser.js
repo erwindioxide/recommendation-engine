@@ -89,18 +89,6 @@ function dataFill(json) {
     document.getElementById('urlGet').value = document.referrer;
 
 
-    // start share social
-    let uri = window.location.href;
-    let res = encodeURIComponent(uri);
-    let title = document.title
-    let title2 = encodeURIComponent(title);
-
-    document.getElementById('shareFB').href = "https://www.facebook.com/dialog/share?app_id=5303202981&display=popup&href=" + res + "redirect_uri=https%3a%2f%2fstatic.addtoany.com%2fmenu%2fthanks.html%23url%3d" + res;
-    document.getElementById('shareMSR').href = "https://www.addtoany.com/add_to/facebook_messenger?linkurl=" + res + "=" + title2 + "&linknote=" + title2;
-    document.getElementById('shareVBR').href = "viber://forward?text=" + title2 + res;
-    document.getElementById('shareWHA').href = "https://api.whatsapp.com/send?text=" + title2 + res;
-    // document.getElementById('shareWC').href = "https://www.addtoany.com/ext/wechat/share/#url=" + res + title;
-
 
 
 
