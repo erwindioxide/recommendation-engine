@@ -36,7 +36,7 @@
                         <br>
                         <small class="claimHeader">{{fundmanagername}}</small>
                         <hr>
-                        <small>🛡️ For {{riskprofile}}-type investors.</small>
+                        <small class="mt-2">🛡️ For {{riskprofile}}-type investors.</small>
                         <br>
                         <small>🕒 Recommended time horizon is {{timehorizon}}.</small>
                         <br>
@@ -78,6 +78,11 @@
                                             <div>
                                                 <p class="claimHeader">{{type}}</p>
                                                 <p class="claimHeader">{{fundmanagername}}</p>
+                                                <div class="d-flex">
+                                                    <small>NAVPS: {{navps}} </small> &nbsp;&nbsp;
+                                                    <small>|</small> &nbsp; &nbsp;
+                                                    <small>Year-to-Date (YTD): {{ytd}}</small>
+                                                </div>
                                                 <hr>
                                                 <small>🛡️ For {{riskprofile}}-type investors.</small>
                                                 <br>
