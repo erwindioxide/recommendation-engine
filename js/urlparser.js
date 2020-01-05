@@ -25,7 +25,7 @@ function dataFill(json) {
     document.querySelector('meta[property="og:title"]').setAttribute("content", document.title);
     document.querySelector('meta[property="og:description"]').setAttribute("content", eval(renderData + '.description'));
     document.querySelector('meta[property="og:url"]').setAttribute("content", window.location.href);
-    document.querySelector('meta[property="og:image"]').setAttribute("content", eval(renderData + '.imageurl'));
+    // document.querySelector('meta[property="og:image"]').setAttribute("content", eval(renderData + '.imageurl'));
     document.title = eval(renderData + '.fundname') + " | Fund Details";
     document.getElementById('fundtitle').innerHTML = eval(renderData + '.fundname');
     document.getElementById('imageurl').src = eval(renderData + '.imageurl');
