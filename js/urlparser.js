@@ -21,33 +21,26 @@ let api = 'https://v2-api.sheety.co/rampverfinancials/mfapi/' + code + '/' + id;
 let renderData = 'json.' + code;
 
 function dataFill(json) {
+
+    document.querySelector('meta[property="og:title"]').setAttribute("content", document.title);
+    document.querySelector('meta[property="og:description"]').setAttribute("content", eval(renderData + '.description'));
+    document.querySelector('meta[property="og:url"]').setAttribute("content", window.location.href);
+    document.querySelector('meta[property="og:image"]').setAttribute("content", eval(renderData + '.imageurl'));
     document.title = eval(renderData + '.fundname') + " | Fund Details";
-    document.getElementById('fundtitle').innerHTML = eval(
-        renderData + '.fundname'
-    );
+    document.getElementById('fundtitle').innerHTML = eval(renderData + '.fundname');
     document.getElementById('imageurl').src = eval(renderData + '.imageurl');
     document.getElementById('navps').innerHTML = eval(renderData + '.navps');
     document.getElementById('ytdtop').innerHTML = eval(renderData + '.ytd');
-    document.getElementById('introduction').innerHTML = eval(
-        renderData + '.introduction'
-    );
-    document.getElementById('description').innerHTML = eval(
-        renderData + '.description'
-    );
+    document.getElementById('introduction').innerHTML = eval(renderData + '.introduction');
+    document.getElementById('description').innerHTML = eval(renderData + '.description');
     document.getElementById('ffy1').innerHTML = eval(renderData + '.ffy1');
     document.getElementById('ffy2').innerHTML = eval(renderData + '.ffy2');
     document.getElementById('ffy3').innerHTML = eval(renderData + '.ffy3');
     document.getElementById('type').innerHTML = eval(renderData + '.type');
-    document.getElementById('fundmanagername').innerHTML = eval(
-        renderData + '.fundmanagername'
-    );
+    document.getElementById('fundmanagername').innerHTML = eval(renderData + '.fundmanagername');
     document.getElementById('ytd').innerHTML = eval(renderData + '.ytd');
-    document.getElementById('riskprofile').innerHTML = eval(
-        renderData + '.riskprofile'
-    );
-    document.getElementById('currency').innerHTML = eval(
-        renderData + '.currency'
-    );
+    document.getElementById('riskprofile').innerHTML = eval(renderData + '.riskprofile');
+    document.getElementById('currency').innerHTML = eval(renderData + '.currency');
     document.getElementById('initial').innerHTML = eval(renderData + '.initial');
     document.getElementById('additional').innerHTML = eval(
         renderData + '.additional'
@@ -87,8 +80,6 @@ function dataFill(json) {
         renderData + '.additional'
     );
     document.getElementById('urlGet').value = document.referrer;
-
-
 
 
 
