@@ -21,9 +21,9 @@ let api = 'https://v2-api.sheety.co/rampverfinancials/mfapi/' + code + '/' + id;
 let renderData = 'json.' + code;
 
 function dataFill(json) {
-
     document.querySelector('meta[property="og:title"]').setAttribute("content", document.title);
-    document.querySelector('meta[property="og:description"]').setAttribute("content", eval(renderData + '.description'));
+    document.querySelector('meta[name="description"]').setAttribute("content", eval(renderData + '.description'));
+    // document.querySelector('meta[property="og:description"]').setAttribute("content", eval(renderData + '.description'));
     document.querySelector('meta[property="og:url"]').setAttribute("content", window.location.href);
     // document.querySelector('meta[property="og:image"]').setAttribute("content", eval(renderData + '.imageurl'));
     document.title = eval(renderData + '.fundname') + " | Fund Details";
@@ -42,52 +42,28 @@ function dataFill(json) {
     document.getElementById('riskprofile').innerHTML = eval(renderData + '.riskprofile');
     document.getElementById('currency').innerHTML = eval(renderData + '.currency');
     document.getElementById('initial').innerHTML = eval(renderData + '.initial');
-    document.getElementById('additional').innerHTML = eval(
-        renderData + '.additional'
-    );
-    document.getElementById('timehorizon').innerHTML = eval(
-        renderData + '.timehorizon'
-    );
-    document.getElementById('inception').innerHTML = eval(
-        renderData + '.inception'
-    );
-    document.getElementById('managementfee').innerHTML = eval(
-        renderData + '.managementfee'
-    );
-    document.getElementById('salesload').innerHTML = eval(
-        renderData + '.salesload'
-    );
-    document.getElementById('holdingperiod').innerHTML = eval(
-        renderData + '.holdingperiod'
-    );
+    document.getElementById('additional').innerHTML = eval(renderData + '.additional');
+    document.getElementById('timehorizon').innerHTML = eval(renderData + '.timehorizon');
+    document.getElementById('inception').innerHTML = eval(renderData + '.inception');
+    document.getElementById('managementfee').innerHTML = eval(renderData + '.managementfee');
+    document.getElementById('salesload').innerHTML = eval(renderData + '.salesload');
+    document.getElementById('holdingperiod').innerHTML = eval(renderData + '.holdingperiod');
     document.getElementById('exitfee').innerHTML = eval(renderData + '.exitfee');
-    document.getElementById('prospectuslink').href = eval(
-        renderData + '.prospectuslink'
-    );
+    document.getElementById('prospectuslink').href = eval(renderData + '.prospectuslink');
     document.getElementById('ffslink').href = eval(renderData + '.ffslink');
     document.getElementById('profilelink').href = code + '.html#profilelink';
     document.getElementById('forms').href = code + '.html#forms';
     document.getElementById('funding').href = code + '.html#funding';
-    document.getElementById('fundnamevalue').value = eval(
-        renderData + '.fundname'
-    );
-    document.getElementById('prospectus').value = eval(
-        renderData + '.prospectuslink'
-    );
+    document.getElementById('fundnamevalue').value = eval(renderData + '.fundname');
+    document.getElementById('prospectus').value = eval(renderData + '.prospectuslink');
     document.getElementById('ffs').value = eval(renderData + '.ffslink');
     document.getElementById('initialamt').value = eval(renderData + '.initial');
-    document.getElementById('additionalamt').value = eval(
-        renderData + '.additional'
-    );
+    document.getElementById('additionalamt').value = eval(renderData + '.additional');
     document.getElementById('urlGet').value = document.referrer;
-
-
-
-
 };
 
 
-// fill dat
+// fill data
 let output = fetch(api)
     .then(response => response.json())
     .then(json => {
