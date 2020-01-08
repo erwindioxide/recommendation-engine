@@ -60,6 +60,8 @@ function dataFill(json) {
     document.getElementById('initialamt').value = eval(renderData + '.initial');
     document.getElementById('additionalamt').value = eval(renderData + '.additional');
     document.getElementById('urlGet').value = document.referrer;
+    document.getElementById('fundnamesoa').innerHTML = eval(renderData + '.fundname');
+    document.getElementById('soafundname').value = eval(renderData + '.fundname');
 };
 
 

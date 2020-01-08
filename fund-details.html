@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" src="./style.css" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20">
     <title>Rampver Financials | Invest in Mutual Funds today!</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -44,47 +44,53 @@
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-12">
                 <div class="pl-4 pr-4">
-                    <h3 class="claimHeader text-center" id="fundtitle"></h3>
+                    <h3 class="claimHeader text-center" id="fundtitle" data-aos="fade-up"></h3>
                     <br>
                     <p class="text-center">
-                        <img id="imageurl" class="detailimg rounded">
+                        <img id="imageurl" class="detailimg rounded" data-aos="fade-up">
                     </p>
                     <br>
-                    <div class="d-flex">
+                    <div class="d-flex" data-aos="fade-up">
                         <p class="claimHeader">Price Per Share: </p>
                         &nbsp;&nbsp;
                         <p class="claimHeader" id="navps"></p>
                     </div>
-                    <div class="d-flex">
+                    <div class="d-flex" data-aos="fade-up">
                         <p class="claimHeader">Year-to-Date (YTD): </p>
                         &nbsp;&nbsp;
                         <p class="font-weight-bold claimHeader" id="ytdtop"></p>
                     </div>
                     <br>
-                    <h5 class="claimHeader ">Fund Introduction</h5>
-                    <hr>
-                    <div id="introduction" class="text-justify"></div>
+                    <div class="" data-aos="fade-up">
+                        <h5 class="claimHeader ">Fund Introduction</h5>
+                        <hr>
+                        <div id="introduction" class="text-justify"></div>
+                    </div>
                     <br>
-                    <h5 class="claimHeader ">Fund Description</h5>
-                    <hr>
-                    <p id="description" class="text-justify"></p>
+                    <div data-aos="fade-up">
+                        <h5 class="claimHeader ">Fund Description</h5>
+                        <hr>
+                        <p id="description" class="text-justify"></p>
+                    </div>
                     <br>
-                    <h5 class="claimHeader ">Fund Suitability</h5>
-                    <hr>
-                    <p>This fund is for you if:</p>
-                    <ul>
-                        <li id="ffy1"></li>
-                        <li id="ffy2" class="mt-2"></li>
-                        <li id="ffy3" class="mt-2"></li>
-                    </ul>
+                    <div data-aos="fade-up">
+                        <h5 class="claimHeader ">Fund Suitability</h5>
+                        <hr>
+                        <p>This fund is for you if:</p>
+                        <ul>
+                            <li id="ffy1"></li>
+                            <li id="ffy2" class="mt-2"></li>
+                            <li id="ffy3" class="mt-2"></li>
+                        </ul>
+                    </div>
                     <br>
-                    <a href class=".text-info font-italic font-underline" data-toggle="modal" data-target="#inquireform">
-                        <p><u>Inquire more
+                    <a href class=".text-info font-italic font-underline" data-toggle="modal" data-target="#inquireform" data-aos="fade-up">
+                        <p data-aos="fade-up"><u>Inquire more
                                 here...</u></p>
                     </a>
                 </div>
                 <br>
-                <div class="container">
+                <div class="container" data-aos="fade-up">
                     <h5 class="claimHeader">Fund Details</h5>
                     <br>
                     <table class="table table-hover">
@@ -145,7 +151,7 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <br>
-                <div class="container">
+                <div class="container" data-aos="fade-up">
                     <h3 class="claimHeader text-center">Interested to invest?</h3>
                     <button class="btn rfbtn btn-block btn-lg text-white mt-3" data-toggle="modal" data-target="#inquireform">Inquire now!</button>
                 </div>
@@ -270,7 +276,8 @@
                                         <div class="form-check">
                                             <input type="checkbox" class="form-check-input" name="consent" id="consent" required>
                                             <small class="text-secondary font-italic form-check-label" for="consent">
-                                                I agree to receive regular updates, promotions, and recommendations from
+                                                I agree to receive regular updates, promotions, and recommendations
+                                                regarding investments, insurance, healthcare, and personal finance from
                                                 Rampver Financials. Visit <a
                                                     href="rampver.com/privacy">rampver.com/privacy</a>
                                                 for more info. </small>
@@ -286,7 +293,7 @@
                     </div>
                 </div>
                 <br>
-                <div class="container">
+                <div class="container" data-aos="fade-up">
                     <br>
                     <h4 class="claimHeader text-center ">Related Readings </h4>
                     <br>
@@ -314,20 +321,96 @@
                         </li>
                         <li class="" style="list-style-type:none">
                             <h6 class="claimHeader">
-                                <a id="funding" class="claimHeader">Funding Procedures</a>
+                                <a id="funding" class="claimHeader">Investing Guidelines</a>
                             </h6>
-                        </li c>
+                        </li>
+                        <li class="" style="list-style-type:none">
+                            <h6 class="claimHeader">
+                                <a href id="soalink" class="claimHeader" data-toggle="modal" data-target="#soarequest">Statement of Account Request</a>
+                            </h6>
+                        </li>
                     </ul>
+
+                    <!-- SOA Modal -->
+                    <div class="modal fade" id="soarequest" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header d-flex align-items-center">
+                                    <h5 class="text-left claimHeader">Statement of Account Request</h5>
+                                    <br>
+                                    <h5 class="text-secondary font-weight-bold text-right ml-auto p-2" data-dismiss="modal">
+                                        X</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <div role="document">
+                                        <div class="d-flex">
+                                            <p class="claimHeader font-italic">For </p> &nbsp;
+                                            <p class="claimHeader font-italic" id="fundnamesoa"></p>
+                                        </div>
+                                        <form action="https://rampver.com/soarequest2020/#wpcf7-f12001-o1" method="post">
+                                            <div style="display: none;">
+                                                <input type="hidden" name="_wpcf7" value="12001">
+                                                <input type="hidden" name="_wpcf7_version" value="5.1.6">
+                                                <input type="hidden" name="_wpcf7_locale" value="en_US">
+                                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f12001-o1">
+                                                <input type="hidden" name="_wpcf7_container_post" value="0">
+                                            </div>
+                                            <input type="hidden" name="mutual_fund" id="soafundname">
+                                            <div class="form-group">
+                                                <label for="account_name" class="claimHeader">Full Name*</label>
+                                                <input type="text" class="form-control" name="account_name" required placeholder="Account Name" id="account_name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email_second" class="claimHeader">Email Address*</label>
+                                                <input type="email" class="form-control" name="email_second" required placeholder="Registered Email Address" id="email_second">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="folio_number" class="claimHeader">Folio Number/ Account
+                                                    Number*</label>
+                                                <input type="text" class="form-control" required placeholder="Folio Number/ Account Number" name="folio_number" id="folio_number">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="claimHeader" for="question">Any questions for us?
+                                                </label>
+                                                <br>
+                                                <textarea type="text" name="question" class="form-control" cols="30" rows="5" placeholder="Your Message" id="message"></textarea>
+                                            </div>
+                                            <div class="mb-2">
+                                                <small class="claimHeader font-italic">*Standard SOA requests takes 3-5
+                                                    banking days to be fulfilled.</small>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" name="consent" id="consent" required>
+                                                <small class="text-secondary font-italic form-check-label" for="consent">
+                                                    I agree to receive regular updates, promotions, and recommendations
+                                                    regarding investments, insurance, healthcare, and personal finance
+                                                    from
+                                                    Rampver Financials. Visit <a
+                                                        href="rampver.com/privacy">rampver.com/privacy</a>
+                                                    for more info. </small>
+                                            </div>
+                                            <p class="text-center mt-4 mb-4">
+                                                <input type="submit" value="Request for SOA" class="text-white btn rfbtn font-weight-bold">
+                                            </p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- SOA Modal -->
+
                 </div>
                 <br>
                 <!-- social share start -->
-                <div class="container-fluid">
-                    <h4 class="claimHeader text-center ">Share this to a friend!</h4>
+                <div class="container-fluid" data-aos="fade-up">
+                    <h4 class="claimHeader text-center">Share this to a friend!</h4>
                     <!-- Go to www.addthis.com/dashboard to customize your tools -->
                     <p class="text-center mt-3">
                         <div class="addthis_inline_share_toolbox"></div>
                     </p>
                 </div>
+                <!-- social share end -->
             </div>
         </div>
     </div>
@@ -337,6 +420,11 @@
     <footer>
         <p class="text-white text-center ">Rampver Financials &copy; 2019</p>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e108780a32cd784"></script>
