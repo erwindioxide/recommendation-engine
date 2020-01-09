@@ -52,8 +52,8 @@ function dataFill(json) {
     document.getElementById('prospectuslink').href = eval(renderData + '.prospectuslink');
     document.getElementById('ffslink').href = eval(renderData + '.ffslink');
     document.getElementById('profilelink').href = code + '.html#profilelink';
-    document.getElementById('forms').href = code + '.html#forms';
-    document.getElementById('funding').href = code + '.html#funding';
+    document.getElementById('forms').href = code + '.html#getStarted';
+    document.getElementById('funding').href = code + '.html#getStarted';
     document.getElementById('fundnamevalue').value = eval(renderData + '.fundname');
     document.getElementById('prospectus').value = eval(renderData + '.prospectuslink');
     document.getElementById('ffs').value = eval(renderData + '.ffslink');
