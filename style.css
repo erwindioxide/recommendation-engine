@@ -11,7 +11,8 @@ html, body {
 
 .navbar {
   background: #124735;
-  align-content: center; }
+  align-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
 .navbar-brand p {
   color: #ffffff; }
@@ -54,11 +55,15 @@ html, body {
 @media (min-width: 900px) {
   .detailimg, .previewimg {
     width: 100%; } }
+.goldHeader {
+  color: #ca9732;
+  font-weight: bold; }
+
 footer {
   background-color: #124735;
-  height: 40px; }
+  height: 50px; }
   footer p {
-    padding-top: 10px;
+    padding-top: 15px;
     margin-bottom: 0;
     color: #ffffff !important; }
 

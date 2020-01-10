@@ -1,26 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#256141">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" src="./style.css" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link rel="icon" href="../img/favicon.png" type="image/png" sizes="16x20">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#256141" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" src="./style.css" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link rel="icon" href="../img/favicon.png" type="image/png" sizes="16x20" />
     <title>Mutual Funds List</title>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
-    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $.getJSON('https://v2-api.sheety.co/rampverfinancials/mfapi/pami', function(data) {
-                var template = Handlebars.compile($('#item-template').html())
-                $('#pami').html(template(data.pami))
-            })
-        })
+            $.getJSON(
+                'https://v2-api.sheety.co/rampverfinancials/mfapi/pami',
+                function(data) {
+                    var template = Handlebars.compile($('#item-template').html());
+                    $('#pami').html(template(data.pami));
+                }
+            );
+        });
     </script>
     <script id="item-template" type="text/x-handlebars-template">
         <div class="row mt-4 mutualfunds">
@@ -131,16 +133,14 @@
 </head>
 
 <body>
-
-
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid d-flex">
             <div class="navbar-brand" href="#">
-                <img src="./img/rf-logo.png"></img>
+                <img src="./img/rf-logo.png" />
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto order-2">
@@ -156,57 +156,445 @@
         <div class="dropdown mt-4">
             <label class="claimHeader">🔎 Browse Mutual Funds: </label>
             <button class="btn btn-block border dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Philam Asset Management (PAMI)
-            </button>
+          Philam Asset Management (PAMI)
+        </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="./recommended.html">✔️ Rampver's Recommended Funds</a>
-                <a class="dropdown-item" href="./index.html">All Mutual Funds</a>
-                <a class="dropdown-item" href="./aggressive.html">For Aggressive Investor (Equity Funds)</a>
-                <a class="dropdown-item" href="./moderate.html">For Moderate Investor (Balanced Funds)</a>
-                <a class="dropdown-item" href="./conservative.html">For Conservative Investor (Bond Funds)</a>
-                <a class="dropdown-item" href="./soldivo.html">Soldivo Funds (SOLDIVO)</a>
-                <a class="dropdown-item" href="./atram.html">ATR Asset Management (ATRAM)</a>
-                <a class="dropdown-item" href="./pemi.html">Philequity Management (PEMI)</a>
-                <a class="dropdown-item" href="./slamci.html">Sun Life Asset Management (SLAMCI)</a>
-                <a class="dropdown-item" href="./fami.html">First Metro Asset Management (FAMI)</a>
-                <a class="dropdown-item" href="#">Philam Asset Management (PAMI)</a>
-                <a class="dropdown-item" href="./bimi.html">BPI Investment Management (BIMI)</a>
-                <a class="dropdown-item" href="./usdollar.html">Dollar Funds (Dollar Funds)</a>
-            </div>
+                <a class="dropdown-item" href="./recommended.html">✔️ Rampver's Recommended Funds</a
+          >
+          <a class="dropdown-item" href="./index.html">All Mutual Funds</a>
+                <a class="dropdown-item" href="./aggressive.html">For Aggressive Investor (Equity Funds)</a
+          >
+          <a class="dropdown-item" href="./moderate.html"
+            >For Moderate Investor (Balanced Funds)</a
+          >
+          <a class="dropdown-item" href="./conservative.html"
+            >For Conservative Investor (Bond Funds)</a
+          >
+          <a class="dropdown-item" href="./soldivo.html"
+            >Soldivo Funds (SOLDIVO)</a
+          >
+          <a class="dropdown-item" href="./atram.html"
+            >ATR Asset Management (ATRAM)</a
+          >
+          <a class="dropdown-item" href="./pemi.html"
+            >Philequity Management (PEMI)</a
+          >
+          <a class="dropdown-item" href="./slamci.html"
+            >Sun Life Asset Management (SLAMCI)</a
+          >
+          <a class="dropdown-item" href="./fami.html"
+            >First Metro Asset Management (FAMI)</a
+          >
+          <a class="dropdown-item" href="#">Philam Asset Management (PAMI)</a>
+                <a class="dropdown-item" href="./bimi.html">BPI Investment Management (BIMI)</a
+          >
+          <a class="dropdown-item" href="./usdollar.html"
+            >Dollar Funds (Dollar Funds)</a
+          >
         </div>
+      </div>
 
-        <div id="pami">
-            <div style="margin:auto">
-                <br></br>
-                <br></br>
-                <h3 class="claimHeader text-center mt-2 mb-3">Please wait..</h3>
-                <p class="text-center">
-                    <img src="./img/preloader.gif" alt="" style="width: 200px;" class="pb-5 text-center"></img>
+      <br />
+
+      <div class="container mt-3">
+        <div class="row">
+          <div class="d-flex align-items-center">
+            <div>
+              <h1 class="text-left claimHeader">
+                Philam Asset Management, Inc.
+              </h1>
+              <h6 class="text-left claimHeader font-italic mt-3">
+                A wealthier life is key to a healthier, longer and better life.
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Go to www.addthis.com/dashboard to customize your tools -->
+      <div class="addthis_inline_share_toolbox_vxvg mt-3"></div>
+
+      <br />
+      <h3 class="claimHeader text-left">About PAMI Funds</h3>
+      <hr />
+      <p class="text-justify">
+        PAMI knows that people have different life goals and they need the right
+        partner who will help them take advantage of investing opportunities.
+        PAMI is committed to helping people achieve their dreams by investing
+        wisely, and we understand that what’s suitable for one, may not be for
+        another. This is why PAMI offers wide range of mutual funds to cater to
+        different investor profiles, from the conservative all the way to the
+        most aggressive.
+      </p>
+
+      <p class="text-justify">
+        BPI Invesment Management, Inc. (BIMI) is the newly appointed fund
+        manager of PAMI mutual Funds.
+      </p>
+      <br />
+      <h3 class="claimHeader text-left">Fund Catalog</h3>
+      <hr />
+      <a
+        href=""
+        class="btn rfbtn text-white mt-2 mb-2"
+        target="_blank"
+        id="profilelink"
+        >Download PAMI Funds Catalog</a
+      >
+
+      <div id="pami">
+        <div style="margin:auto">
+          <br />
+          <br />
+          <h3 class="claimHeader text-center mt-2 mb-3">Please wait..</h3>
+          <p class="text-center">
+            <img
+              src="./img/preloader.gif"
+              alt=""
+              style="width: 200px;"
+              class="pb-5 text-center"
+            />
+          </p>
+          <br />
+          <br />
+        </div>
+      </div>
+      <br />
+      <h3 class="claimHeader text-left" id="getStarted">Get Started!</h3>
+      <hr />
+      <div class="row mt-2">
+        <div class="col-lg-4 col-md-6">
+          <div class="card mb-3" id="funding">
+            <div class="card-header">
+              <h5
+                class="claimHeader text-center"
+                data-toggle="collapse"
+                data-target="#guidelines"
+              >
+                Investing Guidelines &nbsp;
+                <i class="fas fa-chevron-down claimHeader"></i>
+              </h5>
+            </div>
+            <div id="guidelines" class="collapse">
+              <br />
+              <ul>
+                <li class="" style="list-style-type:none">
+                  <h6 class="claimHeader">
+                    <a href="" class="claimHeader" target="_blank"
+                      >Soldivo Funds Checklist</a
+                    >
+                  </h6>
+                </li>
+                <li class="" style="list-style-type:none">
+                  <h6 class="claimHeader">
+                    <a href="" class="claimHeader" target="_blank"
+                      >Soldivo Funds Forms Guidelines</a
+                    >
+                  </h6>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card mb-3" id="forms">
+            <div class="card-header">
+              <h5
+                class="claimHeader text-center"
+                data-toggle="collapse"
+                data-target="#formsandreq"
+              >
+                Application Forms &nbsp;
+                <i class="fas fa-chevron-down claimHeader"></i>
+              </h5>
+            </div>
+            <div id="formsandreq" class="collapse">
+              <br />
+              <ul>
+                <li class="" style="list-style-type:none">
+                  <h6 class="claimHeader">
+                    <a
+                      href="https://drive.google.com/drive/u/1/folders/1UnEMGUlKyDOlUy2TDT6qTUDlJoPT3cms"
+                      class="claimHeader"
+                      target="_blank"
+                      >Data Privacy Consent Form</a
+                    >
+                  </h6>
+                </li>
+                <li class="" style="list-style-type:none">
+                  <h6 class="claimHeader">
+                    <a
+                      href="https://drive.google.com/open?id=1wmd1jEELGqPiJiiKYgZnDYcTWBvYgDwp"
+                      class="claimHeader"
+                      target="_blank"
+                      >Customer Information Sheet<small class="font-italic">
+                        (Account Opening)</small
+                      ></a
+                    >
+                  </h6>
+                </li>
+                <li class="" style="list-style-type:none">
+                  <h6 class="claimHeader">
+                    <a
+                      href="https://drive.google.com/open?id=1yZ3txiQfx5CkbP7-PG8OQaz2F1c4Drtw"
+                      class="claimHeader"
+                      target="_blank"
+                      >Subscription Transaction Form<small class="font-italic">
+                        (Additional Investments)</small
+                      ></a
+                    >
+                  </h6>
+                </li>
+                <li class="" style="list-style-type:none">
+                  <h6 class="claimHeader">
+                    <a
+                      href="https://drive.google.com/open?id=1vz7MV_IUYX7PBm4EHpPrX6XbyFuBJU-I"
+                      class="claimHeader"
+                      target="_blank"
+                      >FAO Confirmation Form</a
+                    >
+                  </h6>
+                </li>
+                <li class="" style="list-style-type:none">
+                  <h6 class="claimHeader">
+                    <a
+                      href="https://drive.google.com/open?id=1EytSQBceXYMFKZhQ8T1fdFIyUXqG55ub"
+                      class="claimHeader"
+                      target="_blank"
+                      >Redemption Transaction Form</a
+                    >
+                  </h6>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card mb-3" id="soa">
+            <div class="card-header">
+              <h5
+                class="claimHeader text-center"
+                data-toggle="collapse"
+                data-target="#soarequest"
+              >
+                SOA Request &nbsp;
+                <i class="fas fa-chevron-down claimHeader"></i>
+              </h5>
+            </div>
+            <div id="soarequest" class="collapse">
+              <br />
+              <div class="container-fluid">
+                <p class="text-justify">
+                  Please fill out the fields completely and accurately as
+                  possible. Incomplete or incorrect details may cause delay in
+                  the Statement of Account generation.
                 </p>
-                <br></br>
-                <br></br>
-            </div>
-        </div>
+                <p class="text-justify">
+                  Statement of Account (SOA) requests normally takes 3-5 banking
+                  days to be fulfilled. If you need it urgently, please get in
+                  touch with you Rampver Financials Business Development
+                  Officer.
+                </p>
+                <button
+                  type="button"
+                  class="btn rfbtn text-white mb-3"
+                  data-toggle="modal"
+                  data-target="#soaform"
+                >
+                  Proceed
+                </button>
+                <br />
+              </div>
 
+              <!-- SOA Modal -->
+              <div class="modal fade" id="soaform" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header d-flex align-items-center">
+                      <h5 class="text-left claimHeader">
+                        Statement of Account Request
+                      </h5>
+                      <br />
+                      <h5
+                        class="text-secondary font-weight-bold text-right ml-auto p-2"
+                        data-dismiss="modal"
+                      >
+                        X
+                      </h5>
+                    </div>
+                    <div class="modal-body">
+                      <div role="document">
+                        <div class="d-flex">
+                          <p class="claimHeader font-italic">
+                            For PAMI Funds
+                          </p>
+                          &nbsp;
+                          <p
+                            class="claimHeader font-italic"
+                            id="fundnamesoa"
+                          ></p>
+                        </div>
+                        <form
+                          action="https://rampver.com/soarequest2020/#wpcf7-f12001-o1"
+                          method="post"
+                        >
+                          <div style="display: none;">
+                            <input type="hidden" name="_wpcf7" value="12001" />
+                            <input
+                              type="hidden"
+                              name="_wpcf7_version"
+                              value="5.1.6"
+                            />
+                            <input
+                              type="hidden"
+                              name="_wpcf7_locale"
+                              value="en_US"
+                            />
+                            <input
+                              type="hidden"
+                              name="_wpcf7_unit_tag"
+                              value="wpcf7-f12001-o1"
+                            />
+                            <input
+                              type="hidden"
+                              name="_wpcf7_container_post"
+                              value="0"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label for="account_name" class="claimHeader"
+                              >Full Name*</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="account_name"
+                              required
+                              placeholder="Account Name"
+                              id="account_name"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label for="email_second" class="claimHeader"
+                              >Email Address*</label
+                            >
+                            <input
+                              type="email"
+                              class="form-control"
+                              name="email_second"
+                              required
+                              placeholder="Registered Email Address"
+                              id="email_second"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label for="folio_number" class="claimHeader"
+                              >Folio Number/ Account Number*</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              required
+                              placeholder="Folio Number/ Account Number"
+                              name="folio_number"
+                              id="folio_number"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label for="mutual_fund" class="claimHeader"
+                              >Fund Name*</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              required
+                              value="PAMI Funds"
+                              name="mutual_fund"
+                              id="mutual_fund"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label class="claimHeader" for="question"
+                              >Any questions for us?
+                            </label>
+                            <br />
+                            <textarea
+                              type="text"
+                              name="question"
+                              class="form-control"
+                              cols="30"
+                              rows="2"
+                              placeholder="Your Message"
+                              id="message"
+                            ></textarea>
+                          </div>
+                          <div class="mb-2">
+                            <small class="claimHeader font-italic"
+                              >*Standard SOA requests takes 3-5 banking days to
+                              be fulfilled.</small
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              type="checkbox"
+                              class="form-check-input"
+                              name="consent"
+                              id="consent"
+                              required
+                            />
+                            <small
+                              class="text-secondary font-italic form-check-label"
+                              for="consent"
+                            >
+                              I agree to receive regular updates, promotions,
+                              and recommendations regarding investments,
+                              insurance, healthcare, and personal finance from
+                              Rampver Financials. Visit
+                              <a href="rampver.com/privacy"
+                                >rampver.com/privacy</a
+                              >
+                              for more info.
+                            </small>
+                          </div>
+                          <p class="text-center mt-4 mb-4">
+                            <input
+                              type="submit"
+                              value="Request for SOA"
+                              class="text-white btn rfbtn font-weight-bold"
+                            />
+                          </p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- SOA Modal -->
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-
-
-
     <footer>
-        <p class="text-white text-center">Rampver Financials &copy; 2019</p>
+      <p class="text-white text-center">Rampver Financials &copy; 2019</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./js/main.js"></script>
     <script>
-        AOS.init();
+      AOS.init();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://kit.fontawesome.com/b2291eba76.js"></script>
-
+  </body>
 </html>
