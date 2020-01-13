@@ -60,6 +60,12 @@ function dataFill(json) {
     document.getElementById('initialamt').value = eval(renderData + '.initial');
     document.getElementById('additionalamt').value = eval(renderData + '.additional');
     document.getElementById('urlGet').value = document.referrer;
+    document.getElementById('imgGet').value = eval(renderData + '.imageurl');
+    document.getElementById('suitability').value = eval(renderData + '.riskprofile');
+    document.getElementById('intro_email').value = eval(renderData + '.introduction');
+    document.getElementById('reason1').value = eval(renderData + '.ffy1');
+    document.getElementById('reason2').value = eval(renderData + '.ffy2');
+    document.getElementById('reason3').value = eval(renderData + '.ffy3');
     document.getElementById('fundnamesoa').innerHTML = eval(renderData + '.fundname');
     document.getElementById('soafundname').value = eval(renderData + '.fundname');
 };

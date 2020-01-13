@@ -1,6 +1,6 @@
 function validatorFN() {
     let x = document.getElementById("fullname");
-    x.value = (x.value.toUpperCase()).replace(/^\s+/g, '');
+    x.value = (x.value).replace(/^\s+/g, '');
     output = (x.value).split(" ").join("");
     xoutput = output.search("=")
     if (xoutput != -1) {
@@ -28,7 +28,7 @@ function validatorEmail() {
 
 function validatorLocation() {
     let x = document.getElementById("location");
-    x.value = (x.value.toUpperCase()).replace(/^\s+/g, '');
+    x.value = (x.value).replace(/^\s+/g, '');
     output = (x.value).split(" ").join("");
     xoutput = output.search("=")
     if (xoutput != -1) {
