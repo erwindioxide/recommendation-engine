@@ -68,6 +68,17 @@ function dataFill(json) {
     document.getElementById('reason3').value = eval(renderData + '.ffy3');
     document.getElementById('fundnamesoa').innerHTML = eval(renderData + '.fundname');
     document.getElementById('soafundname').value = eval(renderData + '.fundname');
+
+    let chart = Highcharts.stockChart('navChart', {
+        data: {
+            googleSpreadsheetKey: '1ymjfcHNL645si4rWH5wlLg0oKVPKH7M4IxUwiPTDDQU',
+            googleSpreadsheetWorksheet: eval(renderData + '.navchart')
+        },
+        title: {
+            text: 'NAVPS History'
+        }
+    });
+
 };
 
 
