@@ -113,6 +113,7 @@ function dataFill(json) {
     );
     document.getElementById('soafundname').value = eval(renderData + '.fundname');
 
+    // Highstocks
     Highcharts.setOptions({
         colors: ['#256141']
     });
@@ -124,8 +125,12 @@ function dataFill(json) {
         },
         title: {
             text: 'NAVPS History'
+        },
+        xAxis: {
+            max: +new Date()
         }
     });
+    // Highstocks
 }
 
 // fill data
