@@ -1,204 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta name="theme-color" content="#124735" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" src="./style.css" href="./style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20" />
     <title>Rampver Financials | Invest in Mutual Funds today!</title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
     <script src="./js/urlparser.js"></script>
     <meta property="og:title" content="" />
-    <meta property="og:description" content="Find the best Mutual Fund investments for as low as ₱1,000!" />
+    <meta
+      property="og:description"
+      content="Find the best Mutual Fund investments for as low as ₱1,000!"
+    />
     <meta property="og:url" content="" />
-    <meta property="og:image" content="https://cdn.sunlife.com/static/ph/Investments/Aggressive%20Investor/Philippine%20Stock%20Index%20Fund/investments-aggressive-investor-Philippine-stock-index-funds-featureog.jpg" />
+    <meta
+      property="og:image"
+      content="https://cdn.sunlife.com/static/ph/Investments/Aggressive%20Investor/Philippine%20Stock%20Index%20Fund/investments-aggressive-investor-Philippine-stock-index-funds-featureog.jpg"
+    />
     <meta property="og:site_name" content="Rampver Financials" />
     <meta property="og:type" content="article" />
-</head>
+  </head>
 
-<body>
+  <body>
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid d-flex">
-            <a class="navbar-brand" href="#">
-                <img src="./img/rf-logo.png" />
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="container-fluid d-flex">
+        <a class="navbar-brand" href="#">
+          <img src="./img/rf-logo.png" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto order-2">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./">Home</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto order-2">
+            <li class="nav-item">
+              <a class="nav-link" href="./">Home</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
-    <br>
+    <br />
     <div class="container mt-4 ">
-        <div class="row">
-            <div class="col-lg-8 col-md-8 col-sm-12">
-                <div class="pl-4 pr-4">
-                    <h3 class="claimHeader text-center font-weight-bolder" id="fundtitle" data-aos="fade-up"></h3>
-                    <br />
-                    <p class="text-center">
-                        <img id="imageurl" class="detailimg rounded" data-aos="fade-up" />
-                    </p>
-                    <br />
-                    <div class="d-flex" data-aos="fade-up">
-                        <p class="claimHeader">Price Per Share:</p>
-                        &nbsp;&nbsp;
-                        <p class="claimHeader" id="navps"></p>
-                    </div>
-                    <div class="d-flex" data-aos="fade-up">
-                        <p class="claimHeader">Year-to-Date (YTD):</p>
-                        &nbsp;&nbsp;
-                        <p class="font-weight-bold claimHeader" id="ytdtop"></p>
-                    </div>
-                    <br />
-                    <div class="" data-aos="fade-up">
-                        <h5 class="claimHeader ">Fund Introduction</h5>
-                        <hr />
-                        <div id="introduction" class="text-justify"></div>
-                    </div>
-                    <br />
-                    <div data-aos="fade-up">
-                        <h5 class="claimHeader ">Fund Description</h5>
-                        <hr />
-                        <p id="description" class="text-justify"></p>
-                    </div>
-                    <br />
-                    <div data-aos="fade-up">
-                        <h5 class="claimHeader ">Fund Suitability</h5>
-                        <hr />
-                        <p>This fund is for you if:</p>
-                        <ul>
-                            <li id="ffy1"></li>
-                            <li id="ffy2" class="mt-2"></li>
-                            <li id="ffy3" class="mt-2"></li>
-                        </ul>
-                    </div>
-                    <br />
-                    <a href class=".text-info font-italic font-underline" data-toggle="modal" data-target="#inquireform" data-aos="fade-up">
-                        <p data-aos="fade-up"><u>Inquire more here...</u></p>
-                    </a>
-                </div>
-                <br />
-                <div class="container" data-aos="fade-up">
-                    <h5 class="claimHeader">Fund Details</h5>
-                    <br />
-                    <table class="table table-hover">
-                        <tr>
-                            <td class="claimHeader" class="claimHeader">
-                                Mutual Fund Type
-                            </td>
-                            <td id="type"></td>
-                        </tr>
-                        <tr>
-                            <td class="claimHeader">Fund Manager</td>
-                            <td id="fundmanagername"></td>
-                        </tr>
-                        <tr>
-                            <td class="claimHeader">Year-to-Date Return</td>
-                            <td id="ytd"></td>
-                        </tr>
-                        <tr>
-                            <td class="claimHeader">Risk Profile</td>
-                            <td id="riskprofile"></td>
-                        </tr>
-                        <tr>
-                            <td class="claimHeader">Currency</td>
-                            <td id="currency"></td>
-                        </tr>
-                        <tr>
-                            <td class="claimHeader">Minimum Initial Investment</td>
-                            <td id="initial"></td>
-                        </tr>
-                        <tr>
-                            <td class="claimHeader">Minimum Additional Investment</td>
-                            <td id="additional"></td>
-                        </tr>
-                        <tr>
-                            <td class="claimHeader">Recommended length of stay</td>
-                            <td id="timehorizon"></td>
-                        </tr>
-                        <tr>
-                            <td class="claimHeader">Inception Date</td>
-                            <td id="inception"></td>
-                        </tr>
-                        <tr>
-                            <td class="claimHeader">Management Fee</td>
-                            <td id="managementfee"></td>
-                        </tr>
-                        <tr>
-                            <td class="claimHeader">Entry Fee Range</td>
-                            <td id="salesload"></td>
-                        </tr>
-                        <tr>
-                            <td class="claimHeader">Holding Period</td>
-                            <td id="holdingperiod"></td>
-                        </tr>
-                        <tr>
-                            <td class="claimHeader">Early Redemption Fee</td>
-                            <td id="exitfee"></td>
-                        </tr>
-                    </table>
-                </div>
-                <!-- HIGHSTOCKS -->
-                <div class="container mt-3 mb-3">
-                  <div id="navChart" style="height: 400px; min-width: 310px"></div>
-                </div>
-                <!-- HIGHSTOCKS -->
+      <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-12">
+          <div class="pl-4 pr-4">
+            <h3
+              class="claimHeader text-center font-weight-bolder"
+              id="fundtitle"
+              data-aos="fade-up"
+            ></h3>
+            <br />
+            <p class="text-center">
+              <img id="imageurl" class="detailimg rounded" data-aos="fade-up" />
+            </p>
+            <br />
+            <div class="d-flex" data-aos="fade-up">
+              <p class="claimHeader">Price Per Share:</p>
+              &nbsp;&nbsp;
+              <p class="claimHeader" id="navps"></p>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <br />
-                <div class="container" data-aos="fade-up">
-                    <h3 class="claimHeader text-center">Interested to invest?</h3>
-                    <button class="btn rfbtn btn-block btn-lg text-white mt-3" data-toggle="modal" data-target="#inquireform">
+            <div class="d-flex" data-aos="fade-up">
+              <p class="claimHeader">Year-to-Date (YTD):</p>
+              &nbsp;&nbsp;
+              <p class="font-weight-bold claimHeader" id="ytdtop"></p>
+            </div>
+            <br />
+            <div class="" data-aos="fade-up">
+              <h5 class="claimHeader ">Fund Introduction</h5>
+              <hr />
+              <div id="introduction" class="text-justify"></div>
+            </div>
+            <br />
+            <div data-aos="fade-up">
+              <h5 class="claimHeader ">Fund Description</h5>
+              <hr />
+              <p id="description" class="text-justify"></p>
+            </div>
+            <br />
+            <div data-aos="fade-up">
+              <h5 class="claimHeader ">Fund Suitability</h5>
+              <hr />
+              <p>This fund is for you if:</p>
+              <ul>
+                <li id="ffy1"></li>
+                <li id="ffy2" class="mt-2"></li>
+                <li id="ffy3" class="mt-2"></li>
+              </ul>
+            </div>
+            <br />
+            <a
+              href
+              class=".text-info font-italic font-underline"
+              data-toggle="modal"
+              data-target="#inquireform"
+              data-aos="fade-up"
+            >
+              <p data-aos="fade-up"><u>Inquire more here...</u></p>
+            </a>
+          </div>
+          <br />
+          <div class="container" data-aos="fade-up">
+            <h5 class="claimHeader">Fund Details</h5>
+            <br />
+            <table class="table table-hover">
+              <tr>
+                <td class="claimHeader" class="claimHeader">
+                  Mutual Fund Type
+                </td>
+                <td id="type"></td>
+              </tr>
+              <tr>
+                <td class="claimHeader">Fund Manager</td>
+                <td id="fundmanagername"></td>
+              </tr>
+              <tr>
+                <td class="claimHeader">Year-to-Date Return</td>
+                <td id="ytd"></td>
+              </tr>
+              <tr>
+                <td class="claimHeader">Risk Profile</td>
+                <td id="riskprofile"></td>
+              </tr>
+              <tr>
+                <td class="claimHeader">Currency</td>
+                <td id="currency"></td>
+              </tr>
+              <tr>
+                <td class="claimHeader">Minimum Initial Investment</td>
+                <td id="initial"></td>
+              </tr>
+              <tr>
+                <td class="claimHeader">Minimum Additional Investment</td>
+                <td id="additional"></td>
+              </tr>
+              <tr>
+                <td class="claimHeader">Recommended length of stay</td>
+                <td id="timehorizon"></td>
+              </tr>
+              <tr>
+                <td class="claimHeader">Inception Date</td>
+                <td id="inception"></td>
+              </tr>
+              <tr>
+                <td class="claimHeader">Management Fee</td>
+                <td id="managementfee"></td>
+              </tr>
+              <tr>
+                <td class="claimHeader">Entry Fee Range</td>
+                <td id="salesload"></td>
+              </tr>
+              <tr>
+                <td class="claimHeader">Holding Period</td>
+                <td id="holdingperiod"></td>
+              </tr>
+              <tr>
+                <td class="claimHeader">Early Redemption Fee</td>
+                <td id="exitfee"></td>
+              </tr>
+            </table>
+          </div>
+          <br />
+          <!-- HIGHSTOCKS -->
+          <div class="container mt-3 mb-3">
+            <div id="navChart" style="height: 400px; min-width: 310px"></div>
+          </div>
+          <!-- HIGHSTOCKS -->
+          <br />
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <br />
+          <div class="container" data-aos="fade-up">
+            <h3 class="claimHeader text-center">Interested to invest?</h3>
+            <button
+              class="btn rfbtn btn-block btn-lg text-white mt-3"
+              data-toggle="modal"
+              data-target="#inquireform"
+            >
               Inquire now!
             </button>
+          </div>
+
+          <div class="modal fade" id="inquireform" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header d-flex align-items-center">
+                  <h5 class="text-left claimHeader">Fill out to know more!</h5>
+                  <h5
+                    class="text-secondary font-weight-bold text-right ml-auto p-2"
+                    data-dismiss="modal"
+                  >
+                    X
+                  </h5>
                 </div>
+                <div class="modal-body">
+                  <div role="document">
+                    <form
+                      action="https://rampver.com/mfinquiryform2/#wpcf7-f11985-o1"
+                      method="post"
+                      id="formstring"
+                    >
+                      <div style="display: none;">
+                        <input type="hidden" name="_wpcf7" value="11985" />
+                        <input
+                          type="hidden"
+                          name="_wpcf7_version"
+                          value="5.1.4"
+                        />
+                        <input
+                          type="hidden"
+                          name="_wpcf7_locale"
+                          value="en_US"
+                        />
+                        <input
+                          type="hidden"
+                          name="_wpcf7_unit_tag"
+                          value="wpcf7-f11985-o1"
+                        />
+                        <input
+                          type="hidden"
+                          name="_wpcf7_container_post"
+                          value="0"
+                        />
+                      </div>
+                      <input type="hidden" name="fundname" id="fundnamevalue" />
+                      <input type="hidden" name="prospectus" id="prospectus" />
+                      <input type="hidden" name="ffs" id="ffs" />
+                      <input type="hidden" name="initialamt" id="initialamt" />
+                      <input
+                        type="hidden"
+                        name="additionalamt"
+                        id="additionalamt"
+                      />
+                      <input type="hidden" name="urlGet" id="urlGet" />
+                      <input type="hidden" name="imgGet" id="imgGet" />
+                      <input
+                        type="hidden"
+                        name="suitability"
+                        id="suitability"
+                      />
+                      <input
+                        type="hidden"
+                        name="intro_email"
+                        id="intro_email"
+                      />
+                      <input type="hidden" name="reason1" id="reason1" />
+                      <input type="hidden" name="reason2" id="reason2" />
+                      <input type="hidden" name="reason3" id="reason3" />
 
-                <div class="modal fade" id="inquireform" role="dialog">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header d-flex align-items-center">
-                                <h5 class="text-left claimHeader">Fill out to know more!</h5>
-                                <h5 class="text-secondary font-weight-bold text-right ml-auto p-2" data-dismiss="modal">
-                                    X
-                                </h5>
-                            </div>
-                            <div class="modal-body">
-                                <div role="document">
-                                    <form action="https://rampver.com/mfinquiryform2/#wpcf7-f11985-o1" method="post" id="formstring">
-                                        <div style="display: none;">
-                                            <input type="hidden" name="_wpcf7" value="11985" />
-                                            <input type="hidden" name="_wpcf7_version" value="5.1.4" />
-                                            <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f11985-o1" />
-                                            <input type="hidden" name="_wpcf7_container_post" value="0" />
-                                        </div>
-                                        <input type="hidden" name="fundname" id="fundnamevalue" />
-                                        <input type="hidden" name="prospectus" id="prospectus" />
-                                        <input type="hidden" name="ffs" id="ffs" />
-                                        <input type="hidden" name="initialamt" id="initialamt" />
-                                        <input type="hidden" name="additionalamt" id="additionalamt" />
-                                        <input type="hidden" name="urlGet" id="urlGet" />
-                                        <input type="hidden" name="imgGet" id="imgGet" />
-                                        <input type="hidden" name="suitability" id="suitability" />
-                                        <input type="hidden" name="intro_email" id="intro_email" />
-                                        <input type="hidden" name="reason1" id="reason1" />
-                                        <input type="hidden" name="reason2" id="reason2" />
-                                        <input type="hidden" name="reason3" id="reason3" />
-                                       
-
-                                        <div class="form-group">
-                                            <label for="salutation" class="claimHeader">Salutation*</label
+                      <div class="form-group">
+                        <label for="salutation" class="claimHeader"
+                          >Salutation*</label
                         >
                         <select
                           class="form-control"
@@ -346,7 +421,11 @@
                         <label class="claimHeader" for="modeofcontact"
                           >What is your preferred mode of contact?
                         </label>
-                                            <select name="modeofcontact" id="modeofcontact" class="form-control">
+                        <select
+                          name="modeofcontact"
+                          id="modeofcontact"
+                          class="form-control"
+                        >
                           <option>-</option>
                           <option value="Email">Email</option>
                           <option value="SMS/Text Message"
@@ -360,13 +439,26 @@
                             >Personal Meeting</option
                           >
                         </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="claimHeader" for="question">Any questions for us?
+                      </div>
+                      <div class="form-group">
+                        <label class="claimHeader" for="question"
+                          >Any questions for us?
                         </label>
-                                            <br />
-                                            <textarea type="text" name="question" class="form-control" cols="30" rows="5" placeholder="Your Message" id="message" onkeyup="validatorMessage()"></textarea>
-                                            <small class="d-none text-danger font-italic" id="errMsgMessage">Invalid input.</small
+                        <br />
+                        <textarea
+                          type="text"
+                          name="question"
+                          class="form-control"
+                          cols="30"
+                          rows="5"
+                          placeholder="Your Message"
+                          id="message"
+                          onkeyup="validatorMessage()"
+                        ></textarea>
+                        <small
+                          class="d-none text-danger font-italic"
+                          id="errMsgMessage"
+                          >Invalid input.</small
                         >
                       </div>
                       <div class="form-check">
@@ -388,25 +480,35 @@
                           <a href="rampver.com/privacy">rampver.com/privacy</a>
                           for more info.
                         </small>
-                                        </div>
-                                        <p class="text-center mt-4 mb-4">
-                                            <input type="submit" id="trigger" value="I want to invest!" class="text-white btn rfbtn font-weight-bold btn-lg" />
-                                        </p>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                      </div>
+                      <p class="text-center mt-4 mb-4">
+                        <input
+                          type="submit"
+                          id="trigger"
+                          value="I want to invest!"
+                          class="text-white btn rfbtn font-weight-bold btn-lg"
+                        />
+                      </p>
+                    </form>
+                  </div>
                 </div>
-                <br />
-                <div class="container" data-aos="fade-up">
-                    <br />
-                    <h4 class="claimHeader text-center ">Related Readings</h4>
-                    <br />
-                    <ul class="">
-                        <li class="" style="list-style-type:none">
-                            <h6 class="claimHeader">
-                                <a href="" id="prospectuslink" class="claimHeader" target="_blank">Mutual Fund Prospectus</a
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="container" data-aos="fade-up">
+            <br />
+            <h4 class="claimHeader text-center ">Related Readings</h4>
+            <br />
+            <ul class="">
+              <li class="" style="list-style-type:none">
+                <h6 class="claimHeader">
+                  <a
+                    href=""
+                    id="prospectuslink"
+                    class="claimHeader"
+                    target="_blank"
+                    >Mutual Fund Prospectus</a
                   >
                 </h6>
               </li>
@@ -427,16 +529,22 @@
               <li class="" style="list-style-type:none">
                 <h6 class="claimHeader">
                   <a id="forms" class="claimHeader">Forms and Requirements</a>
-                            </h6>
-                        </li>
-                        <li class="" style="list-style-type:none">
-                            <h6 class="claimHeader">
-                                <a id="funding" class="claimHeader">Investing Guidelines</a>
-                            </h6>
-                        </li>
-                        <li class="" style="list-style-type:none">
-                            <h6 class="claimHeader">
-                                <a href id="soalink" class="claimHeader" data-toggle="modal" data-target="#soarequest">Statement of Account Request</a
+                </h6>
+              </li>
+              <li class="" style="list-style-type:none">
+                <h6 class="claimHeader">
+                  <a id="funding" class="claimHeader">Investing Guidelines</a>
+                </h6>
+              </li>
+              <li class="" style="list-style-type:none">
+                <h6 class="claimHeader">
+                  <a
+                    href
+                    id="soalink"
+                    class="claimHeader"
+                    data-toggle="modal"
+                    data-target="#soarequest"
+                    >Statement of Account Request</a
                   >
                 </h6>
               </li>
@@ -574,38 +682,58 @@
                           recommendations regarding investments, insurance,
                           healthcare, and personal finance from Rampver
                           Financials. Visit
-                          <a href="rampver.com/privacy">rampver.com/privacy</a> for more info.
-                                </small>
+                          <a href="rampver.com/privacy">rampver.com/privacy</a>
+                          for more info.
+                        </small>
+                      </div>
+                      <p class="text-center mt-4 mb-4">
+                        <input
+                          type="submit"
+                          value="Request for SOA"
+                          class="text-white btn rfbtn font-weight-bold"
+                        />
+                      </p>
+                    </form>
+                  </div>
                 </div>
-                <p class="text-center mt-4 mb-4">
-                    <input type="submit" value="Request for SOA" class="text-white btn rfbtn font-weight-bold" />
-                </p>
-                </form>
+              </div>
             </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    <!-- SOA Modal -->
+          </div>
+          <!-- SOA Modal -->
 
-    <br />
-    <!-- social share start -->
-    <div class="container" data-aos="fade-up">
-        <h4 class="claimHeader text-center">Share this to a friend!</h4>
-        <!-- Go to www.addthis.com/dashboard to customize your tools -->
-        <div class="addthis_inline_share_toolbox mt-3"></div>
-    </div>
-    <!-- social share end -->
+          <br />
+          <!-- social share start -->
+          <div class="container" data-aos="fade-up">
+            <h4 class="claimHeader text-center">Share this to a friend!</h4>
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <div class="addthis_inline_share_toolbox mt-3"></div>
+          </div>
+          <!-- social share end -->
 
-    <br />
-    <!-- Select more funds -->
-    <div class="dropdown mt-2" data-aos="fade-up">
-        <label class="claimHeader">🔎 Browse other Mutual Funds: </label>
-        <button class="btn btn-block border dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              -Choose Funds-
+          <br />
+          <!-- Select more funds -->
+          <!-- dropdown -->
+
+          <div class="dropdown mt-4">
+            <label class="claimHeader">🔎 Browse Mutual Funds: </label>
+            <button
+              class="btn btn-block border dropdown-toggle text-left"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Soldivo Funds (SOLDIVO)
             </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="./recommended.html">✔️ Rampver's Recommended Funds</a
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="./recommended.html"
+                >✔️ Rampver's Recommended Funds</a
+              >
+              <a class="dropdown-item" href="./index.html">All Mutual Funds</a>
+              <hr />
+              <small class="dropdown-item text-secondary font-italic"
+                >By Investor Risk Profile</small
               >
               <a class="dropdown-item" href="./aggressive.html"
                 >For Aggressive Investor (Equity Funds)</a
@@ -616,9 +744,11 @@
               <a class="dropdown-item" href="./conservative.html"
                 >For Conservative Investor (Bond Funds)</a
               >
-              <a class="dropdown-item" href="./soldivo.html"
-                >Soldivo Funds (SOLDIVO)</a
+              <hr />
+              <small class="dropdown-item text-secondary font-italic"
+                >By Investment House</small
               >
+              <a class="dropdown-item" href="#">Soldivo Funds (SOLDIVO)</a>
               <a class="dropdown-item" href="./atram.html"
                 >ATR Asset Management (ATRAM)</a
               >
@@ -637,11 +767,9 @@
               <a class="dropdown-item" href="./bimi.html"
                 >BPI Investment Management (BIMI)</a
               >
-              <a class="dropdown-item" href="./usdollar.html"
-                >Dollar Funds (Dollar Funds)</a
-              >
             </div>
           </div>
+          <!-- dropdown -->
           <!-- Select more funds -->
           <br />
         </div>
@@ -695,19 +823,22 @@
               <p class="goldHeader mb-0">About Us</p>
               <li class="list-unstyled">
                 <small
-                  ><a href="" class="text-secondary">Why Rampver?</a></small>
-            </li>
-            <li class="list-unstyled">
-                <small><a href="" class="text-secondary"
+                  ><a href="" class="text-secondary">Why Rampver?</a></small
+                >
+              </li>
+              <li class="list-unstyled">
+                <small
+                  ><a href="" class="text-secondary"
                     >Vision and Mission</a
                   ></small
                 >
               </li>
               <li class="list-unstyled">
                 <small><a href="" class="text-secondary">History</a></small>
-            </li>
-            <li class="list-unstyled">
-                <small><a href="" class="text-secondary">Management Team</a></small
+              </li>
+              <li class="list-unstyled">
+                <small
+                  ><a href="" class="text-secondary">Management Team</a></small
                 >
               </li>
             </ul>
@@ -736,9 +867,10 @@
               </li>
               <li class="list-unstyled">
                 <small><a href="" class="text-secondary">Healthcare</a></small>
-            </li>
-            <li class="list-unstyled">
-                <small><a href="" class="text-secondary">Stock Trading</a></small
+              </li>
+              <li class="list-unstyled">
+                <small
+                  ><a href="" class="text-secondary">Stock Trading</a></small
                 >
               </li>
             </ul>
@@ -750,34 +882,35 @@
               <h6 class="goldHeader mb-0">Connect</h6>
               <li class="list-unstyled">
                 <small><a href="" class="text-secondary">Facebook</a></small>
-            </li>
-            <li class="list-unstyled">
+              </li>
+              <li class="list-unstyled">
                 <small><a href="" class="text-secondary">Youtube</a></small>
-            </li>
-            <li class="list-unstyled">
+              </li>
+              <li class="list-unstyled">
                 <small><a href="" class="text-secondary">Instagram</a></small>
-            </li>
-            <li class="list-unstyled">
+              </li>
+              <li class="list-unstyled">
                 <small><a href="" class="text-secondary">Spotify</a></small>
-            </li>
-            <li class="list-unstyled">
+              </li>
+              <li class="list-unstyled">
                 <small><a href="" class="text-secondary">Medium</a></small>
-            </li>
+              </li>
             </ul>
-        </div>
-        <!-- connect -->
-        <!-- bulletin -->
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-2" data-aos="fade-up">
+          </div>
+          <!-- connect -->
+          <!-- bulletin -->
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-2" data-aos="fade-up">
             <ul>
-                <h6 class="goldHeader mb-0">Bulletin</h6>
-                <li class="list-unstyled">
-                    <small><a href="" class="text-secondary">Promos</a></small>
-                </li>
-                <li class="list-unstyled">
-                    <small><a href="" class="text-secondary">Events</a></small>
-                </li>
-                <li class="list-unstyled">
-                    <small><a href="" class="text-secondary"
+              <h6 class="goldHeader mb-0">Bulletin</h6>
+              <li class="list-unstyled">
+                <small><a href="" class="text-secondary">Promos</a></small>
+              </li>
+              <li class="list-unstyled">
+                <small><a href="" class="text-secondary">Events</a></small>
+              </li>
+              <li class="list-unstyled">
+                <small
+                  ><a href="" class="text-secondary"
                     >Terms and Conditions</a
                   ></small
                 >
@@ -865,6 +998,8 @@
     <script src="https://code.highcharts.com/stock/highstock.js"></script>
     <script src="https://code.highcharts.com/stock/modules/data.js"></script>
     <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
     <!-- HIGHSTOCKS -->
 
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
