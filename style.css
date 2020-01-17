@@ -65,6 +65,9 @@ html, body {
 .highcharts-title, .highcharts-range-selector, .highcharts-range-selector-group, .highcharts-input-group, .highcharts-xaxis-labels, .highcharts-yaxis-labels {
   font-family: "GoogleSans-Regular", sans-serif !important; }
 
+.highcharts-a11y-proxy-button {
+  color: #256141; }
+
 .goldHeader {
   color: #ca9732;
   font-weight: bold; }

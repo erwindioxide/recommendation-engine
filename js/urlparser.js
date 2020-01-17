@@ -124,10 +124,16 @@ function dataFill(json) {
             googleSpreadsheetWorksheet: eval(renderData + '.navchart')
         },
         title: {
-            text: 'NAVPS History'
+            text: 'NAVPS History',
+            style: {
+                color: '#256141',
+            }
+
         },
         xAxis: {
-            max: +new Date()
+            type: 'datetime',
+            max: +new Date(),
+            ceiling: +new Date()
         }
     });
     // Highstocks
