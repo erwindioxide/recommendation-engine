@@ -72,6 +72,22 @@ html, body {
   color: #ca9732;
   font-weight: bold; }
 
+#sticky, .sticky {
+  position: fixed;
+  right: 15px;
+  top: 415px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 24px;
+  z-index: 1;
+  cursor: pointer;
+  box-shadow: 0 8px 6px -6px #3c3c3c; }
+
+#sticky:hover, .sticky:hover {
+  transform: scale(1.1); }
+
+#sticky:active, .sticky:active {
+  transform: scale(1.1); }
+
 footer {
   background-color: #124735;
   height: 50px; }
