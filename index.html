@@ -5,10 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#256141">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" src="./style.css" href="./style.css">
     <link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20">
-    <title>Mutual Funds List</title>
+    <title>List | All Mutual Funds</title>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
     </script>
@@ -24,24 +26,20 @@
     <script id="item-template" type="text/x-handlebars-template">
         <div class="row mt-4 mutualfunds">
             {{#each this}}
-            <div class="col-lg-4 col-md-6">
-                <div class="card mb-3">
+            <div class="col-lg-4 col-md-6 mb-3">
+                <div class="card h-100">
                     <div class="text-center">
                         <img src="{{imageurl}}" alt="{{imageurl}}" class="previewimg" class="mt-3"></img>
                     </div>
-                    <h5 class="text-center mt-2 text-success claimHeader mt-3 mx-4">{{fundname}}</h5>
+                    <h5 class="text-center mt-2 text-success claimHeader mt-3">{{fundname}}</h5>
                     <div class="my-2 mx-3">
                         <small class="claimHeader">{{type}}</small>
-                        <br>
-                        <small class="claimHeader">{{fundmanagername}}</small>
                         <hr>
                         <small class="mt-2">🛡️ For {{riskprofile}}-type investors.</small>
                         <br>
-                        <small>🕒 Recommended time horizon is {{timehorizon}}.</small>
+                        <small>✔️ Min. initial investment is {{initial}}.</small>
                         <br>
-                        <small>✔️ Minimum initial investment is {{initial}}.</small>
-                        <br>
-                        <small>✔️ Minimum additional investment is {{additional}}.</small>
+                        <small>✔️ Min. additional investment is {{additional}}.</small>
                         <br>
                         <br>
                         <small class="claimHeader">📑 This fund is for you if:</small>
