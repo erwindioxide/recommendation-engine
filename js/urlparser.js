@@ -20,6 +20,7 @@ let api = 'https://v2-api.sheety.co/rampverfinancials/mfapi/' + code + '/' + id;
 // concat api selector
 let renderData = 'json.' + code;
 
+// assign api data to HTML IDs
 function dataFill(json) {
     document
         .querySelector('meta[property="og:title"]')
@@ -119,24 +120,77 @@ function dataFill(json) {
     });
 
     let chart = Highcharts.stockChart('navChart', {
-        data: {
-            googleSpreadsheetKey: '1ymjfcHNL645si4rWH5wlLg0oKVPKH7M4IxUwiPTDDQU',
-            googleSpreadsheetWorksheet: eval(renderData + '.navchart')
-        },
-        title: {
-            text: 'NAVPS History',
-            style: {
-                color: '#256141',
-            }
+            data: {
+                googleSpreadsheetKey: '1ymjfcHNL645si4rWH5wlLg0oKVPKH7M4IxUwiPTDDQU',
+                googleSpreadsheetWorksheet: eval(renderData + '.navchart')
+            },
+            title: {
+                text: 'NAVPS History',
+                style: {
+                    color: '#256141',
+                }
 
-        },
-        xAxis: {
-            type: 'datetime',
-            max: +new Date(),
-            ceiling: +new Date()
-        }
-    });
-    // Highstocks
+            },
+            xAxis: {
+                ordinal: true,
+                type: 'datetime',
+                max: +new Date(),
+                ceiling: +new Date(),
+                events: {
+                    setExtremes: +new Date(),
+                    afterSetExtremes: +new Date()
+                }
+            },
+            rangeSelector: {
+                buttons: [{
+                        type: 'month',
+                        count: 1,
+                        text: '1m'
+                    }, {
+                        type: 'month',
+                        count: 3,
+                        text: '3m'
+                    }, {
+                        type: 'year',
+                        count: 3,
+                        text: '3y'
+                    }, {
+                        type: 'year',
+                        count: 5,
+                        text: '5y'
+                    }, {
+                        type: 'year',
+                        count: 1,
+                        text: 'YOY'
+                    },
+                    {
+                        type: 'ytd',
+                        text: 'YTD',
+                        max: +new Date(),
+                        ceiling: +new Date(),
+                    },
+                    {
+                        type: 'all',
+                        text: 'All'
+                    }
+                ],
+                selected: 5,
+                inputPosition: {
+                    align: "left",
+                    x: 0,
+                    y: 0
+                },
+                buttonPosition: {
+                    align: "right",
+                    x: 0,
+                    y: 0
+                },
+                navigator: {
+                    enabled: false
+                }
+            }
+        })
+        // Highstocks
 }
 
 // fill data
