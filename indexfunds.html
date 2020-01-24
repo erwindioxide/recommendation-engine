@@ -4,27 +4,26 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="theme-color" content="#124735" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#256141" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link rel="stylesheet" src="./style.css" href="./style.css" />
     <link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20" />
-    <title>Rampver Financials Recommended Funds</title>
+    <title>Rampver Financials: Index Funds</title>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $.getJSON(
-                'https://v2-api.sheety.co/rampverfinancials/mfapi/recommended',
+                'https://v2-api.sheety.co/rampverfinancials/mfapi/index',
                 function(data) {
                     var template = Handlebars.compile($('#item-template').html());
-                    $('#recommended').html(template(data.recommended));
+                    $('#index').html(template(data.index));
                 }
             );
         });
     </script>
+    <!-- display searches start -->
     <script id="item-template" type="text/x-handlebars-template">
         <div class="row mt-4 mutualfunds">
             {{#each this}}
@@ -167,7 +166,7 @@
         <div class="dropdown mt-4" data-aos="fade-up">
             <label class="claimHeader">🔎 Browse Mutual Funds: </label>
             <button class="btn btn-block border dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          ✔️ Rampver's Recommended Funds
+          Index Funds
         </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="./index.html">✔️ Rampver's Recommended Funds</a
@@ -213,7 +212,7 @@
       </div>
       <!-- dropdown -->
 
-      <div id="recommended">
+      <div id="index">
         <div style="margin:auto">
           <br />
           <br />
@@ -235,6 +234,7 @@
     <footer>
       <p class="text-white text-center">Rampver Financials &copy; 2019</p>
     </footer>
+
     <script src="./js/tagIdentify.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

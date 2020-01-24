@@ -42,6 +42,9 @@ html, body {
 .fab {
   font-size: 200%; }
 
+.dropdown {
+  z-index: 3; }
+
 .indiv-tag {
   border-radius: 24px;
   font-size: 70%; }
@@ -111,46 +114,5 @@ footer {
     padding-top: 15px;
     margin-bottom: 0;
     color: #ffffff !important; }
-
-.mailtoui-modal-title {
-  color: #256141; }
-
-.mailtoui-email-address {
-  background-color: #ffffff;
-  font-weight: bold;
-  color: #256141; }
-
-.mailtoui-button-content:hover,
-.mailtoui-button-content:focus,
-.mailtoui-button-copy:hover,
-.mailtoui-button-copy:focus {
-  background-color: #256141;
-  color: #ffffff; }
-
-.mailtoui-button-content,
-.mailtoui-button-copy {
-  background-color: #ffffff;
-  color: #3c3c3c; }
-
-.mailtoui-button:focus .mailtoui-button-content {
-  background-color: #256141;
-  color: #ffffff; }
-
-.mailtoui-button-copy-clicked,
-.mailtoui-button-copy-clicked:hover,
-.mailtoui-button-copy-clicked:focus {
-  background-color: #256141;
-  color: #fff; }
-
-.mailtoui-modal-close:focus,
-.mailtoui-modal-close:hover {
-  color: #b74d48; }
-
-.swal-title {
-  color: #256141; }
-
-.swal-text {
-  margin-top: 1rem;
-  font-size: 25px; }
 
 /*# sourceMappingURL=style.css.map */

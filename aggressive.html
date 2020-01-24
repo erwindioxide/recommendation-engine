@@ -7,9 +7,8 @@
     <meta name="theme-color" content="#256141" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link rel="stylesheet" src="./style.css" href="./style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
-    <link rel="icon" href="../img/favicon.png" type="image/png" sizes="16x20" />
-    <title>Mutual Funds List</title>
+    <link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20" />
+    <title>Rampver Financials: Funds for Aggressive-type Investors</title>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -24,6 +23,7 @@
             );
         });
     </script>
+    <!-- display searches start -->
     <script id="item-template" type="text/x-handlebars-template">
         <div class="row mt-4 mutualfunds">
             {{#each this}}
@@ -38,7 +38,7 @@
                             <small class="claimHeader mt-1">{{type}}</small>
                             <div class="d-flex mb-2" id="tags">
                                 <small><a class="indiv-tag btn text-white px-2 py-1" href="./recommended.html">{{recommended}}</a></small>
-                                <small><a class="indiv-tag btn text-white px-2 py-1 ml-1" href="./index.html">{{index}}</a></small>
+                                <small><a class="indiv-tag btn text-white px-2 py-1 ml-1" href="./indexfunds.html">{{index}}</a></small>
                                 <small><a class="indiv-tag btn text-white px-2 py-1 ml-1" href="./dollar.html">{{dollar}}</a></small>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                                             <div>
                                                 <div class="d-flex mb-3" id="tagModal">
                                                     <small><a class="indiv-tag btn text-white px-2 py-1" href="./recommended.html">{{recommended}}</a></small>
-                                                    <small><a class="indiv-tag btn text-white px-2 py-1 ml-1" href="./index.html">{{index}}</a></small>
+                                                    <small><a class="indiv-tag btn text-white px-2 py-1 ml-1" href="./indexfunds.html">{{index}}</a></small>
                                                     <small><a class="indiv-tag btn text-white px-2 py-1 ml-1" href="./dollar.html">{{dollar}}</a></small>
                                                 </div>
                                                 <p class="claimHeader">{{type}}</p>
@@ -161,22 +161,34 @@
     </nav>
 
     <div class="container px-3 mutual funds">
-        <div class="dropdown mt-4">
+        <!-- dropdown -->
+
+        <div class="dropdown mt-4" data-aos="fade-up">
             <label class="claimHeader">🔎 Browse Mutual Funds: </label>
             <button class="btn btn-block border dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          For Aggressive Investor (Stock Funds)
+          For Aggressive Investor (Equity Funds)
         </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="./recommended.html">✔️ Rampver's Recommended Funds</a
           >
-          <a class="dropdown-item" href="./index.html">All Mutual Funds</a>
-                <a class="dropdown-item" href="#">For Aggressive Investor (Equity Funds)</a
+          <a class="dropdown-item" href="./all.html">All Mutual Funds</a>
+                <a class="dropdown-item" href="./indexfunds.html">Index Funds</a>
+                <a class="dropdown-item" href="./dollar.html">Dollar Funds</a>
+                <hr />
+                <small class="dropdown-item text-secondary font-italic">By Investor Risk Profile</small
+          >
+          <a class="dropdown-item" href="./aggressive.html"
+            >For Aggressive Investor (Equity Funds)</a
           >
           <a class="dropdown-item" href="./moderate.html"
             >For Moderate Investor (Balanced Funds)</a
           >
           <a class="dropdown-item" href="./conservative.html"
             >For Conservative Investor (Bond Funds)</a
+          >
+          <hr />
+          <small class="dropdown-item text-secondary font-italic"
+            >By Investment House</small
           >
           <a class="dropdown-item" href="./soldivo.html"
             >Soldivo Funds (SOLDIVO)</a
@@ -196,14 +208,9 @@
           <a class="dropdown-item" href="./pami.html"
             >Philam Asset Management (PAMI)</a
           >
-          <a class="dropdown-item" href="./bimi.html"
-            >BPI Investment Management (BIMI)</a
-          >
-          <a class="dropdown-item" href="./usdollar.html"
-            >Dollar Funds (Dollar Funds)</a
-          >
         </div>
       </div>
+      <!-- dropdown -->
 
       <div id="aggressive">
         <div style="margin:auto">
