@@ -61,6 +61,9 @@ html, body {
 .tag-dollar {
   background-color: #71ae4d; }
 
+.fundcards {
+  z-index: 5; }
+
 @media (min-width: 300px) {
   .detailimg, .previewimg {
     width: 100%;

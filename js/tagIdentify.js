@@ -15,4 +15,4 @@ setTimeout(function(colors) {
             element.innerHTML = 'Unknown';
         }
     });
-}, 3500);
+}, 2800);
