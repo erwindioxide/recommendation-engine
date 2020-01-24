@@ -1,27 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#124735">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" src="./style.css" href="./style.css">
-    <link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#124735" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" src="./style.css" href="./style.css" />
+    <link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20" />
     <title>List | All Mutual Funds</title>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
-    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $.getJSON('https://v2-api.sheety.co/rampverfinancials/mfapi/all', function(data) {
-                var template = Handlebars.compile($('#item-template').html())
-                $('#all').html(template(data.all))
-            })
-        })
+            $.getJSON(
+                'https://v2-api.sheety.co/rampverfinancials/mfapi/all',
+                function(data) {
+                    var template = Handlebars.compile($('#item-template').html());
+                    $('#all').html(template(data.all));
+                }
+            );
+        });
     </script>
     <script id="item-template" type="text/x-handlebars-template">
         <div class="row mt-4 mutualfunds">
@@ -29,11 +31,18 @@
             <div class="col-lg-4 col-md-6 mb-3">
                 <div class="card h-100">
                     <div class="text-center">
-                        <img src="{{imageurl}}" alt="{{imageurl}}" class="previewimg" class="mt-3"></img>
+                        <img src="{{imageurl}}" alt="{{imageurl}}" class="previewimg" class="mt-3">
                     </div>
-                    <h5 class="text-center mt-2 text-success claimHeader mt-3">{{fundname}}</h5>
-                    <div class="my-1 mx-3">
-                        <small class="claimHeader">{{type}}</small>
+                    <h5 class="text-center mb-2 claimHeader mt-3 mx-2">{{fundname}}</h5>
+                    <div class="my-1 mx-3 mt-2">
+                        <div class="d-flex justify-content-between" id="taglevel">
+                            <small class="claimHeader mt-1">{{type}}</small>
+                            <div class="d-flex mb-2" id="tags">
+                                <small><a class="indiv-tag btn text-white px-2 py-1" href="./recommended.html">{{recommended}}</a></small>
+                                <small><a class="indiv-tag btn text-white px-2 py-1 ml-1" href="./index.html">{{index}}</a></small>
+                                <small><a class="indiv-tag btn text-white px-2 py-1 ml-1" href="./dollar.html">{{dollar}}</a></small>
+                            </div>
+                        </div>
                         <div class="mt-2"></div>
                         <small class="mt-2">🛡️ For {{riskprofile}}-type investors.</small>
                         <br>
@@ -68,18 +77,18 @@
                                 <div class="modal-body">
                                     <div class="mb-3">
                                         <div class="text-center">
-                                            <img src="{{imageurl}}" class="mt-2 previewimg rounded"></img>
+                                            <img src="{{imageurl}}" class="mt-2 previewimg rounded">
                                         </div>
                                         <div class="my-2 mx-3">
                                             <br>
                                             <div>
+                                                <div class="d-flex mb-3" id="tagModal">
+                                                    <small><a class="indiv-tag btn text-white px-2 py-1" href="./recommended.html">{{recommended}}</a></small>
+                                                    <small><a class="indiv-tag btn text-white px-2 py-1 ml-1" href="./index.html">{{index}}</a></small>
+                                                    <small><a class="indiv-tag btn text-white px-2 py-1 ml-1" href="./dollar.html">{{dollar}}</a></small>
+                                                </div>
                                                 <p class="claimHeader">{{type}}</p>
                                                 <p class="claimHeader">{{fundmanagername}}</p>
-                                                <div class="d-flex">
-                                                    <small>NAVPS: {{navps}} </small> &nbsp;&nbsp;
-                                                    <small>|</small> &nbsp; &nbsp;
-                                                    <small>Year-to-Date (YTD): {{ytd}}</small>
-                                                </div>
                                                 <hr>
                                                 <small>🛡️ For {{riskprofile}}-type investors.</small>
                                                 <br>
@@ -133,16 +142,14 @@
 </head>
 
 <body>
-
-
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid d-flex">
             <div class="navbar-brand" href="#">
-                <img src="./img/rf-logo.png"></img>
+                <img src="./img/rf-logo.png" />
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto order-2">
@@ -158,53 +165,86 @@
         <div class="dropdown mt-4">
             <label class="claimHeader">🔎 Browse Mutual Funds: </label>
             <button class="btn btn-block border dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Mutual Funds
-            </button>
+          All Mutual Funds
+        </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="./recommended.html">✔️ Rampver's Recommended Funds</a>
-                <a class="dropdown-item" href="./aggressive.html">For Aggressive Investor (Equity Funds)</a>
-                <a class="dropdown-item" href="./moderate.html">For Moderate Investor (Balanced Funds)</a>
-                <a class="dropdown-item" href="./conservative.html">For Conservative Investor (Bond Funds)</a>
-                <a class="dropdown-item" href="./soldivo.html">Soldivo Funds (SOLDIVO)</a>
-                <a class="dropdown-item" href="./atram.html">ATR Asset Management (ATRAM)</a>
-                <a class="dropdown-item" href="./pemi.html">Philequity Management (PEMI)</a>
-                <a class="dropdown-item" href="./slamci.html">Sun Life Asset Management (SLAMCI)</a>
-                <a class="dropdown-item" href="./fami.html">First Metro Asset Management (FAMI)</a>
-                <a class="dropdown-item" href="./pami.html">Philam Asset Management (PAMI)</a>
-                <a class="dropdown-item" href="./bimi.html">BPI Investment Management (BIMI)</a>
-                <a class="dropdown-item" href="./usdollar.html">Dollar Funds (Dollar Funds)</a>
-            </div>
+                <a class="dropdown-item" href="./recommended.html">✔️ Rampver's Recommended Funds</a
+          >
+          <a class="dropdown-item" href="./aggressive.html"
+            >For Aggressive Investor (Equity Funds)</a
+          >
+          <a class="dropdown-item" href="./moderate.html"
+            >For Moderate Investor (Balanced Funds)</a
+          >
+          <a class="dropdown-item" href="./conservative.html"
+            >For Conservative Investor (Bond Funds)</a
+          >
+          <a class="dropdown-item" href="./soldivo.html"
+            >Soldivo Funds (SOLDIVO)</a
+          >
+          <a class="dropdown-item" href="./atram.html"
+            >ATR Asset Management (ATRAM)</a
+          >
+          <a class="dropdown-item" href="./pemi.html"
+            >Philequity Management (PEMI)</a
+          >
+          <a class="dropdown-item" href="./slamci.html"
+            >Sun Life Asset Management (SLAMCI)</a
+          >
+          <a class="dropdown-item" href="./fami.html"
+            >First Metro Asset Management (FAMI)</a
+          >
+          <a class="dropdown-item" href="./pami.html"
+            >Philam Asset Management (PAMI)</a
+          >
+          <a class="dropdown-item" href="./bimi.html"
+            >BPI Investment Management (BIMI)</a
+          >
+          <a class="dropdown-item" href="./usdollar.html"
+            >Dollar Funds (Dollar Funds)</a
+          >
         </div>
+      </div>
 
-        <div id="all">
-            <div style="margin:auto">
-                <br></br>
-                <br></br>
-                <h3 class="claimHeader text-center mt-2 mb-3">Please wait..</h3>
-                <p class="text-center">
-                    <img src="./img/preloader.gif" alt="" style="width: 200px;" class="pb-5 text-center"></img>
-                </p>
-                <br></br>
-                <br></br>
-            </div>
+      <div id="all">
+        <div style="margin:auto">
+          <br />
+          <br />
+          <h3 class="claimHeader text-center mt-2 mb-3">Please wait..</h3>
+          <p class="text-center">
+            <img
+              src="./img/preloader.gif"
+              alt=""
+              style="width: 200px;"
+              class="pb-5 text-center"
+            />
+          </p>
+          <br />
+          <br />
         </div>
-
+      </div>
     </div>
 
-
     <footer>
-        <p class="text-white text-center">Rampver Financials &copy; 2019</p>
+      <p class="text-white text-center">Rampver Financials &copy; 2019</p>
     </footer>
+    <script src="./js/tagIdentify.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+      AOS.init();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://kit.fontawesome.com/b2291eba76.js"></script>
-
+  </body>
 </html>
