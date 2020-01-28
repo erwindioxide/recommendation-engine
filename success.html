@@ -35,13 +35,23 @@
 
     <div class="container px-5">
         <br />
-        <h1 class="text-center py-1 mt-2 claimHeader">Success!</h1>
-        <p class="text-secondary text-center py-1 pb-1">
+        <h1 class="text-center py-1 mt-2 claimHeader" data-aos="fade-up">
+            Success!
+        </h1>
+        <p class="text-secondary text-center py-1 pb-1" data-aos="fade-up">
             Thank you for your response!
         </p>
 
+        <div class="text-center" class="mb-3">
+            <img src="./img/success.png" style="width: 150px" alt="" / data-aos="fade-up">
+        </div>
+
+        <p class="text-secondary font-italic text-center py-1 pb-1 mt-3" data-aos="fade-up">
+            This page will redirect to you to previous page...
+        </p>
+
         <p class="text-center">
-            <a href="https://facebook.com/rampverfinancials" class="btn rfbtn text-white btn-sm mt-3 font-weight-bold" target="_blank"><i
+            <a href="https://facebook.com/rampverfinancials" class="btn rfbtn text-white btn-sm mt-3 font-weight-bold" target="_blank" data-aos="fade-up"><i
             class="fab fa-facebook-f text-white mr-3"
             style="font-size: 100%"
           ></i
@@ -52,18 +62,11 @@
           href="https://youtube.com/c/rampverfinancials"
           class="btn rfbtn text-white btn-sm mt-3 font-weight-bold"
           target="_blank"
+          data-aos="fade-up"
           ><i class="fab fa-youtube text-white mr-1" style="font-size: 100%"></i
           >Subscribe on Youtube</a
         >
       </p>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <br />
       <br />
       <br />
@@ -72,10 +75,19 @@
     <br />
 
     <footer>
-      <p class="text-white text-center">Rampver Financials &copy; 2019</p>
+      <p class="text-white text-center">Rampver Financials &copy; 2020</p>
     </footer>
 
+    <script>
+      setTimeout(function() {
+        history.back();
+      }, 7500);
+    </script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="./js/main.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

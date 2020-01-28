@@ -115,6 +115,15 @@ html, body {
 #sticky:active, .sticky:active {
   transform: scale(1.1); }
 
+#trigger {
+  border: 1px solid #124735;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; }
+
+#trigger:hover {
+  transform: scale(0.8); }
+
 footer {
   background-color: #124735;
   height: 50px; }

@@ -100,7 +100,7 @@
               class="addthis_inline_share_toolbox_vxvg mt-4"
               data-aos="fade-up"
             ></div>
-            <br>
+            <br />
             <div class="d-flex" data-aos="fade-up">
               <p class="claimHeader">Price Per Share:</p>
               &nbsp;&nbsp;
@@ -506,14 +506,23 @@
                           for more info.
                         </small>
                       </div>
-                      <p class="text-center mt-4 mb-4">
+                      <div class="text-center mt-4 mb-4">
                         <input
                           type="submit"
                           id="trigger"
                           value="I want to invest!"
                           class="text-white btn rfbtn font-weight-bold btn-lg"
+                          onclick="submitDetails()"
                         />
-                      </p>
+                        <br />
+                        <img
+                          src="./img/pulse-load.gif"
+                          class="d-none"
+                          id="pulse-load"
+                          style="width: 12%"
+                          alt=""
+                        />
+                      </div>
                     </form>
                   </div>
                 </div>
@@ -1010,7 +1019,7 @@
     <!-- End Section -->
 
     <footer>
-      <p class="text-white text-center ">Rampver Financials &copy; 2019</p>
+      <p class="text-white text-center ">Rampver Financials &copy; 2020</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -1027,8 +1036,17 @@
     <script src="https://code.highcharts.com/stock/modules/data.js"></script>
     <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
     <!-- HIGHSTOCKS -->
+
+
+    <script>
+      function submitDetails() {
+        document.getElementById('pulse-load').classList.remove('d-none');
+        setTimeout(function submitDetails() {
+          document.getElementById('pulse-load').classList.add('d-none');
+        }, 10000);
+      }
+    </script>
 
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script
