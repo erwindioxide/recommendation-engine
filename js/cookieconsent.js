@@ -8,14 +8,14 @@ window.cookieconsent.initialise({
             background: '#e0e0e0'
         }
     },
-    revokable: true,
+    revokable: false,
     onStatusChange: function(status) {
         console.log(
             this.hasConsented() ? 'enable cookies' : 'disable cookies'
         );
     },
-    position: 'top-right',
-    theme: 'classic',
+    position: 'bottom-left',
+    theme: 'edgeless',
     domain: 'https://rampver.com',
     secure: true,
     content: {
