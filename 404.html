@@ -36,18 +36,18 @@
     <div class="container px-5">
         <br />
         <h1 class="text-center py-1 mt-2 claimHeader" data-aos="fade-up">
-            Success!
+            Ooops!
         </h1>
         <p class="text-secondary text-center py-1 pb-1" data-aos="fade-up">
-            Thank you for your response!
+            Page not Found!
         </p>
 
         <div class="text-center" class="mb-3">
-            <img src="./img/success.png" style="width: 150px" alt="" / data-aos="fade-up">
+            <h1 class="claimHeader display-2">404!</h1>
         </div>
 
         <p class="text-secondary font-italic text-center py-1 pb-1 mt-3" data-aos="fade-up">
-            This page will redirect to you to previous page...
+            This page will redirect to you to homepage...
         </p>
 
         <p class="text-center">
@@ -67,6 +67,8 @@
           >Subscribe on Youtube</a
         >
       </p>
+      <br />
+      <br />
       <br />
       <br />
       <br />
@@ -112,8 +114,8 @@
 
     <script>
       setTimeout(function() {
-        history.back();
-      }, 7500);
+        window.location.href = './';
+      }, 6000);
     </script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
