@@ -9,16 +9,22 @@ function getUrlVars() {
     ) {
         vars[key] = value;
     });
-    return vars;
+    if (vars == {}) {
+        window.location.href = "./404.html"
+    } else {
+        return vars;
+    }
 }
+
 
 let code = getUrlVars()['fundmanagercode'].toLowerCase();
 let id = getUrlVars()['id'];
 let app = document.querySelector('.app');
 let api = 'https://v2-api.sheety.co/rampverfinancials/mfapi/' + code + '/' + id;
 
-// concat api selector
 let renderData = 'json.' + code;
+
+// concat api selector
 
 // assign api data to HTML IDs
 function dataFill(json) {
