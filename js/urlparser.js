@@ -10,12 +10,11 @@ function getUrlVars() {
         vars[key] = value;
     });
     if (vars == {}) {
-        window.location.href = "./404.html"
+        window.location.href = './404.html';
     } else {
         return vars;
     }
 }
-
 
 let code = getUrlVars()['fundmanagercode'].toLowerCase();
 let id = getUrlVars()['id'];
@@ -126,77 +125,80 @@ function dataFill(json) {
     });
 
     let chart = Highcharts.stockChart('navChart', {
-            data: {
-                googleSpreadsheetKey: '1ymjfcHNL645si4rWH5wlLg0oKVPKH7M4IxUwiPTDDQU',
-                googleSpreadsheetWorksheet: eval(renderData + '.navchart')
-            },
-            title: {
-                text: 'NAVPS History',
-                style: {
-                    color: '#256141',
-                }
-
-            },
-            xAxis: {
-                ordinal: true,
-                type: 'datetime',
-                max: +new Date(),
-                ceiling: +new Date(),
-                events: {
-                    setExtremes: +new Date(),
-                    afterSetExtremes: +new Date()
-                }
-            },
-            rangeSelector: {
-                buttons: [{
-                        type: 'month',
-                        count: 1,
-                        text: '1m'
-                    }, {
-                        type: 'month',
-                        count: 3,
-                        text: '3m'
-                    }, {
-                        type: 'year',
-                        count: 3,
-                        text: '3y'
-                    }, {
-                        type: 'year',
-                        count: 5,
-                        text: '5y'
-                    }, {
-                        type: 'year',
-                        count: 1,
-                        text: 'YOY'
-                    },
-                    {
-                        type: 'ytd',
-                        text: 'YTD',
-                        max: +new Date(),
-                        ceiling: +new Date(),
-                    },
-                    {
-                        type: 'all',
-                        text: 'All'
-                    }
-                ],
-                selected: 5,
-                inputPosition: {
-                    align: "left",
-                    x: 0,
-                    y: 0
-                },
-                buttonPosition: {
-                    align: "right",
-                    x: 0,
-                    y: 0
-                },
-                navigator: {
-                    enabled: false
-                }
+        data: {
+            googleSpreadsheetKey: '1ymjfcHNL645si4rWH5wlLg0oKVPKH7M4IxUwiPTDDQU',
+            googleSpreadsheetWorksheet: eval(renderData + '.navchart')
+        },
+        title: {
+            text: 'NAVPS History',
+            style: {
+                color: '#256141'
             }
-        })
-        // Highstocks
+        },
+        xAxis: {
+            ordinal: true,
+            type: 'datetime',
+            max: +new Date(),
+            ceiling: +new Date(),
+            events: {
+                setExtremes: +new Date(),
+                afterSetExtremes: +new Date()
+            }
+        },
+        rangeSelector: {
+            buttons: [{
+                    type: 'month',
+                    count: 1,
+                    text: '1m'
+                },
+                {
+                    type: 'month',
+                    count: 3,
+                    text: '3m'
+                },
+                {
+                    type: 'year',
+                    count: 3,
+                    text: '3y'
+                },
+                {
+                    type: 'year',
+                    count: 5,
+                    text: '5y'
+                },
+                {
+                    type: 'year',
+                    count: 1,
+                    text: 'YOY'
+                },
+                {
+                    type: 'ytd',
+                    text: 'YTD',
+                    max: +new Date(),
+                    ceiling: +new Date()
+                },
+                {
+                    type: 'all',
+                    text: 'All'
+                }
+            ],
+            selected: 5,
+            inputPosition: {
+                align: 'left',
+                x: 0,
+                y: 0
+            },
+            buttonPosition: {
+                align: 'right',
+                x: 0,
+                y: 0
+            },
+            navigator: {
+                enabled: false
+            }
+        }
+    });
+    // Highstocks
 }
 
 // fill data

@@ -10,9 +10,7 @@ window.cookieconsent.initialise({
     },
     revokable: false,
     onStatusChange: function(status) {
-        console.log(
-            this.hasConsented() ? 'enable cookies' : 'disable cookies'
-        );
+        console.log(this.hasConsented() ? 'enable cookies' : 'disable cookies');
     },
     position: 'bottom-left',
     theme: 'edgeless',

@@ -1,105 +1,157 @@
 @font-face {
-  font-family: "GoogleSans-Regular";
-  src: url("fonts/GoogleSans-Regular.woff") format("woff"); }
-html, body {
+  font-family: 'GoogleSans-Regular';
+  src: url('fonts/GoogleSans-Regular.woff') format('woff');
+}
+
+html,
+body {
   padding: 0 !important;
   margin: 0 !important;
   width: 100% !important;
   box-sizing: border-box;
-  font-family: "GoogleSans-Regular", sans-serif;
-  scroll-behavior: smooth; }
+  font-family: 'GoogleSans-Regular', sans-serif;
+  scroll-behavior: smooth;
+}
 
 .navbar {
   background: #124735;
   align-content: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 .navbar-brand p {
-  color: #ffffff; }
+  color: #ffffff;
+}
 
 .navbar-brand img {
-  width: 87px; }
+  width: 87px;
+}
 
 .navbar-nav ul li a {
   color: #ffffff;
-  font-size: 80%; }
+  font-size: 80%;
+}
 
 .nav-link {
   color: #ffffff;
-  font-size: 90%; }
+  font-size: 90%;
+}
 
 .navbar-toggler {
-  border: 0 !important; }
+  border: 0 !important;
+}
 
 .rfbtn {
   background-color: #256141;
-  border: 0; }
+  border: 0;
+}
 
 .claimHeader {
   color: #256141 !important;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .fab {
-  font-size: 200%; }
+  font-size: 200%;
+}
 
 .dropdown {
-  z-index: 3; }
+  z-index: 3;
+}
 
 .indiv-tag {
   border-radius: 24px;
-  font-size: 70%; }
+  font-size: 70%;
+}
 
 .tag-level {
-  align-items: center; }
+  align-items: center;
+}
 
 .tag-recommended {
-  background-color: #4e77a2; }
+  background-color: #4e77a2;
+}
 
 .tag-index {
-  background-color: #b57250; }
+  background-color: #b57250;
+}
 
 .tag-dollar {
-  background-color: #71ae4d; }
+  background-color: #71ae4d;
+}
 
 .fundcards {
-  z-index: 5; }
+  z-index: 5;
+}
 
 #cookieconsent {
-  font-family: "GoogleSans-Regular", sans-serif !important;
+  font-family: 'GoogleSans-Regular', sans-serif !important;
   size: 50%;
-  margin-right: 0 !important; }
+  margin-right: 0 !important;
+}
 
 @media (min-width: 300px) {
-  .detailimg, .previewimg {
+
+  .detailimg,
+  .previewimg {
     width: 100%;
-    align-self: auto; } }
+    align-self: auto;
+  }
+}
+
 @media (min-width: 520px) {
-  .detailimg, .previewimg {
-    width: 100%; } }
+
+  .detailimg,
+  .previewimg {
+    width: 100%;
+  }
+}
+
 @media (min-width: 720px) {
-  .detailimg, .previewimg {
-    width: 100%; } }
+
+  .detailimg,
+  .previewimg {
+    width: 100%;
+  }
+}
+
 @media (min-width: 900px) {
-  .detailimg, .previewimg {
-    width: 100%; } }
+
+  .detailimg,
+  .previewimg {
+    width: 100%;
+  }
+}
+
 .highcharts-credits {
-  display: none; }
+  display: none;
+}
 
 .highcharts-title {
   font-weight: bolder;
-  color: #256141 !important; }
+  color: #256141 !important;
+}
 
-.highcharts-title, .highcharts-range-selector, .highcharts-range-selector-group, .highcharts-input-group, .highcharts-xaxis-labels, .highcharts-yaxis-labels {
-  font-family: "GoogleSans-Regular", sans-serif !important; }
+.highcharts-title,
+.highcharts-range-selector,
+.highcharts-range-selector-group,
+.highcharts-input-group,
+.highcharts-xaxis-labels,
+.highcharts-yaxis-labels {
+  font-family: 'GoogleSans-Regular', sans-serif !important;
+}
 
 .highcharts-a11y-proxy-button {
-  color: #256141; }
+  color: #256141;
+}
 
 .goldHeader {
   color: #ca9732;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
-#sticky, .sticky {
+#sticky,
+.sticky {
   position: fixed;
   right: 15px;
   top: 85%;
@@ -107,29 +159,39 @@ html, body {
   border-radius: 24px;
   z-index: 1;
   cursor: pointer;
-  box-shadow: 0 8px 8px -6px #3c3c3c; }
+  box-shadow: 0 8px 8px -6px #3c3c3c;
+}
 
-#sticky:hover, .sticky:hover {
-  transform: scale(1.1); }
+#sticky:hover,
+.sticky:hover {
+  transform: scale(1.1);
+}
 
-#sticky:active, .sticky:active {
-  transform: scale(1.1); }
+#sticky:active,
+.sticky:active {
+  transform: scale(1.1);
+}
 
 #trigger {
   border: 1px solid #124735;
   border-radius: 4px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out; }
+  transition: all 0.2s ease-in-out;
+}
 
 #trigger:hover {
-  transform: scale(0.8); }
+  transform: scale(0.8);
+}
 
 footer {
   background-color: #124735;
-  height: 50px; }
-  footer p {
-    padding-top: 15px;
-    margin-bottom: 0;
-    color: #ffffff !important; }
+  height: 50px;
+}
+
+footer p {
+  padding-top: 15px;
+  margin-bottom: 0;
+  color: #ffffff !important;
+}
 
 /*# sourceMappingURL=style.css.map */
