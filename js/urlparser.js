@@ -125,6 +125,9 @@ function dataFill(json) {
     });
 
     let chart = Highcharts.stockChart('navChart', {
+        navigator: {
+            enabled: false
+        },
         data: {
             googleSpreadsheetKey: '1ymjfcHNL645si4rWH5wlLg0oKVPKH7M4IxUwiPTDDQU',
             googleSpreadsheetWorksheet: eval(renderData + '.navchart')
@@ -192,9 +195,6 @@ function dataFill(json) {
                 align: 'right',
                 x: 0,
                 y: 0
-            },
-            navigator: {
-                enabled: false
             }
         }
     });
