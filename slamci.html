@@ -1,197 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta name="theme-color" content="#124735" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="title" content="Rampver Financials: Rampver Financials: Sun Life Asset Management Company, Inc. (SLAMCI) Mutual Funds" />
-    <meta name="description" content=" Sun Life Financial Philippines offer a broad range of insurance,
+    <meta
+      name="title"
+      content="Rampver Financials: Rampver Financials: Sun Life Asset Management Company, Inc. (SLAMCI) Mutual Funds"
+    />
+    <meta
+      name="description"
+      content=" Sun Life Financial Philippines offer a broad range of insurance,
     retirement and investment products and services to meet the diverse
     needs of both individual and corporate clients around the world. Sun
     Life Financial in the Philippines offers a diverse range of insurance,
     wealth, and asset management solutions to help every Filipino in their
-    journey towards a brighter life." />
-    <meta property="og:title" content="Rampver Financials | Sun Life Mutual Funds" />
-    <meta property="og:description" content="Find the right Sun Life Mutual Fund for you, for as low as ₱1,000!" />
+    journey towards a brighter life."
+    />
+    <meta
+      property="og:title"
+      content="Rampver Financials | Sun Life Mutual Funds"
+    />
+    <meta
+      property="og:description"
+      content="Find the right Sun Life Mutual Fund for you, for as low as ₱1,000!"
+    />
     <meta property="og:url" content="" />
     <meta property="og:image" content="https://i.ibb.co/V90XTrz/SLAMCI.png" />
     <meta property="og:site_name" content="Rampver Financials" />
     <meta property="og:type" content="article" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" src="./style.css" href="./style.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20" />
-      <title>
-        Rampver Financials: Sun Life Asset Management Company, Inc. (SLAMCI) Mutual Funds
+    <title>
+      Rampver Financials: Sun Life Asset Management Company, Inc. (SLAMCI)
+      Mutual Funds
     </title>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
     <script type="text/javascript">
-        $(document).ready(function() {
-            $.getJSON(
-                'https://v2-api.sheety.co/rampverfinancials/mfapi/slamci',
-                function(data) {
-                    var template = Handlebars.compile($('#item-template').html());
-                    $('#slamci').html(template(data.slamci));
-                }
-            );
-        });
+      $(document).ready(function() {
+        $.getJSON(
+          'https://v2-api.sheety.co/rampverfinancials/mfapi/slamci',
+          function(data) {
+            var template = Handlebars.compile($('#item-template').html());
+            $('#slamci').html(template(data.slamci));
+          }
+        );
+      });
     </script>
     <script id="item-template" type="text/x-handlebars-template">
-        <div class="row mt-4 mutualfunds">
-            {{#each this}}
-            <div class="col-lg-4 col-md-6 mb-3">
-                <div class="card h-100">
-                    <div class="text-center">
-                        <img src="{{imageurl}}" alt="{{imageurl}}" class="previewimg" class="mt-3">
-                    </div>
-                    <h5 class="text-center mb-2 claimHeader mt-3 mx-2"><a href="./fund-details.html?fundmanagercode={{fundmanagercode}}&id={{id}}" class="claimHeader">{{fundname}}</a></h5>
-                    <div class="my-1 mx-3">
-                        <small class="claimHeader"><a href="" class="claimHeader typelink">{{type}}</a>
-                  </small>
-                        <div class="mt-2"></div>
-                        <small class="mt-2">🛡️ For {{riskprofile}}-type investors.</small>
-                        <br>
-                        <small>✔️ Min. initial investment is {{initial}}.</small>
-                        <br>
-                        <small>✔️ Min. additional investment is {{additional}}.</small>
-                        <br>
-                        <div class="mt-2"></div>
-                        <small class="claimHeader mt-3">This fund is for you if:</small>
-                        <br>
-                        <p class="text-justify mt-2">
-                            <small style="text-align: justify">{{ffy1}}</small>
-                        </p>
-                        <div class="text-center mb-3 mt-3">
-                            <button class="btn px-4 font-weight-bold claimHeader border" data-toggle="modal" data-target="#viewMore{{fundmanagercode}}{{id}}">Preview</button>
-                            <a class="ml-4 btn px-4 text-white font-weight-bold rfbtn" href="./fund-details.html?fundmanagercode={{fundmanagercode}}&id={{id}}">See More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="row mt-4 mutualfunds">
+          {{#each this}}
+          <div class="col-lg-4 col-md-6 mb-3">
+              <div class="card h-100">
+                  <div class="text-center">
+                      <img src="{{imageurl}}" alt="{{imageurl}}" class="previewimg" class="mt-3">
+                  </div>
+                  <h5 class="text-center mb-2 claimHeader mt-3 mx-2"><a href="./fund-details.html?fundmanagercode={{fundmanagercode}}&id={{id}}" class="claimHeader">{{fundname}}</a></h5>
+                  <div class="my-1 mx-3">
+                      <small class="claimHeader"><a href="" class="claimHeader typelink">{{type}}</a>
+              </small>
+                      <div class="mt-2"></div>
+                      <small class="mt-2">🛡️ For {{riskprofile}}-type investors.</small>
+                      <br>
+                      <small>✔️ Min. initial investment is {{initial}}.</small>
+                      <br>
+                      <small>✔️ Min. additional investment is {{additional}}.</small>
+                      <br>
+                      <div class="mt-2"></div>
+                      <small class="claimHeader mt-3">This fund is for you if:</small>
+                      <br>
+                      <p class="text-justify mt-2">
+                          <small style="text-align: justify">{{ffy1}}</small>
+                      </p>
+                      <div class="text-center mb-3 mt-3">
+                          <button class="btn px-4 font-weight-bold claimHeader border" data-toggle="modal" data-target="#viewMore{{fundmanagercode}}{{id}}">Preview</button>
+                          <a class="ml-4 btn px-4 text-white font-weight-bold rfbtn" href="./fund-details.html?fundmanagercode={{fundmanagercode}}&id={{id}}">See More</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
 
 
-            <div class="modal fade" id="viewMore{{fundmanagercode}}{{id}}" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header d-flex align-items-center">
-                            <h5 class="text-left claimHeader">{{fundname}}</h5>
-                            <h5 class="text-secondary font-weight-bold text-right ml-auto p-2" data-dismiss="modal"> X</h5>
-                        </div>
-                        <div class="modal-body">
-                            <div role="document">
-                                <div class="modal-body">
-                                    <div class="mb-3">
-                                        <div class="text-center">
-                                            <img src="{{imageurl}}" class="mt-2 previewimg rounded">
-                                        </div>
-                                        <div class="my-2 mx-3">
-                                            <br>
-                                            <div>
-                                                <p class="claimHeader"><a href="" class="claimHeader typelink">{{type}}</a>
-                                                </p>
-                                                <p class="claimHeader">{{fundmanagername}}</p>
-                                                <hr>
-                                                <small>🛡️ For {{riskprofile}}-type investors.</small>
-                                                <br>
-                                                <small>🕒 Recommended time horizon is {{timehorizon}}.</small>
-                                                <br>
-                                                <small>✔️ Minimum initial investment is {{initial}}.</small>
-                                                <br>
-                                                <small>✔️ Minimum additional investment is {{additional}}.</small>
-                                                <br>
-                                                <small>📅 Inception date: {{inception}}</small>
-                                                <br>
-                                                <small>📇 Management Fee: {{managementfee}}</small>
-                                                <br>
-                                                <br>
-                                                <small class="claimHeader">📝 Fund Description</small>
-                                                <hr>
-                                                <p class="text-justify mt-2">
-                                                    <small class="text-justify">{{introduction}}</small>
-                                                </p>
-                                                <br>
-                                                <small class="claimHeader">📑 This fund is for you if:</small>
-                                                <hr>
-                                                <ul>
-                                                    <li>
-                                                        <p class="text-justify mt-2">
-                                                            <small style="text-align: justify">{{ffy1}}</small>
-                                                        </p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="text-justify mt-2">
-                                                            <small style="text-align: justify">{{ffy2}}</small>
-                                                        </p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="text-justify mt-2">
-                                                            <small style="text-align: justify">{{ffy3}}</small>
-                                                        </p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{/each}}
+          <div class="modal fade" id="viewMore{{fundmanagercode}}{{id}}" role="dialog">
+              <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                      <div class="modal-header d-flex align-items-center">
+                          <h5 class="text-left claimHeader">{{fundname}}</h5>
+                          <h5 class="text-secondary font-weight-bold text-right ml-auto p-2" data-dismiss="modal"> X</h5>
+                      </div>
+                      <div class="modal-body">
+                          <div role="document">
+                              <div class="modal-body">
+                                  <div class="mb-3">
+                                      <div class="text-center">
+                                          <img src="{{imageurl}}" class="mt-2 previewimg rounded">
+                                      </div>
+                                      <div class="my-2 mx-3">
+                                          <br>
+                                          <div>
+                                              <p class="claimHeader"><a href="" class="claimHeader typelink">{{type}}</a>
+                                              </p>
+                                              <p class="claimHeader">{{fundmanagername}}</p>
+                                              <hr>
+                                              <small>🛡️ For {{riskprofile}}-type investors.</small>
+                                              <br>
+                                              <small>🕒 Recommended time horizon is {{timehorizon}}.</small>
+                                              <br>
+                                              <small>✔️ Minimum initial investment is {{initial}}.</small>
+                                              <br>
+                                              <small>✔️ Minimum additional investment is {{additional}}.</small>
+                                              <br>
+                                              <small>📅 Inception date: {{inception}}</small>
+                                              <br>
+                                              <small>📇 Management Fee: {{managementfee}}</small>
+                                              <br>
+                                              <br>
+                                              <small class="claimHeader">📝 Fund Description</small>
+                                              <hr>
+                                              <p class="text-justify mt-2">
+                                                  <small class="text-justify">{{introduction}}</small>
+                                              </p>
+                                              <br>
+                                              <small class="claimHeader">📑 This fund is for you if:</small>
+                                              <hr>
+                                              <ul>
+                                                  <li>
+                                                      <p class="text-justify mt-2">
+                                                          <small style="text-align: justify">{{ffy1}}</small>
+                                                      </p>
+                                                  </li>
+                                                  <li>
+                                                      <p class="text-justify mt-2">
+                                                          <small style="text-align: justify">{{ffy2}}</small>
+                                                      </p>
+                                                  </li>
+                                                  <li>
+                                                      <p class="text-justify mt-2">
+                                                          <small style="text-align: justify">{{ffy3}}</small>
+                                                      </p>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          {{/each}}
     </script>
     <!-- Google Tag Manager -->
     <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-PG4287G');
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-PG4287G');
     </script>
     <!-- End Google Tag Manager -->
-</head>
+  </head>
 
-<body>
+  <body>
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid d-flex">
-            <div class="navbar-brand" href="#">
-                <img src="./img/rf-logo.png" />
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="container-fluid d-flex">
+        <div class="navbar-brand" href="#">
+          <img src="./img/rf-logo.png" />
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto order-2">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://rampver.com/why-rampver/" target="_blank">About us</a
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto order-2">
+            <li class="nav-item">
+              <a class="nav-link" href="./">Home</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://rampver.com/why-rampver/"
+                target="_blank"
+                >About us</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./" target="_blank">Mutual Funds</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="./all-search.html" target="_blank">Search</a
-            >
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://rampver.com/seedbox/" target="_blank">Seedbox</a
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./all-search.html" target="_blank"
+                >Search</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://rampver.com/seedbox/"
+                target="_blank"
+                >Seedbox</a
               >
             </li>
             <li class="nav-item">
@@ -218,7 +270,7 @@
     <div class="container px-3 mutual funds">
       <!-- dropdown -->
 
-      <div class="dropdown mt-4" >
+      <div class="dropdown mt-4">
         <label class="claimHeader">🔎 Browse Mutual Funds: </label>
         <button
           class="btn btn-block border dropdown-toggle text-left"
@@ -235,10 +287,11 @@
             >✔️ Rampver's Recommended Funds</a
           >
           <a class="dropdown-item" href="./all.html">All Mutual Funds</a>
-                        <a class="dropdown-item" href="./indexfunds.html">Index Funds</a>
-                        <a class="dropdown-item" href="./dollar.html">Dollar Funds</a>
-                        <hr />
-                        <small class="dropdown-item text-secondary font-italic">By Investor Risk Profile</small
+          <a class="dropdown-item" href="./indexfunds.html">Index Funds</a>
+          <a class="dropdown-item" href="./dollar.html">Dollar Funds</a>
+          <hr />
+          <small class="dropdown-item text-secondary font-italic"
+            >By Investor Risk Profile</small
           >
           <a class="dropdown-item" href="./aggressive.html"
             >For Aggressive Investor (Equity Funds)</a
@@ -280,13 +333,10 @@
         <div class="row">
           <div class="d-flex align-items-center">
             <div>
-              <h2 class="text-left claimHeader" >
+              <h2 class="text-left claimHeader">
                 Sun Life Asset Management Company, Inc.
               </h2>
-              <h6
-                class="text-left claimHeader font-italic mt-3"
-                
-              >
+              <h6 class="text-left claimHeader font-italic mt-3">
                 To a Brighter Life.
               </h6>
             </div>
@@ -296,17 +346,14 @@
       </div>
 
       <!-- Go to www.addthis.com/dashboard to customize your tools -->
-      <div
-        class="addthis_inline_share_toolbox_vxvg mt-3"
-        
-      ></div>
+      <div class="addthis_inline_share_toolbox_vxvg mt-3"></div>
 
       <br />
-      <h3 class="claimHeader text-left" >
+      <h3 class="claimHeader text-left">
         About SLAMCI Funds
       </h3>
       <hr / >
-      <p class="text-justify" >
+      <p class="text-justify">
         Sun Life Financial Philippines offer a broad range of insurance,
         retirement and investment products and services to meet the diverse
         needs of both individual and corporate clients around the world. Sun
@@ -314,7 +361,7 @@
         wealth, and asset management solutions to help every Filipino in their
         journey towards a brighter life.
       </p>
-      <p class="text-justify" >
+      <p class="text-justify">
         Sun Life Financial in the Philippines offers a diverse range of
         insurance, wealth, and asset management solutions to help every Filipino
         in their journey towards a brighter life. As the country’s first and
@@ -323,7 +370,7 @@
         with exceptional client-servicing.
       </p>
       <br />
-      <h3 class="claimHeader text-left" id="profilelink" >
+      <h3 class="claimHeader text-left" id="profilelink">
         Sun Life Funds Catalog
       </h3>
       <hr / >
@@ -331,7 +378,6 @@
         href="https://drive.google.com/open?id=1R6yyTI5VIpdGmS1QFQx7HQTRpTp68wTt"
         class="btn rfbtn text-white mt-2 mb-2"
         target="_blank"
-        
         >Download SLAMCI Funds Catalog</a
       >
       <div id="slamci">
@@ -353,12 +399,12 @@
       </div>
 
       <br />
-      <h3 class="claimHeader text-left" id="getStarted" >
+      <h3 class="claimHeader text-left" id="getStarted">
         Get Started!
       </h3>
       <hr / >
       <div class="row mt-2">
-        <div class="col-lg-4 col-md-6" >
+        <div class="col-lg-4 col-md-6">
           <div class="card mb-3" id="funding">
             <div class="card-header">
               <h5
@@ -417,7 +463,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6" >
+        <div class="col-lg-4 col-md-6">
           <div class="card mb-3" id="forms">
             <div class="card-header">
               <h5
@@ -758,30 +804,298 @@
                               >
                               for more info.
                             </small>
+                          </div>
+                          <p class="text-center mt-4 mb-4">
+                            <input
+                              type="submit"
+                              value="Request for SOA"
+                              class="text-white btn rfbtn font-weight-bold"
+                            />
+                          </p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- SOA Modal -->
             </div>
-            <p class="text-center mt-4 mb-4">
-                <input type="submit" value="Request for SOA" class="text-white btn rfbtn font-weight-bold" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <footer>
+      <p class="text-white text-center">Rampver Financials &copy; 2020</p>
+    </footer>
+    <script src="./js/tagIdentify.js"></script>
+    <!-- INQUIRE BUTTON -->
+    <button
+      id="sticky"
+      class="btn rfbtn text-white mt-3 btn-lg"
+      data-toggle="modal"
+      data-target="#inquireform"
+    >
+      Need help?
+    </button>
+    <!-- INQUIRE BUTTON -->
+    <!-- INQUIRE MODAL START -->
+    <div class="modal fade" id="inquireform" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header d-flex align-items-center">
+            <h4 class="text-left claimHeader">Need some help?</h4>
+            <h5
+              class="text-secondary font-weight-bold text-right ml-auto p-2"
+              data-dismiss="modal"
+            >
+              X
+            </h5>
+          </div>
+          <div class="modal-body">
+            <p class="text-secondary font-italic">
+              Get in touch and we'll help you step-by-step.
             </p>
-            </form>
+            <div role="document">
+              <form
+                action="https://rampver.com//mfinquiry-needhelp/#wpcf7-f12057-o1"
+                method="post"
+              >
+                <div style="display: none;">
+                  <input type="hidden" name="_wpcf7" value="12057" />
+                  <input type="hidden" name="_wpcf7_version" value="5.1.6" />
+                  <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                  <input
+                    type="hidden"
+                    name="_wpcf7_unit_tag"
+                    value="wpcf7-f12057-o1"
+                  />
+                  <input type="hidden" name="_wpcf7_container_post" value="0" />
+                </div>
+                <input type="hidden" name="urlGet" id="urlGet" />
+                <div class="form-group">
+                  <label for="salutation" class="claimHeader"
+                    >Salutation*</label
+                  >
+                  <select
+                    class="form-control"
+                    id="salutation"
+                    name="salutation"
+                    required
+                  >
+                    <option>-</option>
+                    <option value="Mr.">Mr.</option>
+                    <option value="Ms.">Ms.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="M.">M.</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="fullname" class="claimHeader">Full Name*</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="fullname"
+                    required
+                    placeholder="Full Name"
+                    id="fullname"
+                    onkeyup="validatorFN()"
+                  />
+                  <small
+                    class="d-none text-danger font-italic"
+                    id="errMsgFullName"
+                    >Invalid input.</small
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="email" class="claimHeader">Email Address*</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    required
+                    placeholder="Email Address"
+                    id="email"
+                    onkeyup="validatorEmail()"
+                  />
+                  <small class="d-none text-danger font-italic" id="errMsgEmail"
+                    >Invalid input.</small
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="contact" class="claimHeader"
+                    >Contact Number*</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    required
+                    placeholder="Contact Number"
+                    name="contact"
+                    id="contact"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="birthday" class="claimHeader">Birthday</label>
+                  <input type="date" class="form-control" name="birthday" />
+                </div>
+                <div class="form-group">
+                  <label for="location" class="claimHeader">Location</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Location"
+                    name="location"
+                    id="location"
+                    onkeyup="validatorLocation()"
+                  />
+                  <small
+                    class="d-none text-danger font-italic"
+                    id="errMsgLocation"
+                    >Invalid input.</small
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="rampverclient" class="claimHeader"
+                    >Are you currently Rampver Financials client?</label
+                  >
+                  <select
+                    name="rampverclient"
+                    id="rampverclient"
+                    class="form-control"
+                  >
+                    <option value="No"
+                      >No, I am not a Rampver client, yet.</option
+                    >
+                    <option value="Yes">Yes, I am a Rampver client.</option>
+                    <option value="Not Sure">I am not sure.</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="referral" class="claimHeader"
+                    >How did you know about Rampver Financials?</label
+                  >
+                  <select name="referral" id="referral" class="form-control">
+                    <option value="--">-</option>
+                    <option value="FB/ Social Media"
+                      >Facebook/ Social Media</option
+                    >
+                    <option value="IMG"
+                      >IMG - International Marketimg Group
+                    </option>
+                    <option value="Youtube">Youtube Videos</option>
+                    <option value="Website">Rampver Website</option>
+                    <option value="Blogs/Articles">Blogs/Articles</option>
+                    <option value="Talks/Conferences/Live Events"
+                      >Talks/Conferences/Live Events</option
+                    >
+                    <option value="Google Search">Google Search</option>
+                    <option value="Friend/Family Referral"
+                      >Friend/Family Referral</option
+                    >
+                    <option value="Advertisements">Advertisements</option>
+                    <option value="Flyers/Printed Materials"
+                      >Flyers/Printed Materials </option
+                    ><option value="Others">Others</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="claimHeader" for="modeofcontact"
+                    >What is your preferred mode of contact?
+                  </label>
+                  <select
+                    name="modeofcontact"
+                    id="modeofcontact"
+                    class="form-control"
+                  >
+                    <option>-</option>
+                    <option value="Email">Email</option>
+                    <option value="SMS/Text Message">SMS/Text Message</option>
+                    <option value="Phone Call">Phone Call</option>
+                    <option value="Messenger/Viber/ Whatsapp"
+                      >Messenger/Viber/ Whatsapp</option
+                    >
+                    <option value="Personal Meeting">Personal Meeting</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="claimHeader" for="question"
+                    >Any questions for us?
+                  </label>
+                  <br />
+                  <textarea
+                    type="text"
+                    name="question"
+                    class="form-control"
+                    cols="30"
+                    rows="5"
+                    placeholder="Your Message"
+                    id="message"
+                    onkeyup="validatorMessage()"
+                  ></textarea>
+                  <small
+                    class="d-none text-danger font-italic"
+                    id="errMsgMessage"
+                    >Invalid input.</small
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    name="consent"
+                    id="consent"
+                    required
+                  />
+                  <small
+                    class="text-secondary font-italic form-check-label"
+                    for="consent"
+                  >
+                    I agree to receive regular updates, promotions, and
+                    recommendations regarding investments, insurance,
+                    healthcare, and personal finance from Rampver Financials.
+                    Visit
+                    <a href="rampver.com/privacy">rampver.com/privacy</a>
+                    for more info.
+                  </small>
+                </div>
+                <div class="text-center mt-4 mb-4">
+                  <input
+                    type="submit"
+                    id="trigger"
+                    value="I want to invest!"
+                    class="text-white btn rfbtn font-weight-bold btn-lg"
+                    onclick="submitDetails()"
+                  />
+                  <br />
+                  <img
+                    src="./img/pulse-load.gif"
+                    class="d-none"
+                    id="pulse-load"
+                    style="width: 12%"
+                    alt=""
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        <!-- SOA Modal -->
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        <br />
-        <footer>
-            <p class="text-white text-center">Rampver Financials &copy; 2020</p>
-        </footer>
-        <script src="./js/tagIdentify.js"></script>
-        <!-- Facebook Messenger -->
-        <!-- Load Facebook SDK for JavaScript -->
-        <div id="fb-root"></div>
+      </div>
+    </div>
+    <!-- INQUIRE MODAL END -->
+
+    <script src="./js/validator.js"></script>
+    <script>
+      function submitDetails() {
+        document.getElementById('pulse-load').classList.remove('d-none');
+        setTimeout(function submitDetails() {
+          document.getElementById('pulse-load').classList.add('d-none');
+        }, 15000);
+      }
+    </script>
+    <!-- Facebook Messenger -->
+    <!-- Load Facebook SDK for JavaScript -->
+    <!-- <div id="fb-root"></div>
         <script>
             window.fbAsyncInit = function() {
                 FB.init({
@@ -801,35 +1115,50 @@
             })(document, 'script', 'facebook-jssdk');
         </script>
 
-        <!-- Your customer chat code -->
-        <div class="fb-customerchat" attribution="setup_tool" page_id="355427532453" theme_color="#256141" logged_in_greeting="We're here to help you! :D" logged_out_greeting="We're here to help you! :D"></div>
-        <!-- Facebook Messenger -->
-        <!-- cookie consent -->
-        <div id="cookieconsent"></div>
-        <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-        <script src="./js/cookieconsent.js"></script>
-        <!-- cookie consent -->
+        <div class="fb-customerchat" attribution="setup_tool" page_id="355427532453" theme_color="#256141" logged_in_greeting="We're here to help you! :D" logged_out_greeting="We're here to help you! :D"></div> -->
+    <!-- Facebook Messenger -->
+    <!-- cookie consent -->
+    <div id="cookieconsent"></div>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <script src="./js/cookieconsent.js"></script>
+    <!-- cookie consent -->
 
-        <!-- Go to www.addthis.com/dashboard to customize your tools -->
-        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e108780a32cd784"></script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script
+      type="text/javascript"
+      src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e108780a32cd784"
+    ></script>
 
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-PG4287G"
         height="0"
         width="0"
         style="display:none;visibility:hidden"
       ></iframe
     ></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/b2291eba76.js"></script>
-        <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
-</body>
-
+    <!-- End Google Tag Manager (noscript) -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/b2291eba76.js"></script>
+    <script
+      src="//instant.page/3.0.0"
+      type="module"
+      defer
+      integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"
+    ></script>
+  </body>
 </html>
