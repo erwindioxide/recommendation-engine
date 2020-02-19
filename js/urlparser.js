@@ -141,9 +141,6 @@ function dataFill(json) {
         xAxis: {
             ordinal: true,
             type: 'datetime',
-            labels: {
-      format: '{value:%m/%d/%Y}'
-    },
             max: +new Date(),
             ceiling: +new Date(),
             events: {
