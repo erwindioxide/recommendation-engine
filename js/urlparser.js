@@ -142,7 +142,7 @@ function dataFill(json) {
             ordinal: true,
             type: 'datetime',
             labels: {
-      format: '{value:%m-%d-%Y}'
+      format: '{value:%m/%d/%Y}'
     },
             max: +new Date(),
             ceiling: +new Date(),
