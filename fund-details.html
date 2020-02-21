@@ -1,112 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#124735" />
     <meta name="title" content="Rampver Financials | Fund Details" />
     <meta name="description" content="Find the best Mutual Fund investments for as low as ₱1,000 with Rampver Financials. Largest mutual fund distrubutor in the Philippines." />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link rel="stylesheet" src="./style.css" href="./style.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
-    />
-      <link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20" />
     <title>Rampver Financials | Invest in Mutual Funds today!</title>
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-    ></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./js/urlparser.js"></script>
-    <meta
-      property="og:title"
-      content="Mutual Fund Investments | Rampver Financials"
-    />
-    <meta
-      property="og:description"
-      content="Find the best Mutual Fund investments for as low as ₱1,000!"
-    />
+    <meta property="og:title" content="Mutual Fund Investments | Rampver Financials" />
+    <meta property="og:description" content="Find the best Mutual Fund investments for as low as ₱1,000!" />
     <meta property="og:url" content="" />
     <meta property="og:image" content="https://i.ibb.co/3k60mhS/specific.png" />
     <meta property="og:site_name" content="Rampver Financials" />
     <meta property="og:type" content="article" />
     <!-- Google Tag Manager -->
     <script>
-      (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-PG4287G');
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PG4287G');
     </script>
     <!-- End Google Tag Manager -->
-  </head>
+</head>
 
-  <body>
+<body>
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-fluid d-flex">
-          <div class="navbar-brand" href="#">
-              <img src="./img/rf-logo.png" />
-          </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <div class="container-fluid d-flex">
+            <div class="navbar-brand" href="#">
+                <img src="./img/rf-logo.png" />
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto order-2">
-                  <li class="nav-item">
-                      <a class="nav-link" href="./">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="https://rampver.com/why-rampver/" target="_blank">About us</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./" target="_blank">Mutual Funds</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./all-search.html" target="_blank">Search</a
-          >
-                  <li class="nav-item">
-                      <a class="nav-link" href="https://rampver.com/seedbox/" target="_blank">Seedbox</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="https://rampver.com/contact-us/"
-              target="_blank"
-              >Contact Us</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="https://rampver.com/privacy/"
-              target="_blank"
-              >Privacy</a
-            >
-          </li>
-        </ul>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto order-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://rampver.com/why-rampver/" target="_blank">About us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./" target="_blank">Mutual Funds</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./all-search.html" target="_blank">Search</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://rampver.com/seedbox/"
+                target="_blank"
+                >Seedbox</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://rampver.com/contact-us/"
+                target="_blank"
+                >Contact Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://rampver.com/privacy/"
+                target="_blank"
+                >Privacy</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
     <br />
     <!-- INQUIRE BUTTON -->
     <button
@@ -114,7 +103,6 @@
       class="btn rfbtn text-white mt-3 btn-lg"
       data-toggle="modal"
       data-target="#inquireform"
-      
     >
       Inquire now!
     </button>
@@ -126,42 +114,38 @@
             <h3
               class="claimHeader text-center font-weight-bolder"
               id="fundtitle"
-              
             ></h3>
             <br />
             <p class="text-center">
-              <img id="imageurl" class="detailimg rounded"  />
+              <img id="imageurl" class="lazyload detailimg rounded" />
             </p>
             <!-- Go to www.addthis.com/dashboard to customize your tools -->
-            <div
-              class="addthis_inline_share_toolbox_vxvg mt-4"
-              
-            ></div>
+            <div class="addthis_inline_share_toolbox_vxvg mt-4"></div>
             <br />
-            <div class="d-flex" >
+            <div class="d-flex">
               <p class="claimHeader">Price Per Share:</p>
               &nbsp;&nbsp;
               <p class="claimHeader" id="navps"></p>
             </div>
-            <div class="d-flex" >
+            <div class="d-flex">
               <p class="claimHeader">Year-to-Date (YTD):</p>
               &nbsp;&nbsp;
               <p class="font-weight-bold claimHeader" id="ytdtop"></p>
             </div>
             <br />
-            <div class="" >
+            <div class="">
               <h5 class="claimHeader ">Fund Introduction</h5>
               <hr />
               <div id="introduction" class="text-justify"></div>
             </div>
             <br />
-            <div >
+            <div>
               <h5 class="claimHeader ">Fund Description</h5>
               <hr />
               <p id="description" class="text-justify"></p>
             </div>
             <br />
-            <div >
+            <div>
               <h5 class="claimHeader ">Fund Suitability</h5>
               <hr />
               <p>This fund is for you if:</p>
@@ -173,7 +157,7 @@
             </div>
           </div>
           <br />
-          <div class="container" >
+          <div class="container">
             <h5 class="claimHeader">Fund Details</h5>
             <br />
             <table class="table table-hover">
@@ -243,12 +227,8 @@
           </div>
           <div class="mt-3"></div>
           <!-- HIGHSTOCKS -->
-          <div class="container mt-2 mb-2" >
-            <div
-              id="navChart"
-              style="height: 400px; min-width: 310px"
-              
-            ></div>
+          <div class="container mt-2 mb-2">
+            <div id="navChart" style="height: 400px; min-width: 310px"></div>
           </div>
           <!-- HIGHSTOCKS -->
         </div>
@@ -539,45 +519,27 @@
                           recommendations regarding investments, insurance,
                           healthcare, and personal finance from Rampver
                           Financials. Visit
-                          <a href="rampver.com/privacy">rampver.com/privacy</a>
-                          for more info.
+                          <a href="rampver.com/privacy">rampver.com/privacy</a> for more info.
                         </small>
-                      </div>
-                      <div class="text-center mt-4 mb-4">
-                        <input
-                          type="submit"
-                          id="trigger"
-                          value="I want to invest!"
-                          class="text-white btn rfbtn font-weight-bold btn-lg"
-                          onclick="submitDetails()"
-                        />
-                        <br />
-                        <img
-                          src="./img/pulse-load.gif"
-                          class="d-none"
-                          id="pulse-load"
-                          style="width: 12%"
-                          alt=""
-                        />
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-          <!-- INQUIRE MODAL END -->
-          <div class="container" >
+            <div class="text-center mt-4 mb-4">
+                <input type="submit" id="trigger" value="I want to invest!" class="text-white btn rfbtn font-weight-bold btn-lg" onclick="submitDetails()" />
+                <br />
+                <img src="./img/pulse-load.gif" class="d-none" id="pulse-load" style="width: 12%" alt="" />
+            </div>
+            </form>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <!-- INQUIRE MODAL END -->
+        <div class="container">
             <h4 class="claimHeader text-center ">Related Readings</h4>
             <ul class="mt-3">
-              <li class="" style="list-style-type:none">
-                <h6 class="claimHeader">
-                  <a
-                    href=""
-                    id="prospectuslink"
-                    class="claimHeader"
-                    target="_blank"
-                    >Mutual Fund Prospectus</a
+                <li class="" style="list-style-type:none">
+                    <h6 class="claimHeader">
+                        <a href="" id="prospectuslink" class="claimHeader" target="_blank">Mutual Fund Prospectus</a
                   >
                 </h6>
               </li>
@@ -598,22 +560,16 @@
               <li class="" style="list-style-type:none">
                 <h6 class="claimHeader">
                   <a id="forms" class="claimHeader">Forms and Requirements</a>
-                </h6>
-              </li>
-              <li class="" style="list-style-type:none">
-                <h6 class="claimHeader">
-                  <a id="funding" class="claimHeader">Investing Guidelines</a>
-                </h6>
-              </li>
-              <li class="" style="list-style-type:none">
-                <h6 class="claimHeader">
-                  <a
-                    href
-                    id="soalink"
-                    class="claimHeader"
-                    data-toggle="modal"
-                    data-target="#soarequest"
-                    >Statement of Account Request</a
+                    </h6>
+                </li>
+                <li class="" style="list-style-type:none">
+                    <h6 class="claimHeader">
+                        <a id="funding" class="claimHeader">Investing Guidelines</a>
+                    </h6>
+                </li>
+                <li class="" style="list-style-type:none">
+                    <h6 class="claimHeader">
+                        <a href id="soalink" class="claimHeader" data-toggle="modal" data-target="#soarequest">Statement of Account Request</a
                   >
                 </h6>
               </li>
@@ -751,60 +707,46 @@
                           recommendations regarding investments, insurance,
                           healthcare, and personal finance from Rampver
                           Financials. Visit
-                          <a href="rampver.com/privacy">rampver.com/privacy</a>
-                          for more info.
+                          <a href="rampver.com/privacy">rampver.com/privacy</a> for more info.
                         </small>
-                      </div>
-                      <p class="text-center mt-4 mb-4">
-                        <input
-                          type="submit"
-                          value="Request for SOA"
-                          class="text-white btn rfbtn font-weight-bold"
-                        />
-                      </p>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- SOA Modal -->
+        </div>
+        <p class="text-center mt-4 mb-4">
+            <input type="submit" value="Request for SOA" class="text-white btn rfbtn font-weight-bold" />
+        </p>
+        </form>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <!-- SOA Modal -->
 
-          <br />
-          <!-- social share start -->
-          <div class="container" >
+        <br />
+        <!-- social share start -->
+        <div class="container">
             <h4 class="claimHeader text-center">Share this to a friend!</h4>
             <!-- Go to www.addthis.com/dashboard to customize your tools -->
             <div class="addthis_inline_share_toolbox mt-3"></div>
-          </div>
-          <!-- social share end -->
+        </div>
+        <!-- social share end -->
 
-          <br />
-          <!-- Select more funds -->
-          <!-- dropdown -->
+        <br />
+        <!-- Select more funds -->
+        <!-- dropdown -->
 
-          <div class="dropdown mt-4" >
+        <div class="dropdown mt-4">
             <label class="claimHeader">🔎 Browse Mutual Funds: </label>
-            <button
-              class="btn btn-block border dropdown-toggle text-left"
-              type="button"
-              id="dropdownMenuButton"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
+            <button class="btn btn-block border dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Select funds
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="./index.html"
-                >✔️ Rampver's Recommended Funds</a
+                <a class="dropdown-item" href="./index.html">✔️ Rampver's Recommended Funds</a
               >
               <a class="dropdown-item" href="./all.html">All Mutual Funds</a>
-              <a class="dropdown-item" href="./indexfunds.html">Index Funds</a>
-              <a class="dropdown-item" href="./dollar.html">Dollar Funds</a>
-              <hr />
-              <small class="dropdown-item text-secondary font-italic"
-                >By Investor Risk Profile</small
+                <a class="dropdown-item" href="./indexfunds.html">Index Funds</a>
+                <a class="dropdown-item" href="./dollar.html">Dollar Funds</a>
+                <hr />
+                <small class="dropdown-item text-secondary font-italic">By Investor Risk Profile</small
               >
               <a class="dropdown-item" href="./aggressive.html"
                 >For Aggressive Investor (Equity Funds)</a
@@ -847,13 +789,15 @@
     </div>
 
     <!-- End Section -->
-  
+
     <!-- End Section -->
 
     <footer>
       <p class="text-white text-center ">Rampver Financials &copy; 2020</p>
     </footer>
-           <!-- cookie consent -->
+    <script src="./js/lazysizes.min.js"></script>
+
+    <!-- cookie consent -->
     <div id="cookieconsent"></div>
     <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
     <script src="./js/cookieconsent.js"></script>
@@ -903,6 +847,11 @@
     ></script>
     <script src="https://kit.fontawesome.com/b2291eba76.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html-minifier/4.0.0/htmlminifier.min.js"></script>
-    <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    <script
+      src="//instant.page/3.0.0"
+      type="module"
+      defer
+      integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"
+    ></script>
   </body>
 </html>

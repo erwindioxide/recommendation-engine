@@ -43,6 +43,8 @@ function dataFill(json) {
         renderData + '.fundname'
     );
     document.getElementById('imageurl').src = eval(renderData + '.imageurl');
+    let lazyload = eval(renderData + '.imageurl');
+    document.getElementById('imageurl').setAttribute("data-src", lazyload);
     document.getElementById('navps').innerHTML = eval(renderData + '.navps');
     document.getElementById('ytdtop').innerHTML = eval(renderData + '.ytd');
     document.getElementById('introduction').innerHTML = eval(
