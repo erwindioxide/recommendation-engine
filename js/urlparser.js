@@ -44,12 +44,14 @@ function dataFill(json) {
         renderData + '.fundname'
     );
     document.getElementById('imageurl').src = eval(renderData + '.imageurl');
-    document.getElementById('fundQR').src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://invest.rampver.com/fund-details.html?fundmanagercode=" + codeBig + "%26id=" + id;
-    document.getElementById('QRName').innerHTML = eval(
-        renderData + '.fundname'
-    );
+    document.getElementById('fundQR').src =
+        'https://api.qrserver.com/v1/create-qr-code/?size=200x200&color=124735&data=https://invest.rampver.com/fund-details.html?fundmanagercode=' +
+        codeBig +
+        '%26id=' +
+        id;
+    document.getElementById('QRName').innerHTML = eval(renderData + '.fundname');
     let lazyload = eval(renderData + '.imageurl');
-    document.getElementById('imageurl').setAttribute("data-src", lazyload);
+    document.getElementById('imageurl').setAttribute('data-src', lazyload);
     document.getElementById('navps').innerHTML = eval(renderData + '.navps');
     document.getElementById('ytdtop').innerHTML = eval(renderData + '.ytd');
     document.getElementById('introduction').innerHTML = eval(
