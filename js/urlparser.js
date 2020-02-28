@@ -43,6 +43,7 @@ function dataFill(json) {
         renderData + '.fundname'
     );
     document.getElementById('imageurl').src = eval(renderData + '.imageurl');
+    document.getElementById('fundQR').src = "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" + window.location.href;
     let lazyload = eval(renderData + '.imageurl');
     document.getElementById('imageurl').setAttribute("data-src", lazyload);
     document.getElementById('navps').innerHTML = eval(renderData + '.navps');
