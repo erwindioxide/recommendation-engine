@@ -17,6 +17,7 @@ function getUrlVars() {
 }
 
 let code = getUrlVars()['fundmanagercode'].toLowerCase();
+let codeBig = getUrlVars()['fundmanagercode'];
 let id = getUrlVars()['id'];
 let app = document.querySelector('.app');
 let api = 'https://v2-api.sheety.co/rampverfinancials/mfapi/' + code + '/' + id;
@@ -43,7 +44,10 @@ function dataFill(json) {
         renderData + '.fundname'
     );
     document.getElementById('imageurl').src = eval(renderData + '.imageurl');
-    document.getElementById('fundQR').src = "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" + window.location.href;
+    document.getElementById('fundQR').src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://invest.rampver.com/fund-details.html?fundmanagercode=" + codeBig + "%26id=" + id;
+    document.getElementById('QRName').innerHTML = eval(
+        renderData + '.fundname'
+    );
     let lazyload = eval(renderData + '.imageurl');
     document.getElementById('imageurl').setAttribute("data-src", lazyload);
     document.getElementById('navps').innerHTML = eval(renderData + '.navps');
