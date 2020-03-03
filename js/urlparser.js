@@ -16,12 +16,16 @@ function getUrlVars() {
     }
 }
 
-let code = getUrlVars()['fundmanagercode'].toLowerCase();
-let codeBig = getUrlVars()['fundmanagercode'];
-let id = getUrlVars()['id'];
-let app = document.querySelector('.app');
-let api = 'https://v2-api.sheety.co/rampverfinancials/mfapi/' + code + '/' + id;
-
+let code;
+code = getUrlVars()['fundmanagercode'].toLowerCase();
+let codeBig;
+codeBig = getUrlVars()['fundmanagercode'];
+let id;
+id = getUrlVars()['id'];
+let app;
+app = document.querySelector('.app');
+let api;
+api = 'https://v2-api.sheety.co/rampverfinancials/mfapi/' + code + '/' + id;
 
 let renderData = 'json.' + code;
 
@@ -100,8 +104,8 @@ function dataFill(json) {
     );
     document.getElementById('ffslink').href = eval(renderData + '.ffslink');
     document.getElementById('profilelink').href = code + '.html#profilelink';
-    document.getElementById('forms').href = code + '.html#getStarted';
-    document.getElementById('funding').href = code + '.html#getStarted';
+    // document.getElementById('forms').href = code + '.html#getStarted';
+    // document.getElementById('funding').href = code + '.html#getStarted';
     document.getElementById('fundnamevalue').value = eval(
         renderData + '.fundname'
     );
@@ -128,8 +132,6 @@ function dataFill(json) {
         renderData + '.fundname'
     );
     document.getElementById('soafundname').value = eval(renderData + '.fundname');
-
-
 
     // Highstocks
     Highcharts.setOptions({
@@ -212,24 +214,31 @@ function dataFill(json) {
     });
     // Highstocks
 
-    if (code == "soldivo") {
-        document.getElementById('guidelines').value = "https://res.cloudinary.com/rampver-financials/image/upload/v1582874968/Rampver%20Financials%20Mutual%20Fund%20Pricipals%20Forms%20Library/Account%20Opening%20Guidelines%202020/Soldivo_Funds_Account_Opening_Guidelines.pdf";
+    //guidelines autofill link
+    if (code == 'soldivo') {
+        document.getElementById('guidelines').value =
+            'https://res.cloudinary.com/rampver-financials/image/upload/v1582874968/Rampver%20Financials%20Mutual%20Fund%20Pricipals%20Forms%20Library/Account%20Opening%20Guidelines%202020/Soldivo_Funds_Account_Opening_Guidelines.pdf';
         // document.getElementById('inv_guidelines').setAttribute("value", "https://res.cloudinary.com/rampver-financials/image/upload/v1582874968/Rampver%20Financials%20Mutual%20Fund%20Pricipals%20Forms%20Library/Account%20Opening%20Guidelines%202020/Soldivo_Funds_Account_Opening_Guidelines.pdf")
-    } else if (code == "atram") {
-        document.getElementById('guidelines').value = "https://res.cloudinary.com/rampver-financials/image/upload/v1582874969/Rampver%20Financials%20Mutual%20Fund%20Pricipals%20Forms%20Library/Account%20Opening%20Guidelines%202020/ATRAM_Account_Opening_Guidelines.pdf";
-    } else if (code == "pemi") {
-        document.getElementById('guidelines').value = "https://res.cloudinary.com/rampver-financials/image/upload/v1582874969/Rampver%20Financials%20Mutual%20Fund%20Pricipals%20Forms%20Library/Account%20Opening%20Guidelines%202020/Philequity_Mutual_Fund_Account_Opening_Guidelines.pdf";
-    } else if (code == "slamci") {
-        document.getElementById('guidelines').value = "https://res.cloudinary.com/rampver-financials/image/upload/v1582874968/Rampver%20Financials%20Mutual%20Fund%20Pricipals%20Forms%20Library/Account%20Opening%20Guidelines%202020/SLAMCI_Account_Opening_Guidelines.pdf";
-    } else if (code == "fami") {
-        document.getElementById('guidelines').value = "https://res.cloudinary.com/rampver-financials/image/upload/v1582874970/Rampver%20Financials%20Mutual%20Fund%20Pricipals%20Forms%20Library/Account%20Opening%20Guidelines%202020/FAMI_Account_Opening_Guidelines.pdf";
-    } else if (code == "pami") {
-        document.getElementById('guidelines').value = "https://res.cloudinary.com/rampver-financials/image/upload/v1582876804/Rampver%20Financials%20Mutual%20Fund%20Pricipals%20Forms%20Library/Account%20Opening%20Checklists/PAMICHECKLIST.png";
+    } else if (code == 'atram') {
+        document.getElementById('guidelines').value =
+            'https://res.cloudinary.com/rampver-financials/image/upload/v1582874969/Rampver%20Financials%20Mutual%20Fund%20Pricipals%20Forms%20Library/Account%20Opening%20Guidelines%202020/ATRAM_Account_Opening_Guidelines.pdf';
+    } else if (code == 'pemi') {
+        document.getElementById('guidelines').value =
+            'https://res.cloudinary.com/rampver-financials/image/upload/v1582874969/Rampver%20Financials%20Mutual%20Fund%20Pricipals%20Forms%20Library/Account%20Opening%20Guidelines%202020/Philequity_Mutual_Fund_Account_Opening_Guidelines.pdf';
+    } else if (code == 'slamci') {
+        document.getElementById('guidelines').value =
+            'https://res.cloudinary.com/rampver-financials/image/upload/v1582874968/Rampver%20Financials%20Mutual%20Fund%20Pricipals%20Forms%20Library/Account%20Opening%20Guidelines%202020/SLAMCI_Account_Opening_Guidelines.pdf';
+    } else if (code == 'fami') {
+        document.getElementById('guidelines').value =
+            'https://res.cloudinary.com/rampver-financials/image/upload/v1582874970/Rampver%20Financials%20Mutual%20Fund%20Pricipals%20Forms%20Library/Account%20Opening%20Guidelines%202020/FAMI_Account_Opening_Guidelines.pdf';
+    } else if (code == 'pami') {
+        document.getElementById('guidelines').value =
+            'https://res.cloudinary.com/rampver-financials/image/upload/v1582876804/Rampver%20Financials%20Mutual%20Fund%20Pricipals%20Forms%20Library/Account%20Opening%20Checklists/PAMICHECKLIST.png';
     } else {
-        document.getElementById('guidelines').value = "https://res.cloudinary.com/rampver-financials/image/upload/v1571712275/Rampver_Financials_Mutual_Fund_Investing_Basics.pdf";
+        document.getElementById('guidelines').value =
+            'https://res.cloudinary.com/rampver-financials/image/upload/v1571712275/Rampver_Financials_Mutual_Fund_Investing_Basics.pdf';
     }
-
-
+    //guidelines autofill link
 }
 
 // fill data

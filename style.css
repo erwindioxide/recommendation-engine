@@ -98,6 +98,9 @@ html, body {
 @media (min-width: 500px) {
   .form-container {
     width: 500px !important; } }
+.text-rampver {
+  color: #256141; }
+
 .ais-SearchBox-input {
   display: block;
   width: 100%;
