@@ -2,46 +2,48 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="theme-color" content="#124735" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="title" content="Rampver Financials: Mutual Funds for Aggressive-type Investors" />
-    <meta name="description" content="As an aggressive investor, you are committed to investing for the long
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#124735" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="title" content="Rampver Financials: Mutual Funds for Aggressive-type Investors" />
+  <meta name="description" content="As an aggressive investor, you are committed to investing for the long
     term, knowing that you may encounter market downturns along the way. You
     have set aside enough for your short-term needs, and you have enough
     money for investing." />
-    <meta property="og:title" content="For Aggressive Investors | Equity Funds" />
-    <meta property="og:description" content="Find the best Equity Mutual Fund investments for as low as ₱1,000!" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="https://i.ibb.co/sbRQXm5/aggressive.png" />
-    <meta property="og:site_name" content="Rampver Financials" />
-    <meta property="og:type" content="article" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <link rel="stylesheet" src="./style.css" href="./style.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-    <link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20" />
-    <title>
-        Rampver Financials: Mutual Funds for Aggressive-type Investors
-    </title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
-    </script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $.getJSON(
-                'https://v2-api.sheety.co/rampverfinancials/mfapi/aggressive',
-                function(data) {
-                    var template = Handlebars.compile($('#item-template').html());
-                    $('#aggressive').html(template(data.aggressive));
-                }
-            );
-        });
-    </script>
-    <!-- display searches start -->
-    <script id="item-template" type="text/x-handlebars-template">
-        <div class="row mt-4 mutualfunds">
+  <meta property="og:title" content="For Aggressive Investors | Equity Funds" />
+  <meta property="og:description" content="Find the best Equity Mutual Fund investments for as low as ₱1,000!" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="https://i.ibb.co/sbRQXm5/aggressive.png" />
+  <meta property="og:site_name" content="Rampver Financials" />
+  <meta property="og:type" content="article" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" src="./style.css" href="./style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+  <link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20" />
+  <title>
+    Rampver Financials: Mutual Funds for Aggressive-type Investors
+  </title>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
+  </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.getJSON(
+        'https://v2-api.sheety.co/rampverfinancials/mfapi/aggressive',
+        function (data) {
+          var template = Handlebars.compile($('#item-template').html());
+          $('#aggressive').html(template(data.aggressive));
+        }
+      );
+    });
+  </script>
+  <!-- display searches start -->
+  <script id="item-template" type="text/x-handlebars-template">
+    <div class="row mt-4 mutualfunds">
             {{#each this}}
             <div class="col-lg-4 col-md-6 mb-3">
                 <div class="card h-100">
@@ -150,269 +152,279 @@
             {{/each}}
     </script>
 
-    <script src="./js/lazysizes.min.js"></script>
+  <script src="./js/lazysizes.min.js"></script>
 
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-PG4287G');
-    </script>
-    <!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PG4287G');
+  </script>
+  <!-- End Google Tag Manager -->
 </head>
 
 <body>
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid d-flex">
-            <div class="navbar-brand" href="#">
-                <img src="./img/rf-logo.png" />
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid d-flex">
+      <div class="navbar-brand" href="#">
+        <img src="./img/rf-logo.png" />
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto order-2">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://rampver.com/why-rampver/" target="_blank">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./" target="_blank">Mutual Funds</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./forms.html">Forms and Guidelines</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./all-search.html" target="_blank">Search</a>
-                    </li>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto order-2">
+          <li class="nav-item">
+            <a class="nav-link" href="./">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://rampver.com/why-rampver/" target="_blank">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./" target="_blank">Mutual Funds</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./forms.html">Forms and Guidelines</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./all-search.html" target="_blank">Search</a>
+          </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://rampver.com/seedbox/" target="_blank">Seedbox</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://rampver.com/contact-us/" target="_blank">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://rampver.com/privacy/" target="_blank">Privacy</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+          <li class="nav-item">
+            <a class="nav-link" href="https://rampver.com/seedbox/" target="_blank">Seedbox</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://rampver.com/contact-us/" target="_blank">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://rampver.com/privacy/" target="_blank">Privacy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <div class="container px-3 mutual funds">
-        <!-- dropdown -->
+  <div class="container px-3 mutual funds">
+    <!-- dropdown -->
 
-        <div class="dropdown mt-4">
-            <label class="claimHeader">🔎 Browse Mutual Funds: </label>
-            <button class="btn btn-block border dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="dropdown mt-4">
+      <label class="claimHeader">🔎 Browse Mutual Funds: </label>
+      <button class="btn btn-block border dropdown-toggle text-left" type="button" id="dropdownMenuButton"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         For Aggressive Investor (Equity Funds)
       </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="./recommended.html">✔️ Rampver's Recommended Funds</a>
-                <a class="dropdown-item" href="./all.html">All Mutual Funds</a>
-                <a class="dropdown-item" href="./indexfunds.html">Index Funds</a>
-                <a class="dropdown-item" href="./dollar.html">Dollar Funds</a>
-                <hr />
-                <small class="dropdown-item text-secondary font-italic">By Investor Risk Profile</small>
-                <a class="dropdown-item" href="./aggressive.html">For Aggressive Investor (Equity Funds)</a>
-                <a class="dropdown-item" href="./moderate.html">For Moderate Investor (Balanced Funds)</a>
-                <a class="dropdown-item" href="./conservative.html">For Conservative Investor (Bond Funds)</a>
-                <hr />
-                <small class="dropdown-item text-secondary font-italic">By Investment House</small>
-                <a class="dropdown-item" href="./soldivo.html">Soldivo Funds (SOLDIVO)</a>
-                <a class="dropdown-item" href="./atram.html">ATR Asset Management (ATRAM)</a>
-                <a class="dropdown-item" href="./pemi.html">Philequity Management (PEMI)</a>
-                <a class="dropdown-item" href="./slamci.html">Sun Life Asset Management (SLAMCI)</a>
-                <a class="dropdown-item" href="./fami.html">First Metro Asset Management (FAMI)</a>
-                <a class="dropdown-item" href="./pami.html">Philam Asset Management (PAMI)</a>
-            </div>
-        </div>
-        <!-- dropdown -->
-
-        <!-- info block -->
-        <div class="container mt-3">
-            <div class="row">
-                <div class="d-flex align-items-center">
-                    <div>
-                        <h2 class="text-left claimHeader">
-                            For Aggressive Investors
-                        </h2>
-                        <h6 class="text-left claimHeader font-italic mt-3">
-                            Equity/ Stock Funds
-                        </h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Go to www.addthis.com/dashboard to customize your tools -->
-        <div class="addthis_inline_share_toolbox_vxvg mt-3"></div>
-
-        <!-- share via QR Code -->
-        <p class="mt-3">
-            <a href="" class="text-info" data-toggle="modal" data-target="#shareQR">Share via QR Code</a>
-        </p>
-
-        <div class="modal fade" id="shareQR" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header d-flex align-items-center">
-                        <h5 class="text-left claimHeader">
-                            Share this via QR Code!
-                        </h5>
-                        <h5 class="text-secondary font-weight-bold text-right ml-auto p-2" data-dismiss="modal">
-                            X
-                        </h5>
-                    </div>
-                    <div class="modal-body">
-                        <div role="document">
-                            <div class="mx-auto text-center">
-                                <h5 class="claimHeader mb-3" id="QRName">
-                                    Funds For Aggressive Investors
-                                </h5>
-                                <div class="mb-3">
-                                    <img id="categoryQR" class="mx-auto rounded border-secondary border px-3 py-3" />
-                                    <br />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script>
-            let qrUrl =
-                'https://api.qrserver.com/v1/create-qr-code/?size=200x200&color=124735&data=' +
-                window.location.href;
-            document.getElementById('categoryQR').setAttribute('src', qrUrl);
-        </script>
-        <!-- share via QR Code -->
-
-        <br />
-        <h3 class="claimHeader text-left">
-            About Equity Funds
-        </h3>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="./recommended.html">✔️ Rampver's Recommended Funds</a>
+        <a class="dropdown-item" href="./all.html">All Mutual Funds</a>
+        <a class="dropdown-item" href="./indexfunds.html">Index Funds</a>
+        <a class="dropdown-item" href="./dollar.html">Dollar Funds</a>
         <hr />
-        <p class="text-justify">
-            As an aggressive investor, you are committed to investing for the long term, knowing that you may encounter market downturns along the way. You have set aside enough for your short-term needs, and you have enough money for investing.
-        </p>
-
-        <p class="text-justify">
-            Stock funds are basically designed for “growth”, to earn from capital gains and dividend yields. This is usually recommended for those investors who have long-term financial goals such as children’s education, retirement fund, funds for future business,
-            and others.
-        </p>
-        <br />
-        <h3 class="claimHeader text-left" id="profilelink">
-            Aggressive Funds Catalog
-        </h3>
+        <small class="dropdown-item text-secondary font-italic">By Investor Risk Profile</small>
+        <a class="dropdown-item" href="./aggressive.html">For Aggressive Investor (Equity Funds)</a>
+        <a class="dropdown-item" href="./moderate.html">For Moderate Investor (Balanced Funds)</a>
+        <a class="dropdown-item" href="./conservative.html">For Conservative Investor (Bond Funds)</a>
         <hr />
-        <!-- info block -->
+        <small class="dropdown-item text-secondary font-italic">By Investment House</small>
+        <a class="dropdown-item" href="./soldivo.html">Soldivo Funds (SOLDIVO)</a>
+        <a class="dropdown-item" href="./atram.html">ATR Asset Management (ATRAM)</a>
+        <a class="dropdown-item" href="./pemi.html">Philequity Management (PEMI)</a>
+        <a class="dropdown-item" href="./slamci.html">Sun Life Asset Management (SLAMCI)</a>
+        <a class="dropdown-item" href="./fami.html">First Metro Asset Management (FAMI)</a>
+        <a class="dropdown-item" href="./pami.html">Philam Asset Management (PAMI)</a>
+      </div>
+    </div>
+    <!-- dropdown -->
 
-        <div id="aggressive">
-            <div style="margin:auto">
-                <br />
-                <br />
-                <h3 class="claimHeader text-center mt-2 mb-3">Please wait..</h3>
-                <p class="text-center">
-                    <img src="./img/preloader.gif" alt="" style="width: 200px;" class="pb-5 text-center" />
-                </p>
-                <br />
-                <br />
-            </div>
+    <!-- info block -->
+    <div class="container mt-3">
+      <div class="row">
+        <div class="d-flex align-items-center">
+          <div>
+            <h2 class="text-left claimHeader">
+              For Aggressive Investors
+            </h2>
+            <h6 class="text-left claimHeader font-italic mt-3">
+              Equity/ Stock Funds
+            </h6>
+          </div>
         </div>
+      </div>
     </div>
 
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_inline_share_toolbox_vxvg mt-3"></div>
+
+    <!-- share via QR Code -->
+    <p class="mt-3">
+      <a href="" class="text-info" data-toggle="modal" data-target="#shareQR">Share via QR Code</a>
+    </p>
+
+    <div class="modal fade" id="shareQR" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header d-flex align-items-center">
+            <h5 class="text-left claimHeader">
+              Share this via QR Code!
+            </h5>
+            <h5 class="text-secondary font-weight-bold text-right ml-auto p-2" data-dismiss="modal">
+              X
+            </h5>
+          </div>
+          <div class="modal-body">
+            <div role="document">
+              <div class="mx-auto text-center">
+                <h5 class="claimHeader mb-3" id="QRName">
+                  Funds For Aggressive Investors
+                </h5>
+                <div class="mb-3">
+                  <img id="categoryQR" class="mx-auto rounded border-secondary border px-3 py-3" />
+                  <br />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let qrUrl =
+        'https://api.qrserver.com/v1/create-qr-code/?size=200x200&color=124735&data=' +
+        window.location.href;
+      document.getElementById('categoryQR').setAttribute('src', qrUrl);
+    </script>
+    <!-- share via QR Code -->
+
     <br />
-    <footer>
-        <p class="text-white text-center">Rampver Financials &copy; 2020</p>
-    </footer>
-    <!-- INQUIRE BUTTON -->
-    <button id="sticky" class="btn rfbtn text-white mt-3 btn-lg" data-toggle="modal" data-target="#inquireform">
+    <h3 class="claimHeader text-left">
+      About Equity Funds
+    </h3>
+    <hr />
+    <p class="text-justify">
+      As an aggressive investor, you are committed to investing for the long term, knowing that you may encounter market
+      downturns along the way. You have set aside enough for your short-term needs, and you have enough money for
+      investing.
+    </p>
+
+    <p class="text-justify">
+      Stock funds are basically designed for “growth”, to earn from capital gains and dividend yields. This is usually
+      recommended for those investors who have long-term financial goals such as children’s education, retirement fund,
+      funds for future business,
+      and others.
+    </p>
+    <br />
+    <h3 class="claimHeader text-left" id="profilelink">
+      Aggressive Funds Catalog
+    </h3>
+    <hr />
+    <!-- info block -->
+
+    <div id="aggressive">
+      <div style="margin:auto">
+        <br />
+        <br />
+        <h3 class="claimHeader text-center mt-2 mb-3">Please wait..</h3>
+        <p class="text-center">
+          <img src="./img/preloader.gif" alt="" style="width: 200px;" class="pb-5 text-center" />
+        </p>
+        <br />
+        <br />
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <footer>
+    <p class="text-white text-center">Rampver Financials &copy; 2020</p>
+  </footer>
+  <!-- INQUIRE BUTTON -->
+  <button id="sticky" class="btn rfbtn text-white mt-3 btn-lg" data-toggle="modal" data-target="#inquireform">
     Need help?
   </button>
-    <!-- INQUIRE BUTTON -->
-    <!-- INQUIRE MODAL START -->
-    <div class="modal fade" id="inquireform" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header d-flex align-items-center">
-                    <h4 class="text-left claimHeader">Need some help?</h4>
-                    <h5 class="text-secondary font-weight-bold text-right ml-auto p-2" data-dismiss="modal">
-                        X
-                    </h5>
-                </div>
-                <div class="modal-body">
-                    <p class="text-secondary font-italic">
-                        Get in touch and we'll help you step-by-step.
-                    </p>
-                    <div role="document">
-                        <form action="https://rampver.com//mfinquiry-needhelp/#wpcf7-f12057-o1" method="post">
-                            <div style="display: none;">
-                                <input type="hidden" name="_wpcf7" value="12057" />
-                                <input type="hidden" name="_wpcf7_version" value="5.1.6" />
-                                <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f12057-o1" />
-                                <input type="hidden" name="_wpcf7_container_post" value="0" />
-                            </div>
-                            <input type="hidden" name="urlGet" id="urlGet" />
-                            <div class="form-group">
-                                <label for="salutation" class="claimHeader">Salutation*</label>
-                                <select class="form-control" id="salutation" name="salutation" required>
+  <!-- INQUIRE BUTTON -->
+  <!-- INQUIRE MODAL START -->
+  <div class="modal fade" id="inquireform" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-flex align-items-center">
+          <h4 class="text-left claimHeader">Need some help?</h4>
+          <h5 class="text-secondary font-weight-bold text-right ml-auto p-2" data-dismiss="modal">
+            X
+          </h5>
+        </div>
+        <div class="modal-body">
+          <p class="text-secondary font-italic">
+            Get in touch and we'll help you step-by-step.
+          </p>
+          <div role="document">
+            <form action="https://rampver.com//mfinquiry-needhelp/#wpcf7-f12057-o1" method="post">
+              <div style="display: none;">
+                <input type="hidden" name="_wpcf7" value="12057" />
+                <input type="hidden" name="_wpcf7_version" value="5.1.6" />
+                <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f12057-o1" />
+                <input type="hidden" name="_wpcf7_container_post" value="0" />
+              </div>
+              <input type="hidden" name="urlGet" id="urlGet" />
+              <div class="form-group">
+                <label for="salutation" class="claimHeader">Salutation*</label>
+                <select class="form-control" id="salutation" name="salutation" required>
                   <option>-</option>
                   <option value="Mr.">Mr.</option>
                   <option value="Ms.">Ms.</option>
                   <option value="Mrs.">Mrs.</option>
                   <option value="M.">M.</option>
                 </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="fullname" class="claimHeader">Full Name*</label>
-                                <input type="text" class="form-control" name="fullname" required placeholder="Full Name" id="fullname" onkeyup="validatorFN()" />
-                                <small class="d-none text-danger font-italic" id="errMsgFullName">Invalid input.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="claimHeader">Email Address*</label>
-                                <input type="email" class="form-control" name="email" required placeholder="Email Address" id="email" onkeyup="validatorEmail()" />
-                                <small class="d-none text-danger font-italic" id="errMsgEmail">Invalid input.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="contact" class="claimHeader">Contact Number*</label>
-                                <input type="number" class="form-control" required placeholder="Contact Number" name="contact" id="contact" />
-                            </div>
-                            <div class="form-group">
-                                <label for="birthday" class="claimHeader">Birthday</label>
-                                <input type="date" class="form-control" name="birthday" />
-                            </div>
-                            <div class="form-group">
-                                <label for="location" class="claimHeader">Location</label>
-                                <input type="text" class="form-control" placeholder="Location" name="location" id="location" onkeyup="validatorLocation()" />
-                                <small class="d-none text-danger font-italic" id="errMsgLocation">Invalid input.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="rampverclient" class="claimHeader">Are you currently Rampver Financials client?</label>
-                                <select name="rampverclient" id="rampverclient" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="fullname" class="claimHeader">Full Name*</label>
+                <input type="text" class="form-control" name="fullname" required placeholder="Full Name" id="fullname"
+                  onkeyup="validatorFN()" />
+                <small class="d-none text-danger font-italic" id="errMsgFullName">Invalid input.</small>
+              </div>
+              <div class="form-group">
+                <label for="email" class="claimHeader">Email Address*</label>
+                <input type="email" class="form-control" name="email" required placeholder="Email Address" id="email"
+                  onkeyup="validatorEmail()" />
+                <small class="d-none text-danger font-italic" id="errMsgEmail">Invalid input.</small>
+              </div>
+              <div class="form-group">
+                <label for="contact" class="claimHeader">Contact Number*</label>
+                <input type="number" class="form-control" required placeholder="Contact Number" name="contact"
+                  id="contact" />
+              </div>
+              <div class="form-group">
+                <label for="birthday" class="claimHeader">Birthday</label>
+                <input type="date" class="form-control" name="birthday" />
+              </div>
+              <div class="form-group">
+                <label for="location" class="claimHeader">Location</label>
+                <input type="text" class="form-control" placeholder="Location" name="location" id="location"
+                  onkeyup="validatorLocation()" />
+                <small class="d-none text-danger font-italic" id="errMsgLocation">Invalid input.</small>
+              </div>
+              <div class="form-group">
+                <label for="rampverclient" class="claimHeader">Are you currently Rampver Financials client?</label>
+                <select name="rampverclient" id="rampverclient" class="form-control">
                   <option value="No">No, I am not a Rampver client, yet.</option>
                   <option value="Yes">Yes, I am a Rampver client.</option>
                   <option value="Not Sure">I am not sure.</option>
                 </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="referral" class="claimHeader">How did you know about Rampver Financials?</label>
-                                <select name="referral" id="referral" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="referral" class="claimHeader">How did you know about Rampver Financials?</label>
+                <select name="referral" id="referral" class="form-control">
                   <option value="--">-</option>
                   <option value="FB/ Social Media">Facebook/ Social Media</option>
                   <option value="IMG">IMG - International Marketimg Group
@@ -427,11 +439,11 @@
                   <option value="Flyers/Printed Materials">Flyers/Printed Materials </option>
                   <option value="Others">Others</option>
                 </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="claimHeader" for="modeofcontact">What is your preferred mode of contact?
+              </div>
+              <div class="form-group">
+                <label class="claimHeader" for="modeofcontact">What is your preferred mode of contact?
                 </label>
-                                <select name="modeofcontact" id="modeofcontact" class="form-control">
+                <select name="modeofcontact" id="modeofcontact" class="form-control">
                   <option>-</option>
                   <option value="Email">Email</option>
                   <option value="SMS/Text Message">SMS/Text Message</option>
@@ -439,17 +451,18 @@
                   <option value="Messenger/Viber/ Whatsapp">Messenger/Viber/ Whatsapp</option>
                   <option value="Personal Meeting">Personal Meeting</option>
                 </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="claimHeader" for="question">Any questions for us?
+              </div>
+              <div class="form-group">
+                <label class="claimHeader" for="question">Any questions for us?
                 </label>
-                                <br />
-                                <textarea type="text" name="question" class="form-control" cols="30" rows="5" placeholder="Your Message" id="message" onkeyup="validatorMessage()"></textarea>
-                                <small class="d-none text-danger font-italic" id="errMsgMessage">Invalid input.</small>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" name="consent" id="consent" required />
-                                <small class="text-secondary font-italic form-check-label" for="consent">
+                <br />
+                <textarea type="text" name="question" class="form-control" cols="30" rows="5" placeholder="Your Message"
+                  id="message" onkeyup="validatorMessage()"></textarea>
+                <small class="d-none text-danger font-italic" id="errMsgMessage">Invalid input.</small>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="consent" id="consent" required />
+                <small class="text-secondary font-italic form-check-label" for="consent">
                   I agree to receive regular updates, promotions, and
                   recommendations regarding investments, insurance,
                   healthcare, and personal finance from Rampver Financials.
@@ -457,32 +470,33 @@
                   <a href="rampver.com/privacy">rampver.com/privacy</a>
                   for more info.
                 </small>
-                            </div>
-                            <div class="text-center mt-4 mb-4">
-                                <input type="submit" id="trigger" value="I want to invest!" class="text-white btn rfbtn font-weight-bold btn-lg" onclick="submitDetails()" />
-                                <br />
-                                <img src="./img/pulse-load.gif" class="d-none" id="pulse-load" style="width: 12%" alt="" />
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+              </div>
+              <div class="text-center mt-4 mb-4">
+                <input type="submit" id="trigger" value="I want to invest!"
+                  class="text-white btn rfbtn font-weight-bold btn-lg" onclick="submitDetails()" />
+                <br />
+                <img src="./img/pulse-load.gif" class="d-none" id="pulse-load" style="width: 12%" alt="" />
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
-    <!-- INQUIRE MODAL END -->
+  </div>
+  <!-- INQUIRE MODAL END -->
 
-    <script src="./js/validator.js"></script>
-    <script>
-        function submitDetails() {
-            document.getElementById('pulse-load').classList.remove('d-none');
-            setTimeout(function submitDetails() {
-                document.getElementById('pulse-load').classList.add('d-none');
-            }, 15000);
-        }
-    </script>
-    <!-- Facebook Messenger -->
-    <!-- Load Facebook SDK for JavaScript -->
-    <!-- <div id="fb-root"></div>
+  <script src="./js/validator.js"></script>
+  <script>
+    function submitDetails() {
+      document.getElementById('pulse-load').classList.remove('d-none');
+      setTimeout(function submitDetails() {
+        document.getElementById('pulse-load').classList.add('d-none');
+      }, 15000);
+    }
+  </script>
+  <!-- Facebook Messenger -->
+  <!-- Load Facebook SDK for JavaScript -->
+  <!-- <div id="fb-root"></div>
     <script>
       window.fbAsyncInit = function() {
         FB.init({
@@ -509,27 +523,30 @@
       logged_in_greeting="We're here to help you! :D"
       logged_out_greeting="We're here to help you! :D"
     ></div> -->
-    <!-- Facebook Messenger -->
+  <!-- Facebook Messenger -->
 
-    <script src="./js/tagIdentify.js"></script>
-    <!-- cookie consent -->
-    <div id="cookieconsent"></div>
-    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-    <script src="./js/cookieconsent.js"></script>
-    <!-- cookie consent -->
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e108780a32cd784"></script>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PG4287G" height="0" width="0"
+  <script src="./js/tagIdentify.js"></script>
+  <!-- cookie consent -->
+  <div id="cookieconsent"></div>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+  <script src="./js/cookieconsent.js"></script>
+  <!-- cookie consent -->
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e108780a32cd784"></script>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PG4287G" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+  <!-- End Google Tag Manager (noscript) -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    <script src="https://kit.fontawesome.com/b2291eba76.js"></script>
-    <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="https://kit.fontawesome.com/b2291eba76.js"></script>
+  <script src="//instant.page/3.0.0" type="module" defer
+    integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 </body>
 
 </html>
