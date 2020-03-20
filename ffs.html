@@ -7,12 +7,12 @@
 	<meta name="theme-color" content="#124735" />
 	<meta name="mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="title" content="Mutual Fund Prices | Rampver Financials" />
-	<meta name="description" content="Track mutual fund price and performance." />
-	<meta property="og:title" content="Rampver Financials | Mutual Fund Prices" />
-	<meta property="og:description" content="Mutual Fund Prices" />
+	<meta name="title" content="Latest Fund Fact Sheets and Fund Prospectus | Rampver Financials" />
+	<meta name="description" content="Latest Fund Fact Sheets and Fund Prospectus" />
+	<meta property="og:title" content="Rampver Financials | Latest Fund Fact Sheets and Fund Prospectus" />
+	<meta property="og:description" content="Latest Fund Fact Sheets and Fund Prospectus" />
 	<meta property="og:url" content="" />
-	<meta property="og:image" content="https://rampver.sirv.com/fund-images/salmmf.png" />
+	<meta property="og:image" content="https://rampver.sirv.com/fund-images/ppse-pic.png" />
 	<meta property="og:site_name" content="Rampver Financials" />
 	<meta property="og:type" content="article" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -22,7 +22,7 @@
 		href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 	<link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20" />
 
-	<title>Mutual Fund Prices | Rampver Financials</title>
+	<title>Fund Fact Sheets and Prospectus</title>
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
 	</script>
@@ -32,30 +32,29 @@
 	<script type="text/javascript">
 		$(document).ready(function () {
 			$.getJSON(
-				'https://v2-api.sheety.co/rampverfinancials/mfapi/navps',
+				'https://v2-api.sheety.co/rampverfinancials/mfapi/funddocs',
 				function (data) {
 					var template = Handlebars.compile($('#item-template').html());
-					$('#navps').html(template(data.navps));
+					$('#funddocs').html(template(data.funddocs));
 				}
 			);
 		});
 	</script>
 	<script id="item-template" type="text/x-handlebars-template">
 		<table class="table table-hover table-striped">
-			<h3 class="claimHeader mb-3">Mutual Fund Prices</h3>
+			<h3 class="claimHeader mb-3">Latest Fund Fact Sheets and Fund Prospectus</h3>
 						<tr>
 							<th class="claimHeader">Mutual Fund Name</th>
-							<th class="claimHeader text-right">NAVPS</th>
-							<th class="claimHeader text-right">YTD Return</th>
+							<th class="claimHeader">Fund Prospectus</th>
+							<th class="claimHeader">Latest Fund Fact Sheet</th>
 						</tr>
 						{{#each this}}
 
-						<h6 class="claimHeader mb-3 font-italic">{{date}}</h6>
 						<small class="text-secondary" id="historicalNote"></small>
             <tr>
-							<td class="claimHeader"><small><a href="{{url}}#navChart" class="claimHeader">{{fundname}}</a></small></td>
-							<td class="text-right"><small>{{navps}}</small></td>
-							<td class="text-right ytd"><small>{{ytd}}</small></td>
+							<td class="claimHeader"><small><a href="{{url}}" class="claimHeader">{{fundname}}</a></small></td>
+							<td><a href="{{prospectuslink}}" class="btn btn-sm rfbtn text-white">Download Prospectus</a></td>
+							<td><a href="{{ffslink}}" class="btn btn-sm rfbtn text-white">Download FFS</a></td>
 						</tr>
 
 
@@ -64,9 +63,6 @@
 					</table>
 					<small class="font-italic text-secondary">* Past perfomance is not a guarantee of future returns.</small>
 					<br>
-					<small class="font-italic text-secondary">** NAVPS as of two banking days ago.</small>
-					<br>
-					<small class="font-italic text-secondary">*** Unitized Mutual Funds.</small>
 
     </script>
 
@@ -135,7 +131,7 @@
 		</div>
 	</nav>
 
-	<div class="container px-3 mutual funds">
+	<div class="container">
 		<!-- dropdown -->
 
 		<div class="dropdown mt-4">
@@ -191,7 +187,7 @@
 						<div role="document">
 							<div class="mx-auto text-center">
 								<h5 class="claimHeader mb-3" id="QRName">
-									Mutual Fund Share Prices
+									Latest Fund Fact Sheets and Fund Prospectus
 								</h5>
 								<div class="mb-3">
 									<img id="categoryQR" class="mx-auto rounded border-secondary border px-3 py-3" />
@@ -220,7 +216,7 @@
 		<!-- Calendly link widget end -->
 
 
-		<div id="navps">
+		<div id="funddocs">
 			<div style="margin:auto">
 				<br />
 				<br />
@@ -239,12 +235,7 @@
 		<p class="text-white text-center">Rampver Financials &copy; 2020</p>
 	</footer>
 
-	<script>
-		setTimeout(function e() {
-			document.getElementById("historicalNote").innerHTML =
-				"For historical charts and prices, click the name of the mutual fund."
-		}, 3000);
-	</script>
+
 	<!-- <script src="./js/ytdColor.js"></script> -->
 
 

@@ -7,12 +7,14 @@
 	<meta name="theme-color" content="#124735" />
 	<meta name="mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="title" content="Mutual Fund Prices | Rampver Financials" />
-	<meta name="description" content="Track mutual fund price and performance." />
-	<meta property="og:title" content="Rampver Financials | Mutual Fund Prices" />
-	<meta property="og:description" content="Mutual Fund Prices" />
+	<meta name="title" content="Schedule a Meeting | Rampver Financials" />
+	<meta name="description"
+		content="Talk to one person for all your financial needs. Set a phone call appointment with us to know our recommendations for your investment and insurance needs." />
+	<meta property="og:title" content="Schedule a Meeting | Rampver Financials" />
+	<meta property="og:description"
+		content="Talk to one person for all your financial needs. Set a phone call appointment with us to know our recommendations for your investment and insurance needs." />
 	<meta property="og:url" content="" />
-	<meta property="og:image" content="https://rampver.sirv.com/fund-images/salmmf.png" />
+	<meta property="og:image" content="https://rampver.sirv.com/fund-images/ppse-pic.png" />
 	<meta property="og:site_name" content="Rampver Financials" />
 	<meta property="og:type" content="article" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -22,53 +24,12 @@
 		href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 	<link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20" />
 
-	<title>Mutual Fund Prices | Rampver Financials</title>
+	<title>Schedule Appointment with Rampver
+	</title>
 
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
-	</script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="./js/lazysizes.min.js"></script>
 
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$.getJSON(
-				'https://v2-api.sheety.co/rampverfinancials/mfapi/navps',
-				function (data) {
-					var template = Handlebars.compile($('#item-template').html());
-					$('#navps').html(template(data.navps));
-				}
-			);
-		});
-	</script>
-	<script id="item-template" type="text/x-handlebars-template">
-		<table class="table table-hover table-striped">
-			<h3 class="claimHeader mb-3">Mutual Fund Prices</h3>
-						<tr>
-							<th class="claimHeader">Mutual Fund Name</th>
-							<th class="claimHeader text-right">NAVPS</th>
-							<th class="claimHeader text-right">YTD Return</th>
-						</tr>
-						{{#each this}}
-
-						<h6 class="claimHeader mb-3 font-italic">{{date}}</h6>
-						<small class="text-secondary" id="historicalNote"></small>
-            <tr>
-							<td class="claimHeader"><small><a href="{{url}}#navChart" class="claimHeader">{{fundname}}</a></small></td>
-							<td class="text-right"><small>{{navps}}</small></td>
-							<td class="text-right ytd"><small>{{ytd}}</small></td>
-						</tr>
-
-
-						{{/each}}
-						
-					</table>
-					<small class="font-italic text-secondary">* Past perfomance is not a guarantee of future returns.</small>
-					<br>
-					<small class="font-italic text-secondary">** NAVPS as of two banking days ago.</small>
-					<br>
-					<small class="font-italic text-secondary">*** Unitized Mutual Funds.</small>
-
-    </script>
 
 	<!-- Google Tag Manager -->
 	<script>
@@ -136,40 +97,15 @@
 	</nav>
 
 	<div class="container px-3 mutual funds">
-		<!-- dropdown -->
-
-		<div class="dropdown mt-4">
-			<label class="claimHeader">🔎 Browse Mutual Funds: </label>
-			<button class="btn btn-block border dropdown-toggle text-left" type="button" id="dropdownMenuButton"
-				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				✔️ Rampver's Recommended Funds
-			</button>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<a class="dropdown-item" href="./index.html">✔️ Rampver's Recommended Funds</a>
-				<a class="dropdown-item" href="./all.html">All Mutual Funds</a>
-				<a class="dropdown-item" href="./indexfunds.html">Index Funds</a>
-				<a class="dropdown-item" href="./dollar.html">Dollar Funds</a>
-				<hr />
-				<small class="dropdown-item text-secondary font-italic">By Investor Risk Profile</small>
-				<a class="dropdown-item" href="./aggressive.html">For Aggressive Investor (Equity Funds)</a>
-				<a class="dropdown-item" href="./moderate.html">For Moderate Investor (Balanced Funds)</a>
-				<a class="dropdown-item" href="./conservative.html">For Conservative Investor (Bond Funds)</a>
-				<hr />
-				<small class="dropdown-item text-secondary font-italic">By Investment House</small>
-				<a class="dropdown-item" href="./soldivo.html">Soldivo Funds (SOLDIVO)</a>
-				<a class="dropdown-item" href="./atram.html">ATR Asset Management (ATRAM)</a>
-				<a class="dropdown-item" href="./pemi.html">Philequity Management (PEMI)</a>
-				<a class="dropdown-item" href="./slamci.html">Sun Life Asset Management (SLAMCI)</a>
-				<a class="dropdown-item" href="./fami.html">First Metro Asset Management (FAMI)</a>
-				<a class="dropdown-item" href="./pami.html">Philam Asset Management (PAMI)</a>
-			</div>
-		</div>
-		<!-- dropdown -->
+		<br>
+		<h2 class="text-center font-weight-bolder px-3 claimHeader mt-2">Schedule Appointment with Rampver
+		</h2>
+		<br>
 		<!-- info block -->
 
 
 		<!-- Go to www.addthis.com/dashboard to customize your tools -->
-		<div class="addthis_inline_share_toolbox_vxvg mt-3"></div>
+		<div class="addthis_inline_share_toolbox_vxvg"></div>
 
 		<!-- share via QR Code -->
 		<p class="mt-3">
@@ -191,11 +127,10 @@
 						<div role="document">
 							<div class="mx-auto text-center">
 								<h5 class="claimHeader mb-3" id="QRName">
-									Mutual Fund Share Prices
+									Schedule Appointment
 								</h5>
 								<div class="mb-3">
 									<img id="categoryQR" class="mx-auto rounded border-secondary border px-3 py-3" />
-									<br />
 								</div>
 							</div>
 						</div>
@@ -211,41 +146,19 @@
 		</script>
 		<!-- share via QR Code -->
 
-		<!-- Calendly link widget begin -->
-		<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-		<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
-		<a href="" class="btn btn-sm rfbtn text-white mb-3"
-			onclick="Calendly.initPopupWidget({url: 'https://calendly.com/rampver/schedule-appointment'});return false;">Schedule
-			a Call</a>
-		<!-- Calendly link widget end -->
+		<!-- Calendly inline widget begin -->
+		<div class="calendly-inline-widget" data-url="https://calendly.com/rampver/schedule-appointment"
+			style="min-width:320px;height:630px;"></div>
+		<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+		<!-- Calendly inline widget end -->
 
 
-		<div id="navps">
-			<div style="margin:auto">
-				<br />
-				<br />
-				<h3 class="claimHeader text-center mt-2 mb-3">Please wait..</h3>
-				<p class="text-center">
-					<img src="./img/preloader.gif" alt="" style="width: 200px;" class="pb-5 text-center" />
-				</p>
-				<br />
-				<br />
-			</div>
-		</div>
 
 	</div>
 	<br />
 	<footer>
 		<p class="text-white text-center">Rampver Financials &copy; 2020</p>
 	</footer>
-
-	<script>
-		setTimeout(function e() {
-			document.getElementById("historicalNote").innerHTML =
-				"For historical charts and prices, click the name of the mutual fund."
-		}, 3000);
-	</script>
-	<!-- <script src="./js/ytdColor.js"></script> -->
 
 
 	<!-- Facebook Messenger -->

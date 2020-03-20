@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#256141" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" src="./style.css" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20" />
+    <title>Oooops?!!</title>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PG4287G');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body data-instant-intensity="viewport">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid d-flex">
+            <div class="navbar-brand" href="#">
+                <img src="./img/rf-logo.png" />
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto order-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://rampver.com/why-rampver/" target="_blank">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./" target="_blank">Mutual Funds</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./daily-navps.html">NAVPS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./forms.html">Forms and Guidelines</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./all-search.html" target="_blank">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://rampver.com/seedbox/" target="_blank">Seedbox</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://rampver.com/contact-us/" target="_blank">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://rampver.com/privacy/" target="_blank">Privacy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <div class="container px-5">
+
+        <div class="mx-auto">
+            <div class="form-container px-3">
+                <br />
+                <div class="form-group d-none" id="1">
+                    <h4 class="claimHeader text-center">Investment Goal and Experience</h4>
+                    <hr>
+                    <label for="referral" class="claimHeader lead">What's your priority in investing?
+                    </label>
+                    <br>
+                    <br>
+                    <input type="radio" value="1" name="q1" onclick="show2nd()"> <label>I want to preserve
+                        my
+                        capital</label>
+                    <br>
+                    <input type="radio" value="2" name="q1" onclick="show2nd()"> <label>I want to get more
+                        income but keep my
+                        capital protected</label>
+                    <br>
+                    <input type="radio" value="3" name="q1" onclick="show2nd()"> <label> I want to grow my
+                        capital to the
+                        fullest</label>
+                    <br>
+                    <br>
+                    <button class="btn btn-block rfbtn text-white d-none" id="2nd"
+                        onclick="secondQuestion()">Proceed</button>
+                </div>
+                <div class="form-group d-none" id="2">
+                    <h4 class="claimHeader text-center">Investment Goal and Experience</h4>
+                    <hr>
+
+                    <label for="referral" class="claimHeader lead">How familiar are you with the different types of
+                        investments?</label>
+                    <br>
+                    <br>
+                    <input type="radio" value="1" name="q2" onclick="show3rd()"> <label>My knowledge is
+                        limited</label>
+                    <br>
+                    <input type="radio" value="2" name="q2" onclick="show3rd()"> <label>My knowledge is
+                        average</label>
+                    <br>
+                    <input type="radio" value="3" name="q2" onclick="show3rd()"> <label>My knowledge is
+                        extensive</label>
+                    <br>
+                    <br>
+                    <button class="btn btn-block rfbtn d-none text-white " id="3rd"
+                        onclick="thirdQuestion()">Proceed</button>
+
+                </div>
+                <div class="form-group d-none" id="3">
+                    <h4 class="claimHeader text-center">Investment Goal and Experience</h4>
+                    <hr>
+
+                    <label for="referral" class="claimHeader lead">Your investments are mostly in what?</label>
+                    <br>
+                    <br>
+                    <input type="radio" value="1" name="q3" onclick="show4th()"> <label>Savings Accounts/ Time
+                        Deposit
+                        / Money
+                        Market Funds</label>
+                    <br>
+                    <input type="radio" value="2" name="q3" onclick="show4th()"> <label>Peso or Dollar Bonds /
+                        UITFs
+                        or Mutual
+                        Funds invested in Bonds</label>
+                    <br>
+                    <input type="radio" value="3" name="q3" onclick="show4th()"> <label>Stocks / UITFs or Mutual
+                        Funds
+                        invested in
+                        Equities</label>
+                    <br>
+                    <br>
+                    <button class="btn btn-block d-none rfbtn text-white" id="4th"
+                        onclick="fourthQuestion()">Next</button>
+                </div>
+                <div class="form-group d-none" id="4">
+                    <h4 class="claimHeader text-center">Investment Horizon</h4>
+                    <hr>
+
+                    <label for="referral" class="claimHeader lead">How much of your income can you afford to invest?
+                    </label>
+                    <br>
+                    <br>
+                    <input type="radio" value="1" name="q4" onclick="show5th()"> <label>I can invest up to 10%</label>
+                    <br>
+                    <input type="radio" value="2" name="q4" onclick="show5th()"> <label>I can invest 11-30%</label>
+                    <br>
+                    <input type="radio" value="3" name="q4" onclick="show5th()"> <label>I can invest more than
+                        30%</label>
+                    <br>
+                    <br>
+                    <button class="btn btn-block d-none rfbtn text-white" id="5th"
+                        onclick="fifthQuestion()">Next</button>
+                </div>
+                <div class="form-group d-none" id="5">
+                    <h4 class="claimHeader text-center">Investment Horizon</h4>
+                    <hr>
+
+                    <label for="referral" class="claimHeader lead">How stable are your finances?
+                    </label>
+                    <br>
+                    <br>
+                    <input type="radio" value="1" name="q5" onclick="show6th()"> <label>Somewhat stable</label>
+                    <br>
+                    <input type="radio" value="2" name="q5" onclick="show6th()"> <label>Stable but I foresee major
+                        expenses within the next 3 years</label>
+                    <br>
+                    <input type="radio" value="3" name="q5" onclick="show6th()"> <label>Very stable for the next 3
+                        years</label>
+                    <br>
+                    <br>
+                    <button class="btn btn-block d-none rfbtn text-white" id="6th"
+                        onclick="sixthQuestion()">Next</button>
+                </div>
+                <div class="form-group d-none" id="6">
+                    <h4 class="claimHeader text-center">Investment Horizon</h4>
+                    <hr>
+
+                    <label for="referral" class="claimHeader lead">How many years can you afford to invest without
+                        redeeming part of
+                        your investment?
+                    </label>
+                    <br>
+                    <br>
+                    <input type="radio" value="1" name="q6" onclick="show7th()"> <label>I can invest for less than 1
+                        year</label>
+                    <br>
+                    <input type="radio" value="2" name="q6" onclick="show7th()"> <label>I can invest for 1-5
+                        years</label>
+                    <br>
+                    <input type="radio" value="3" name="q6" onclick="show7th()"> <label>I can invest for more than 5
+                        years</label>
+                    <br>
+                    <br>
+                    <button class="btn btn-block d-none rfbtn text-white" id="7th"
+                        onclick="seventhQuestion()">Next</button>
+                </div>
+                <div class="form-group d-none" id="7">
+                    <h4 class="claimHeader text-center">Investment Horizon</h4>
+                    <hr>
+
+                    <label for="referral" class="claimHeader lead">How many years until your planned retirement?
+                    </label>
+                    <br>
+                    <br>
+                    <input type="radio" value="1" name="q7" onclick="show8th()"> <label>1-7 years from
+                        retirement</label>
+                    <br>
+                    <input type="radio" value="2" name="q7" onclick="show8th()"> <label>8-15 years from
+                        retirement</label>
+                    <br>
+                    <input type="radio" value="3" name="q7" onclick="show8th()"> <label>more than 15 years from
+                        retirement</label>
+                    <br>
+                    <br>
+                    <button class="btn btn-block d-none rfbtn text-white" id="8th"
+                        onclick="eighthQuestion()">Next</button>
+                </div>
+                <div class="form-group d-none" id="8">
+                    <h4 class="claimHeader text-center">Risk Tolerance</h4>
+                    <hr>
+                    <label for="referral" class="claimHeader lead">How much risk are you willing to take?
+                    </label>
+                    <br>
+                    <br>
+                    <input type="radio" value="1" name="q8" onclick="show9th()"> <label>Minimal Risk</label>
+                    <br>
+                    <input type="radio" value="2" name="q8" onclick="show9th()"> <label>Moderate Risk</label>
+                    <br>
+                    <input type="radio" value="3" name="q8" onclick="show9th()"> <label>High Risk</label>
+                    <br>
+                    <br>
+                    <button class="btn btn-block d-none rfbtn text-white" id="9th"
+                        onclick="ninthQuestion()">Next</button>
+                </div>
+                <div class="form-group d-none" id="9">
+                    <h4 class="claimHeader text-center">Risk Tolerance</h4>
+                    <hr>
+                    <label for="referral" class="claimHeader lead">How much are you willing to invest in stocks?
+                    </label>
+                    <br>
+                    <br>
+                    <input type="radio" value="1" name="q9" onclick="showResBtn()"> <label>I am willing to invest up to
+                        20%</label>
+                    <br>
+                    <input type="radio" value="2" name="q9" onclick="showResBtn()"> <label>I am willing to invest
+                        21-50%</label>
+                    <br>
+                    <input type="radio" value="3" name="q9" onclick="showResBtn()"> <label>I am willing to invest more
+                        than 50%
+                    </label>
+                    <br>
+                    <br>
+                    <button class="btn btn-block d-none rfbtn text-white" id="res">Get Result!</button>
+                </div>
+
+
+                <div class="mx-auto" id="start">
+                    <p class="text-justify">This is a simple assessment tool to assist you in determining your investing
+                        style and risk tolerance level and may, in turn, help you choose the portfolio that might suit
+                        your profile. The evaluation is based on your current profile and for reference only. </p>
+                    <p class="text-justify">Please remember that personal circumstances change over time, you should
+                        re-assess your risk profile and goals from time to time.</p>
+                    <br>
+                    <p class="text-center">
+                        <button class=" text-center btn btn-block rfbtn text-white"
+                            onclick="startQuiz()">Start!</button>
+                    </p>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+
+    </div>
+    <footer>
+        <p class="text-white text-center">Rampver Financials &copy; 2020</p>
+    </footer>
+    <!-- Facebook Messenger -->
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v5.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js,
+                fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        })(document, 'script', 'facebook-jssdk');
+    </script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution="setup_tool" page_id="355427532453" theme_color="#256141"
+        logged_in_greeting="We're here to help you! :D" logged_out_greeting="We're here to help you! :D"></div>
+    <!-- Facebook Messenger -->
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PG4287G" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/b2291eba76.js"></script>
+    <script src="//instant.page/3.0.0" type="module" defer
+        integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+    <script src="./js/riskProfiler.js"></script>
+
+
+</body>
+
+</html>
