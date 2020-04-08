@@ -10,7 +10,7 @@
     <link rel="stylesheet" src="./style.css" href="./style.css" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
     <link rel="icon" href="./img/favicon.png" type="image/png" sizes="16x20" />
-    <title>Oooops?!!</title>
+    <title>Risk Profiler</title>
     <!-- Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
@@ -75,45 +75,46 @@
         </div>
     </nav>
     <br>
-    <br>
-    <div class="container px-5">
-
+    <div class="container">
+        <h5 class="claimHeader text-center mb-3">Know your Investing Risk Profile!</h5>
         <div class="mx-auto">
-            <div class="form-container px-3">
+            <div class="card px-3 mx-auto" style="max-width: 600px;">
                 <br />
                 <div class="form-group d-none" id="1">
-                    <h4 class="claimHeader text-center">Investment Goal and Experience</h4>
+                    <h6 class="claimHeader text-center">Investment Goal and Experience</h6>
+                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">1 of 9</small></div>
                     <hr>
-                    <label for="referral" class="claimHeader lead">What's your priority in investing?
+                    <label class="claimHeader lead">What's your priority in investing?
                     </label>
                     <br>
                     <br>
-                    <input type="radio" value="1" name="q1" onclick="show2nd()"> <label>I want to preserve
+                    <label class="mb-2"><input type="radio" value="1" name="q1" onclick="show2nd()"> I want to preserve
                         my
                         capital</label>
                     <br>
-                    <input type="radio" value="2" name="q1" onclick="show2nd()"> <label>I want to get more
-                        income but keep my
-                        capital protected</label>
+                    <label class="mb-2"><input type="radio" value="2" name="q1" onclick="show2nd()"> I want to get more
+                        income but
+                        keep my capital protected</label>
                     <br>
-                    <input type="radio" value="3" name="q1" onclick="show2nd()"> <label> I want to grow my
+                    <label class="mb-2"><input type="radio" value="3" name="q1" onclick="show2nd()"> I want to grow my
                         capital to the
                         fullest</label>
                     <br>
                     <br>
                     <button class="btn btn-block rfbtn text-white d-none" id="2nd"
-                        onclick="secondQuestion()">Proceed</button>
+                        onclick="secondQuestion()">Next</button>
                 </div>
                 <div class="form-group d-none" id="2">
-                    <h4 class="claimHeader text-center">Investment Goal and Experience</h4>
+                    <h6 class="claimHeader text-center">Investment Goal and Experience</h6>
+                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">2 of 9</small></div>
+
                     <hr>
 
-                    <label for="referral" class="claimHeader lead">How familiar are you with the different types of
+                    <label class="claimHeader lead">How familiar are you with the different types of
                         investments?</label>
                     <br>
                     <br>
-                    <input type="radio" value="1" name="q2" onclick="show3rd()"> <label>My knowledge is
-                        limited</label>
+                    <label><input type="radio" value="1" name="q2" onclick="show3rd()"> My knowledge is limited</label>
                     <br>
                     <input type="radio" value="2" name="q2" onclick="show3rd()"> <label>My knowledge is
                         average</label>
@@ -127,10 +128,12 @@
 
                 </div>
                 <div class="form-group d-none" id="3">
-                    <h4 class="claimHeader text-center">Investment Goal and Experience</h4>
+                    <h6 class="claimHeader text-center">Investment Goal and Experience</h6>
+                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">3 of 9</small></div>
+
                     <hr>
 
-                    <label for="referral" class="claimHeader lead">Your investments are mostly in what?</label>
+                    <label class="claimHeader lead">Your investments are mostly in what?</label>
                     <br>
                     <br>
                     <input type="radio" value="1" name="q3" onclick="show4th()"> <label>Savings Accounts/ Time
@@ -153,10 +156,10 @@
                         onclick="fourthQuestion()">Next</button>
                 </div>
                 <div class="form-group d-none" id="4">
-                    <h4 class="claimHeader text-center">Investment Horizon</h4>
+                    <h6 class="claimHeader text-center">Investment Horizon</h6>
+                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">4 of 9</small></div>
                     <hr>
-
-                    <label for="referral" class="claimHeader lead">How much of your income can you afford to invest?
+                    <label class="claimHeader lead">How much of your income can you afford to invest?
                     </label>
                     <br>
                     <br>
@@ -172,10 +175,10 @@
                         onclick="fifthQuestion()">Next</button>
                 </div>
                 <div class="form-group d-none" id="5">
-                    <h4 class="claimHeader text-center">Investment Horizon</h4>
+                    <h6 class="claimHeader text-center">Investment Horizon</h6>
+                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">5 of 9</small></div>
                     <hr>
-
-                    <label for="referral" class="claimHeader lead">How stable are your finances?
+                    <label class="claimHeader lead">How stable are your finances?
                     </label>
                     <br>
                     <br>
@@ -192,10 +195,10 @@
                         onclick="sixthQuestion()">Next</button>
                 </div>
                 <div class="form-group d-none" id="6">
-                    <h4 class="claimHeader text-center">Investment Horizon</h4>
+                    <h6 class="claimHeader text-center">Investment Horizon</h6>
+                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">6 of 9</small></div>
                     <hr>
-
-                    <label for="referral" class="claimHeader lead">How many years can you afford to invest without
+                    <label class="claimHeader lead">How many years can you afford to invest without
                         redeeming part of
                         your investment?
                     </label>
@@ -215,10 +218,10 @@
                         onclick="seventhQuestion()">Next</button>
                 </div>
                 <div class="form-group d-none" id="7">
-                    <h4 class="claimHeader text-center">Investment Horizon</h4>
+                    <h6 class="claimHeader text-center">Investment Horizon</h6>
+                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">7 of 9</small></div>
                     <hr>
-
-                    <label for="referral" class="claimHeader lead">How many years until your planned retirement?
+                    <label class="claimHeader lead">How many years until your planned retirement?
                     </label>
                     <br>
                     <br>
@@ -236,9 +239,10 @@
                         onclick="eighthQuestion()">Next</button>
                 </div>
                 <div class="form-group d-none" id="8">
-                    <h4 class="claimHeader text-center">Risk Tolerance</h4>
+                    <h6 class="claimHeader text-center">Risk Tolerance</h6>
+                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">8 of 9</small></div>
                     <hr>
-                    <label for="referral" class="claimHeader lead">How much risk are you willing to take?
+                    <label class="claimHeader lead">How much risk are you willing to take?
                     </label>
                     <br>
                     <br>
@@ -253,9 +257,11 @@
                         onclick="ninthQuestion()">Next</button>
                 </div>
                 <div class="form-group d-none" id="9">
-                    <h4 class="claimHeader text-center">Risk Tolerance</h4>
+                    <h6 class="claimHeader text-center">Risk Tolerance</h6>
+                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">9 of 9</small></div>
+
                     <hr>
-                    <label for="referral" class="claimHeader lead">How much are you willing to invest in stocks?
+                    <label class="claimHeader lead">How much are you willing to invest in stocks?
                     </label>
                     <br>
                     <br>
@@ -294,14 +300,16 @@
     <br>
     <br>
     <br>
-
-
-
-
-
+    <br>
+    <br>
+    <br>
+    <br>
 
     </div>
-    <footer>
+    <footer style="position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%; padding-top: 0px !important;">
         <p class="text-white text-center">Rampver Financials &copy; 2020</p>
     </footer>
     <!-- Facebook Messenger -->
