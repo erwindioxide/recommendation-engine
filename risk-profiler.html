@@ -37,7 +37,7 @@
                 <img src="./img/rf-logo.png" />
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-p="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -80,236 +80,143 @@
         <div class="mx-auto">
             <div class="card px-3 mx-auto" style="max-width: 600px;">
                 <br />
-                <div class="form-group d-none" id="1">
-                    <h6 class="claimHeader text-center">Investment Goal and Experience</h6>
-                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">1 of 9</small></div>
-                    <hr>
-                    <label class="claimHeader lead">What's your priority in investing?
-                    </label>
-                    <br>
-                    <br>
-                    <label class="mb-2"><input type="radio" value="1" name="q1" onclick="show2nd()"> I want to preserve
-                        my
-                        capital</label>
-                    <br>
-                    <label class="mb-2"><input type="radio" value="2" name="q1" onclick="show2nd()"> I want to get more
-                        income but
-                        keep my capital protected</label>
-                    <br>
-                    <label class="mb-2"><input type="radio" value="3" name="q1" onclick="show2nd()"> I want to grow my
-                        capital to the
-                        fullest</label>
-                    <br>
-                    <br>
-                    <button class="btn btn-block rfbtn text-white d-none" id="2nd"
-                        onclick="secondQuestion()">Next</button>
-                </div>
-                <div class="form-group d-none" id="2">
-                    <h6 class="claimHeader text-center">Investment Goal and Experience</h6>
-                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">2 of 9</small></div>
 
-                    <hr>
-
-                    <label class="claimHeader lead">How familiar are you with the different types of
-                        investments?</label>
-                    <br>
-                    <br>
-                    <label><input type="radio" value="1" name="q2" onclick="show3rd()"> My knowledge is limited</label>
-                    <br>
-                    <input type="radio" value="2" name="q2" onclick="show3rd()"> <label>My knowledge is
-                        average</label>
-                    <br>
-                    <input type="radio" value="3" name="q2" onclick="show3rd()"> <label>My knowledge is
-                        extensive</label>
-                    <br>
-                    <br>
-                    <button class="btn btn-block rfbtn d-none text-white " id="3rd"
-                        onclick="thirdQuestion()">Proceed</button>
-
-                </div>
-                <div class="form-group d-none" id="3">
-                    <h6 class="claimHeader text-center">Investment Goal and Experience</h6>
-                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">3 of 9</small></div>
-
-                    <hr>
-
-                    <label class="claimHeader lead">Your investments are mostly in what?</label>
-                    <br>
-                    <br>
-                    <input type="radio" value="1" name="q3" onclick="show4th()"> <label>Savings Accounts/ Time
-                        Deposit
-                        / Money
-                        Market Funds</label>
-                    <br>
-                    <input type="radio" value="2" name="q3" onclick="show4th()"> <label>Peso or Dollar Bonds /
-                        UITFs
-                        or Mutual
-                        Funds invested in Bonds</label>
-                    <br>
-                    <input type="radio" value="3" name="q3" onclick="show4th()"> <label>Stocks / UITFs or Mutual
-                        Funds
-                        invested in
-                        Equities</label>
-                    <br>
-                    <br>
-                    <button class="btn btn-block d-none rfbtn text-white" id="4th"
-                        onclick="fourthQuestion()">Next</button>
-                </div>
-                <div class="form-group d-none" id="4">
-                    <h6 class="claimHeader text-center">Investment Horizon</h6>
-                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">4 of 9</small></div>
-                    <hr>
-                    <label class="claimHeader lead">How much of your income can you afford to invest?
-                    </label>
-                    <br>
-                    <br>
-                    <input type="radio" value="1" name="q4" onclick="show5th()"> <label>I can invest up to 10%</label>
-                    <br>
-                    <input type="radio" value="2" name="q4" onclick="show5th()"> <label>I can invest 11-30%</label>
-                    <br>
-                    <input type="radio" value="3" name="q4" onclick="show5th()"> <label>I can invest more than
-                        30%</label>
-                    <br>
-                    <br>
-                    <button class="btn btn-block d-none rfbtn text-white" id="5th"
-                        onclick="fifthQuestion()">Next</button>
-                </div>
-                <div class="form-group d-none" id="5">
-                    <h6 class="claimHeader text-center">Investment Horizon</h6>
-                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">5 of 9</small></div>
-                    <hr>
-                    <label class="claimHeader lead">How stable are your finances?
-                    </label>
-                    <br>
-                    <br>
-                    <input type="radio" value="1" name="q5" onclick="show6th()"> <label>Somewhat stable</label>
-                    <br>
-                    <input type="radio" value="2" name="q5" onclick="show6th()"> <label>Stable but I foresee major
-                        expenses within the next 3 years</label>
-                    <br>
-                    <input type="radio" value="3" name="q5" onclick="show6th()"> <label>Very stable for the next 3
-                        years</label>
-                    <br>
-                    <br>
-                    <button class="btn btn-block d-none rfbtn text-white" id="6th"
-                        onclick="sixthQuestion()">Next</button>
-                </div>
-                <div class="form-group d-none" id="6">
-                    <h6 class="claimHeader text-center">Investment Horizon</h6>
-                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">6 of 9</small></div>
-                    <hr>
-                    <label class="claimHeader lead">How many years can you afford to invest without
-                        redeeming part of
-                        your investment?
-                    </label>
-                    <br>
-                    <br>
-                    <input type="radio" value="1" name="q6" onclick="show7th()"> <label>I can invest for less than 1
-                        year</label>
-                    <br>
-                    <input type="radio" value="2" name="q6" onclick="show7th()"> <label>I can invest for 1-5
-                        years</label>
-                    <br>
-                    <input type="radio" value="3" name="q6" onclick="show7th()"> <label>I can invest for more than 5
-                        years</label>
-                    <br>
-                    <br>
-                    <button class="btn btn-block d-none rfbtn text-white" id="7th"
-                        onclick="seventhQuestion()">Next</button>
-                </div>
-                <div class="form-group d-none" id="7">
-                    <h6 class="claimHeader text-center">Investment Horizon</h6>
-                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">7 of 9</small></div>
-                    <hr>
-                    <label class="claimHeader lead">How many years until your planned retirement?
-                    </label>
-                    <br>
-                    <br>
-                    <input type="radio" value="1" name="q7" onclick="show8th()"> <label>1-7 years from
-                        retirement</label>
-                    <br>
-                    <input type="radio" value="2" name="q7" onclick="show8th()"> <label>8-15 years from
-                        retirement</label>
-                    <br>
-                    <input type="radio" value="3" name="q7" onclick="show8th()"> <label>more than 15 years from
-                        retirement</label>
-                    <br>
-                    <br>
-                    <button class="btn btn-block d-none rfbtn text-white" id="8th"
-                        onclick="eighthQuestion()">Next</button>
-                </div>
-                <div class="form-group d-none" id="8">
-                    <h6 class="claimHeader text-center">Risk Tolerance</h6>
-                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">8 of 9</small></div>
-                    <hr>
-                    <label class="claimHeader lead">How much risk are you willing to take?
-                    </label>
-                    <br>
-                    <br>
-                    <input type="radio" value="1" name="q8" onclick="show9th()"> <label>Minimal Risk</label>
-                    <br>
-                    <input type="radio" value="2" name="q8" onclick="show9th()"> <label>Moderate Risk</label>
-                    <br>
-                    <input type="radio" value="3" name="q8" onclick="show9th()"> <label>High Risk</label>
-                    <br>
-                    <br>
-                    <button class="btn btn-block d-none rfbtn text-white" id="9th"
-                        onclick="ninthQuestion()">Next</button>
-                </div>
-                <div class="form-group d-none" id="9">
-                    <h6 class="claimHeader text-center">Risk Tolerance</h6>
-                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">9 of 9</small></div>
-
-                    <hr>
-                    <label class="claimHeader lead">How much are you willing to invest in stocks?
-                    </label>
-                    <br>
-                    <br>
-                    <input type="radio" value="1" name="q9" onclick="showResBtn()"> <label>I am willing to invest up to
-                        20%</label>
-                    <br>
-                    <input type="radio" value="2" name="q9" onclick="showResBtn()"> <label>I am willing to invest
-                        21-50%</label>
-                    <br>
-                    <input type="radio" value="3" name="q9" onclick="showResBtn()"> <label>I am willing to invest more
-                        than 50%
-                    </label>
-                    <br>
-                    <br>
-                    <button class="btn btn-block d-none rfbtn text-white" id="res">Get Result!</button>
-                </div>
-
-
-                <div class="mx-auto" id="start">
+                <div class="mx-auto" id="0">
                     <p class="text-justify">This is a simple assessment tool to assist you in determining your investing
                         style and risk tolerance level and may, in turn, help you choose the portfolio that might suit
                         your profile. The evaluation is based on your current profile and for reference only. </p>
                     <p class="text-justify">Please remember that personal circumstances change over time, you should
                         re-assess your risk profile and goals from time to time.</p>
                     <br>
-                    <p class="text-center">
-                        <button class=" text-center btn btn-block rfbtn text-white"
-                            onclick="startQuiz()">Start!</button>
+                    <button class="text-center btn btn-block rfbtn text-white mb-0" id="btn1"
+                        onclick="nextQuestion()">Start!</button>
+                </div>
+
+                <div class="form-group d-none" id="1">
+                    <h6 class="claimHeader text-center">Investment Goal and Experience</h6>
+                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">1 of 9</small></div>
+                    <hr>
+                    <p class="claimHeader lead">What's your priority in investing?
                     </p>
+                    <p class="mb-2"><input type="radio" value="1" name="q1" onclick="showBtn()"> I want to preserve my
+                        capital</p>
+                    <p class="mb-2"><input type="radio" value="2" name="q1" onclick="showBtn()"> I want to get more
+                        income but keep my capital protected</p>
+                    <p class="mb-2"><input type="radio" value="3" name="q1" onclick="showBtn()"> I want to grow my
+                        capital to the fullest</p>
+                    <button class="btn btn-block rfbtn text-white d-none mb-0" id="btn2"
+                        onclick="nextQuestion()">Next</button>
+                </div>
+
+                <div class="form-group d-none" id="2">
+                    <h6 class="claimHeader text-center">Investment Goal and Experience</h6>
+                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">2 of 9</small></div>
+                    <hr>
+                    <p class="claimHeader lead">How familiar are you with the different types of investments?</p>
+                    <p><input type="radio" value="1" name="q2" onclick="showBtn()"> My knowledge is limited</p>
+                    <p><input type="radio" value="2" name="q2" onclick="showBtn()"> My knowledge is average</p>
+                    <p><input type="radio" value="3" name="q2" onclick="showBtn()"> My knowledge is extensive</p>
+                    <button class="btn btn-block rfbtn d-none text-white " id="btn3"
+                        onclick="nextQuestion()">Next</button>
+                </div>
+
+                <div class="form-group d-none" id="3">
+                    <h6 class="claimHeader text-center">Investment Goal and Experience</h6>
+                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">3 of 9</small></div>
+                    <hr>
+                    <p class="claimHeader lead">Your investments are mostly in what?</p>
+                    <p><input type="radio" value="1" name="q3" onclick="showBtn()"> Savings Accounts/ Time Deposit/
+                        Money Market Funds</p>
+                    <p><input type="radio" value="2" name="q3" onclick="showBtn()"> Peso or Dollar Bonds /UITFs or
+                        Mutual Funds invested in Bonds</p>
+                    <p><input type="radio" value="3" name="q3" onclick="showBtn()"> Stocks / UITFs or Mutual Funds
+                        invested in Equities</p>
+                    <button class="btn btn-block d-none rfbtn text-white" id="btn4"
+                        onclick="nextQuestion()">Next</button>
+                </div>
+
+                <div class="form-group d-none" id="4">
+                    <h6 class="claimHeader text-center">Investment Horizon</h6>
+                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">4 of 9</small></div>
+                    <hr>
+                    <p class="claimHeader lead">How much of your income can you afford to invest?</p>
+                    <p><input type="radio" value="1" name="q4" onclick="showBtn()"> I can invest up to 10%</p>
+                    <p><input type="radio" value="2" name="q4" onclick="showBtn()"> I can invest 11-30%</p>
+                    <p><input type="radio" value="3" name="q4" onclick="showBtn()"> I can invest more than 30%</p>
+                    <button class="btn btn-block d-none rfbtn text-white" id="btn5"
+                        onclick="nextQuestion()">Next</button>
+                </div>
+
+                <div class="form-group d-none" id="5">
+                    <h6 class="claimHeader text-center">Investment Horizon</h6>
+                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">5 of 9</small></div>
+                    <hr>
+                    <p class="claimHeader lead">How stable are your finances?</p>
+                    <p><input type="radio" value="1" name="q5" onclick="showBtn()"> Somewhat stable</p>
+                    <p><input type="radio" value="2" name="q5" onclick="showBtn()"> Stable but I foresee major expenses
+                        within the next 3 years</p>
+                    <p><input type="radio" value="3" name="q5" onclick="showBtn()"> Very stable for the next 3 years</p>
+                    <button class="btn btn-block d-none rfbtn text-white" id="btn6"
+                        onclick="nextQuestion()">Next</button>
+                </div>
+
+                <div class="form-group d-none" id="6">
+                    <h6 class="claimHeader text-center">Investment Horizon</h6>
+                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">6 of 9</small></div>
+                    <hr>
+                    <p class="claimHeader lead">How many years can you afford to invest without redeeming part of your
+                        investment?</p>
+                    <p><input type="radio" value="1" name="q6" onclick="showBtn()"> I can invest for less than 1 year
+                    </p>
+                    <p><input type="radio" value="2" name="q6" onclick="showBtn()"> I can invest for 1-5 years</p>
+                    <p><input type="radio" value="3" name="q6" onclick="showBtn()"> I can invest for more than 5 years
+                    </p>
+                    <button class="btn btn-block d-none rfbtn text-white" id="btn7"
+                        onclick="nextQuestion()">Next</button>
+                </div>
+
+                <div class="form-group d-none" id="7">
+                    <h6 class="claimHeader text-center">Investment Horizon</h6>
+                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">7 of 9</small></div>
+                    <hr>
+                    <p class="claimHeader lead">How many years until your planned retirement?</p>
+                    <p><input type="radio" value="1" name="q7" onclick="showBtn()"> 1-7 years from retirement</p>
+                    <p><input type="radio" value="2" name="q7" onclick="showBtn()"> 8-15 years from retirement</p>
+                    <p><input type="radio" value="3" name="q7" onclick="showBtn()"> More than 15 years from retirement
+                    </p>
+                    <button class="btn btn-block d-none rfbtn text-white" id="btn8"
+                        onclick="nextQuestion()">Next</button>
+                </div>
+
+                <div class="form-group d-none" id="8">
+                    <h6 class="claimHeader text-center">Risk Tolerance</h6>
+                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">8 of 9</small></div>
+                    <hr>
+                    <p class="claimHeader lead">How much risk are you willing to take?</p>
+                    <p><input type="radio" value="1" name="q8" onclick="showBtn()"> Minimal Risk</p>
+                    <p><input type="radio" value="2" name="q8" onclick="showBtn()"> Moderate Risk</p>
+                    <p><input type="radio" value="3" name="q8" onclick="showBtn()"> High Risk</p>
+                    <button class="btn btn-block d-none rfbtn text-white" id="btn9"
+                        onclick="nextQuestion()">Next</button>
+                </div>
+
+                <div class="form-group d-none" id="9">
+                    <h6 class="claimHeader text-center">Risk Tolerance</h6>
+                    <div class="text-center mb-0"><small class="font-italic text-secondary mx-auto">9 of 9</small></div>
+                    <hr>
+                    <p class="claimHeader lead">How much are you willing to invest in stocks? </p>
+                    <p><input type="radio" value="1" name="q9" onclick="showResBtn()"> I am willing to invest up to 20%
+                    </p>
+                    <p><input type="radio" value="2" name="q9" onclick="showResBtn()"> I am willing to invest 21-50%</p>
+                    <p><input type="radio" value="3" name="q9" onclick="showResBtn()"> I am willing to invest more than
+                        50% </p>
+                    <button class="btn btn-block d-none rfbtn text-white" id="res">Get Result!</button>
                 </div>
                 <br>
             </div>
         </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    </div>
-    <footer style="position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%; padding-top: 0px !important;">
+    <footer style="position: fixed; left: 0; bottom: 0; width: 100%; padding-top: 0px !important;">
         <p class="text-white text-center">Rampver Financials &copy; 2020</p>
     </footer>
     <!-- Facebook Messenger -->
@@ -357,10 +264,7 @@
     <script src="https://kit.fontawesome.com/b2291eba76.js"></script>
     <script src="//instant.page/3.0.0" type="module" defer
         integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
-
     <script src="./js/riskProfiler.js"></script>
-
-
 </body>
 
 </html>

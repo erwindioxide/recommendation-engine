@@ -1,8 +1,7 @@
 // parse url for data
-
 function getUrlVars() {
     let vars = {};
-    let parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(
+    let parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (
         m,
         key,
         value
@@ -27,9 +26,8 @@ app = document.querySelector('.app');
 let api;
 api = 'https://v2-api.sheety.co/rampverfinancials/mfapi/' + code + '/' + id;
 
-let renderData = 'json.' + code;
-
 // concat api selector
+let renderData = 'json.' + code;
 
 // assign api data to HTML IDs
 function dataFill(json) {
@@ -39,11 +37,10 @@ function dataFill(json) {
     document
         .querySelector('meta[name="description"]')
         .setAttribute('content', eval(renderData + '.description'));
-    // document.querySelector('meta[property="og:description"]').setAttribute("content", eval(renderData + '.description'));
     document
         .querySelector('meta[property="og:url"]')
         .setAttribute('content', window.location.href);
-    // document.querySelector('meta[property="og:image"]').setAttribute("content", eval(renderData + '.imageurl'));
+
     document.title = eval(renderData + '.fundname') + ' | Fund Details';
     document.getElementById('fundtitle').innerHTML = eval(
         renderData + '.fundname'
@@ -218,7 +215,7 @@ function dataFill(json) {
     if (code == 'soldivo') {
         document.getElementById('guidelines').value =
             'https://res.cloudinary.com/rampver-financials/image/upload/v1582874968/Rampver%20Financials%20Mutual%20Fund%20Pricipals%20Forms%20Library/Account%20Opening%20Guidelines%202020/Soldivo_Funds_Account_Opening_Guidelines.pdf';
-        // document.getElementById('inv_guidelines').setAttribute("value", "https://res.cloudinary.com/rampver-financials/image/upload/v1582874968/Rampver%20Financials%20Mutual%20Fund%20Pricipals%20Forms%20Library/Account%20Opening%20Guidelines%202020/Soldivo_Funds_Account_Opening_Guidelines.pdf")
+
     } else if (code == 'atram') {
         document.getElementById('guidelines').value =
             'https://res.cloudinary.com/rampver-financials/image/upload/v1582874969/Rampver%20Financials%20Mutual%20Fund%20Pricipals%20Forms%20Library/Account%20Opening%20Guidelines%202020/ATRAM_Account_Opening_Guidelines.pdf';
@@ -238,10 +235,10 @@ function dataFill(json) {
         document.getElementById('guidelines').value =
             'https://res.cloudinary.com/rampver-financials/image/upload/v1571712275/Rampver_Financials_Mutual_Fund_Investing_Basics.pdf';
     }
-    //guidelines autofill link
 }
+//guidelines autofill link
 
-// fill data
+// hydrate html with data
 let output = fetch(api)
     .then(response => response.json())
     .then(json => {
