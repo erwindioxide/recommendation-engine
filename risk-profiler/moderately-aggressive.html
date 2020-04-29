@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="theme-color" content="#124735" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="title" content="You are an Moderately Aggressive-type Investor!" />
+	<meta name="description" content="As a moderately aggressive investor, you want the balance of capital growth and
+	protection. You want to experience the “best of both worlds”. " />
+	<meta property="og:title" content="I am a Moderately Aggressive-type Investor! What's yours?" />
+	<meta property="og:description"
+		content="I want the balance of growth and protection. I want to experience the “best of both worlds”.  " />
+	<meta property="og:url" content="" />
+	<meta property="og:image"
+		content="https://res.cloudinary.com/rampver-financials/image/upload/v1584316522/Image%20Hosting/invest-rampver/fund-thumbnails/phfi-pic.webp" />
+	<meta property="og:site_name" content="Rampver Financials" />
+	<meta property="og:type" content="article" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+	<link rel="stylesheet" src="../style.css" href="../style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+	<link rel="icon" href="../img/favicon.png" type="image/png" sizes="16x20" />
+	<title>You are a Moderately-Aggressive Investor!</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
+	</script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$.getJSON(
+				'https://v2-api.sheety.co/rampverfinancials/mfapi/moderate?profilershow=true',
+				function (data) {
+					var template = Handlebars.compile($('#item-template').html());
+					$('#moderate').html(template(data.moderate));
+				}
+			);
+		});
+	</script>
+	<!-- display searches start -->
+	<script id="item-template" type="text/x-handlebars-template">
+		<div class="">
+              {{#each this}}
+              <div style="max-width: 500px !important" class="mx-auto">
+                  <div class="card h-100">
+                      <div class="text-center">
+                          <img data-src="{{imageurl}}" alt="{{fundname}}" class="previewimg lazyload" class="mt-3">
+                      </div>
+                      <h5 class="text-center mb-2 claimHeader mt-3 mx-2"><a href="../fund-details.html?fundmanagercode={{fundmanagercode}}&id={{id}}" class="claimHeader">{{fundname}}</a></h5>
+                      <div class="px-3">
+                          <small>{{blurb}}</small>
+                      </div>
+                      <br>
+                     <a class="btn bt-block px-4 text-white font-weight-bold rfbtn" style="border-radius: 0 !important" href="../fund-details.html?fundmanagercode={{fundmanagercode}}&id={{id}}">Learn more</a>
+                  </div>
+              </div>
+              <br>
+              {{/each}}
+      </script>
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-PG4287G');
+	</script>
+	<!-- End Google Tag Manager -->
+	<script src="../js/lazysizes.min.js"></script>
+
+</head>
+
+<body data-instant-intensity="viewport">
+	<nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
+		<div class="container-fluid d-flex">
+			<div class="navbar-brand" href="#">
+				<img src="../img/rf-logo.png" />
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-p="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto order-2">
+					<li class="nav-item">
+						<a class="nav-link" href="../">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://rampver.com/why-rampver/" target="_blank">About us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./" target="_blank">Mutual Funds</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../daily-navps.html">NAVPS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../forms.html">Forms and Guidelines</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../all-search.html" target="_blank">Search</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://rampver.com/seedbox/" target="_blank">Seedbox</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://rampver.com/contact-us/" target="_blank">Contact Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://rampver.com/privacy/" target="_blank">Privacy</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<br>
+	<div class="container">
+		<div class="mx-auto">
+			<div class="px-3 mx-auto" style="max-width: 600px;">
+				<h4 class="claimHeader text-center mb-3">Your investor profile is:</h4>
+				<h1 class="claimHeader text-center">Moderately Aggressive</h1>
+				<br>
+				<img
+					data-src="https://res.cloudinary.com/rampver-financials/image/upload/v1584316522/Image%20Hosting/invest-rampver/fund-thumbnails/phfi-pic.webp"
+					alt="risk-profile aggressive" class="mx-auto previewimg lazyload rounded mb-4">
+				<br>
+				<div class="d-flex mx-auto justify-content-center">
+					<a href="./quiz.html" class="btn rfbtn text-white px-4" style="border-radius: 0 !important"></i>Take
+						the Quiz!</a>
+					<a href="https://www.facebook.com/sharer/sharer.php?u=https://invest.rampver.com/risk-profiler/moderately-aggressive.html"
+						target="_blank" class="btn text-white ml-3" style="border-radius: 0 !important; background-color: #3b5998">
+						<i class="fab fa-facebook text-white mr-2" style="font-size: 100%;"></i> Share
+						on
+						Facebook</a>
+				</div>
+				<!-- points div -->
+				<div></div>
+				<!-- points div -->
+				<br>
+
+				<h5 class="claimHeader text-center mt-4" id="score-statement"></h5>
+
+				<p class="text-justify mt-4">As a moderately aggressive investor, you want the balance of capital growth and
+					protection. You want to experience the “best of both worlds”. </p>
+				<p class="text-justify">You prefer the combined benefits of bonds and stocks as a way to reach your goals while
+					building your financial nest for the long-term.</p>
+				<a href="../moderate.html" class="text-justify claimHeader"><u>Balanced Funds are the best
+						for you.</u></a>
+				<br>
+				<br>
+				<br>
+				<h3 class="claimHeader text-left">Balanced Funds</h3>
+				<br>
+				<p class="text-justify">
+					A balanced fund is a hybrid fund, a mix of a stock fund, bond fund, or money market fund in a single
+					portfolio. Usually, there are set gauges on how much a balanced fund should be invested in stocks and bonds.
+				</p>
+				<br>
+				<h3 class="claimHeader text-left">Recommended Funds</h3>
+				<br>
+				<div id="moderate">
+					<div style="margin:auto">
+						<br />
+						<br />
+						<h3 class="claimHeader text-center mt-2 mb-3">Loading recommendations..</h3>
+						<p class="text-center">
+							<img src="../img/pulse-load.gif" alt="" style="width: 100px;" class="pb-5 text-center" />
+						</p>
+						<br />
+						<br />
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<footer>
+		<p class="text-white text-center">Rampver Financials &copy; 2020</p>
+	</footer>
+	<!-- Facebook Messenger -->
+	<!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+	<script>
+		window.fbAsyncInit = function () {
+			FB.init({
+				xfbml: true,
+				version: 'v5.0'
+			});
+		};
+
+		(function (d, s, id) {
+			var js,
+				fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+			fjs.parentNode.insertBefore(js, fjs);
+		})(document, 'script', 'facebook-jssdk');
+	</script>
+	<script src="./score.js"></script>
+
+	<!-- Your customer chat code -->
+	<div class="fb-customerchat" attribution="setup_tool" page_id="355427532453" theme_color="#256141"
+		logged_in_greeting="We're here to help you! :D" logged_out_greeting="We're here to help you! :D"></div>
+	<!-- Facebook Messenger -->
+
+
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PG4287G" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
+	<script src="https://kit.fontawesome.com/b2291eba76.js"></script>
+	<script src="//instant.page/3.0.0" type="module" defer
+		integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+
+
+</body>
+
+</html>
